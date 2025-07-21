@@ -12,6 +12,7 @@ import { PhotoGallery } from '@/components/photo-gallery';
 import { NewsEvents } from '@/components/news-events';
 import { BlogSection } from '@/components/blog-section';
 import { testimonials, galleryImages, newsAndEvents, blogPosts } from '@/data/content';
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -31,8 +32,8 @@ export default function Home() {
                 The authentic taste of Sri Lanka, delivered to your kitchen.
               </p>
               <div className="mt-8">
-                <Button size="lg" className="font-bold">
-                  Explore Spices
+                <Button size="lg" className="font-bold" asChild>
+                  <Link href="/products">Explore Spices</Link>
                 </Button>
               </div>
             </div>

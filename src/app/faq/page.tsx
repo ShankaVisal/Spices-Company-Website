@@ -1,0 +1,67 @@
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+const faqs = [
+    {
+        question: "Where do you source your spices from?",
+        answer: "All our spices are sourced directly from sustainable and ethical spice gardens across Sri Lanka. We work closely with local farmers to ensure the highest quality and freshness."
+    },
+    {
+        question: "Are your products organic?",
+        answer: "We offer a wide range of spices, including a dedicated line of certified organic products. Please check the product description for details on organic certification."
+    },
+    {
+        question: "What is Ceylon Cinnamon and how is it different?",
+        answer: "Ceylon Cinnamon, also known as 'true cinnamon,' is native to Sri Lanka. It has a more delicate and sweet flavor compared to the more common Cassia cinnamon. It also has lower levels of coumarin, a natural compound that can be harmful in large doses."
+    },
+    {
+        question: "How should I store my spices?",
+        answer: "To maintain maximum freshness and potency, store your spices in a cool, dark, and dry place. Our resealable packaging is designed to protect the spices from light, air, and moisture."
+    },
+    {
+        question: "Do you ship internationally?",
+        answer: "Yes, we ship our spices worldwide! Shipping costs and times vary depending on the destination. You can find more details on our shipping policy page."
+    }
+]
+
+export default function FAQPage() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1">
+        <section className="w-full py-20 md:py-32 bg-card">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-foreground">
+              Frequently Asked Questions
+            </h1>
+            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+              Have questions? We have answers.
+            </p>
+          </div>
+        </section>
+
+        <section className="w-full py-16 md:py-24">
+            <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+                <Accordion type="single" collapsible className="w-full">
+                    {faqs.map((faq, index) => (
+                         <AccordionItem key={index} value={`item-${index + 1}`}>
+                            <AccordionTrigger className="text-lg font-semibold text-left">{faq.question}</AccordionTrigger>
+                            <AccordionContent className="text-muted-foreground">
+                                {faq.answer}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
+            </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}

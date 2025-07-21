@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useApp } from '@/hooks/use-app';
 import { uiStrings } from '@/data/products';
 import { Leaf, Twitter, Facebook, Instagram } from 'lucide-react';
@@ -25,24 +26,24 @@ export function Footer() {
                         <div>
                             <h3 className="font-semibold mb-4">Products</h3>
                             <ul className="space-y-2">
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Spices</a></li>
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Blends</a></li>
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Gift Boxes</a></li>
+                                <li><Link href="/products" className="text-sm text-muted-foreground hover:text-primary">Spices</Link></li>
+                                <li><Link href="/products" className="text-sm text-muted-foreground hover:text-primary">Blends</Link></li>
+                                <li><Link href="/products" className="text-sm text-muted-foreground hover:text-primary">Gift Boxes</Link></li>
                             </ul>
                         </div>
                          <div>
                             <h3 className="font-semibold mb-4">Company</h3>
                             <ul className="space-y-2">
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">About Us</a></li>
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Blog</a></li>
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Contact</a></li>
+                                <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
+                                <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">Blog</Link></li>
+                                <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
                             </ul>
                         </div>
                         <div>
                             <h3 className="font-semibold mb-4">Resources</h3>
                             <ul className="space-y-2">
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Recipes</a></li>
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">FAQs</a></li>
+                                <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">Recipes</Link></li>
+                                <li><Link href="/faq" className="text-sm text-muted-foreground hover:text-primary">FAQs</Link></li>
                                 <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Shipping</a></li>
                             </ul>
                         </div>
