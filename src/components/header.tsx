@@ -52,7 +52,7 @@ export function Header() {
             </SheetTrigger>
           </CartSheet>
         </nav>
-        <div className="flex items-center gap-4 ml-4">
+        <div className="flex items-center gap-2 ml-4">
           <LanguageToggle />
           <Sheet>
             <SheetTrigger asChild>
@@ -62,7 +62,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-               <nav className="grid gap-6 text-lg font-medium mt-10">
+               <nav className="grid gap-4 text-base font-medium mt-10">
                  <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
                     <Leaf className="h-6 w-6 text-primary" />
                     <span className="font-headline text-2xl font-bold">{uiStrings.spiceverse[language]}</span>
@@ -77,7 +77,7 @@ export function Header() {
                         <a className="text-muted-foreground hover:text-foreground flex items-center gap-2">
                             Cart
                             {itemCount > 0 && (
-                                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                                <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
                                     {itemCount}
                                 </span>
                             )}

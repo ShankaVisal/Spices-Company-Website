@@ -39,25 +39,25 @@ export default function ContactPage() {
         <section className="w-full py-16 md:py-24">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid md:grid-cols-2 gap-12">
-                    <div>
-                        <h2 className="text-3xl md:text-4xl font-headline font-bold mb-8">Contact Information</h2>
+                    <div className="space-y-8">
+                        <h2 className="text-3xl md:text-4xl font-headline font-bold">Contact Information</h2>
                         <div className="space-y-6">
                             <div className="flex items-start gap-4">
-                                <Mail className="h-6 w-6 text-primary mt-1"/>
+                                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Email</h3>
                                     <p className="text-muted-foreground">hello@spiceverse.com</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
-                                <Phone className="h-6 w-6 text-primary mt-1"/>
+                                <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Phone</h3>
                                     <p className="text-muted-foreground">+94 11 234 5678</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
-                                <MapPin className="h-6 w-6 text-primary mt-1"/>
+                                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Address</h3>
                                     <p className="text-muted-foreground">123 Spice Grove, Colombo, Sri Lanka</p>

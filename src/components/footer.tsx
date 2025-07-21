@@ -22,7 +22,7 @@ export function Footer() {
                             {uiStrings.heroSlogan[language]}
                         </p>
                     </div>
-                    <div className="md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="md:col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-8">
                         <div>
                             <h3 className="font-semibold mb-4">Products</h3>
                             <ul className="space-y-2">

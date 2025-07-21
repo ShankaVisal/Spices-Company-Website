@@ -21,11 +21,11 @@ export default function GalleryPage() {
 
         <section className="w-full py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col gap-20">
+            <div className="flex flex-col gap-12 md:gap-20">
               {products.map((product, index) => (
                 <div
                   key={product.id}
-                  className="grid md:grid-cols-2 gap-12 items-center"
+                  className="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
                 >
                   <div
                     className={`relative aspect-square rounded-xl overflow-hidden shadow-lg ${
