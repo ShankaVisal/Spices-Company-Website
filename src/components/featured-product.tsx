@@ -27,9 +27,6 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
   return (
     <section className="w-full py-16 md:py-24 lg:py-32 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-5xl font-headline font-bold text-center mb-12 md:mb-16">
-          Featured Product
-        </h2>
         <Card className="overflow-hidden shadow-xl border-2 border-primary/20">
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2">
