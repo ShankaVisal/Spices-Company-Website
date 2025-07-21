@@ -19,9 +19,18 @@ const SuggestRecipesInputSchema = z.object({
 export type SuggestRecipesInput = z.infer<typeof SuggestRecipesInputSchema>;
 
 const RecipeSchema = z.object({
-  title: z.string().describe('The title of the recipe.'),
-  ingredients: z.array(z.string()).describe('The ingredients required for the recipe.'),
-  instructions: z.string().describe('The instructions for the recipe.'),
+  title: z.object({
+    en: z.string().describe('The English title of the recipe.'),
+    si: z.string().describe('The Sinhala title of the recipe.'),
+  }),
+  ingredients: z.array(z.object({
+    en: z.string().describe('The ingredient in English.'),
+    si: z.string().describe('The ingredient in Sinhala.'),
+  })).describe('The ingredients for the recipe, in both English and Sinhala.'),
+  instructions: z.object({
+    en: z.string().describe('The instructions for the recipe in English.'),
+    si: z.string().describe('The instructions for the recipe in Sinhala.'),
+  }),
   url: z.string().describe('The URL of the recipe.'),
 });
 
@@ -42,7 +51,10 @@ const prompt = ai.definePrompt({
 
 You will use this information to find recipes that use the spices.
 
-You should suggest multiple options from a third party API, linking to full recipes. Return a JSON object containing a list of recipes.
+You should suggest multiple options from a third party API, linking to full recipes. 
+You MUST provide all text content (titles, ingredients, instructions) in both English and Sinhala.
+
+Return a JSON object containing a list of recipes.
 
 Spices: {{{spices}}}
 `,

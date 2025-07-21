@@ -18,8 +18,17 @@ export interface CartItem extends Product {
 }
 
 export interface Recipe {
-  title: string;
-  ingredients: string[];
-  instructions: string;
+  title: {
+    en: string;
+    si: string;
+  };
+  ingredients: {
+    en: string;
+    si: string;
+  }[];
+  instructions: {
+    en: string;
+    si: string;
+  };
   url: string;
 }
