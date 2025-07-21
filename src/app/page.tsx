@@ -12,7 +12,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card overflow-hidden">
+        <section className="relative w-full min-h-screen flex items-center justify-center bg-card overflow-hidden">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <div className="relative z-10">
               <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
