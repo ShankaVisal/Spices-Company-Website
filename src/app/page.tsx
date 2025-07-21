@@ -34,10 +34,9 @@ export default function Home() {
               fill
               className="object-cover opacity-10 dark:opacity-5"
             />
-          </section>
-
+          </div>
+        </section>
         <ProductList products={products} />
-        
         <RecipeSuggester products={products} />
       </main>
       <Footer />
