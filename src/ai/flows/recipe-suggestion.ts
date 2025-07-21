@@ -28,8 +28,8 @@ const RecipeSchema = z.object({
     si: z.string().describe('The ingredient in Sinhala.'),
   })).describe('The ingredients for the recipe, in both English and Sinhala.'),
   instructions: z.object({
-    en: z.string().describe('The instructions for the recipe in English.'),
-    si: z.string().describe('The instructions for the recipe in Sinhala.'),
+    en: z.array(z.string()).describe('The instructions for the recipe in English, as a list of steps.'),
+    si: z.array(z.string()).describe('The instructions for the recipe in Sinhala, as a list of steps.'),
   }),
   url: z.string().describe('The URL of the recipe.'),
 });
@@ -53,6 +53,7 @@ You will use this information to find recipes that use the spices.
 
 You should suggest multiple options from a third party API, linking to full recipes. 
 You MUST provide all text content (titles, ingredients, instructions) in both English and Sinhala.
+The instructions should be provided as an array of strings, where each string is a separate step.
 
 Return a JSON object containing a list of recipes.
 

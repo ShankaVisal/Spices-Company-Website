@@ -27,8 +27,8 @@ export interface Recipe {
     si: string;
   }[];
   instructions: {
-    en: string;
-    si: string;
+    en: string[];
+    si: string[];
   };
   url: string;
 }

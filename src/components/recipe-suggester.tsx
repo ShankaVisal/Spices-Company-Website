@@ -106,7 +106,10 @@ export function RecipeSuggester({ products }: RecipeSuggesterProps) {
                        <ul className="list-disc list-inside text-sm text-muted-foreground mb-4">
                          {recipe.ingredients.map((ing, i) => <li key={i}>{ing[language]}</li>)}
                        </ul>
-                       <p className="text-sm text-muted-foreground">{recipe.instructions[language]}</p>
+                       <p className="font-semibold mb-2">Instructions:</p>
+                        <ol className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
+                            {recipe.instructions[language].map((step, i) => <li key={i}>{step}</li>)}
+                        </ol>
                      </CardContent>
                    </Card>
                 ))}
