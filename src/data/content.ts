@@ -34,18 +34,21 @@ export const newsAndEvents: NewsEvent[] = [
     title: 'New Organic Spice Line Launched',
     date: 'August 15, 2024',
     description: 'We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms.',
+    content: 'We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms. This collection features our most popular spices, now available with organic certification, ensuring the purest quality and taste. We believe in supporting farming practices that are good for you and for the planet.'
   },
   {
     id: 2,
     title: 'Spiceverse at the Good Food Show',
     date: 'July 28, 2024',
     description: 'Come visit our booth at the International Good Food Show in London. We will be offering samples and special discounts.',
+    content: 'Come visit our booth at the International Good Food Show in London. We will be offering samples of our latest products, special event-only discounts, and live cooking demonstrations. Meet the team and experience the world of Spiceverse firsthand!'
   },
   {
     id: 3,
     title: 'Cooking Workshop: The Art of Curry',
     date: 'June 05, 2024',
     description: 'Join our masterclass on creating the perfect Sri Lankan curry. Limited spots available, book now!',
+    content: 'Join our masterclass on creating the perfect Sri Lankan curry. This hands-on workshop will guide you through the essential techniques and spice blends to create an authentic and delicious curry. Limited spots are available, so book now to avoid disappointment!'
   },
 ];
 
@@ -55,20 +58,23 @@ export const blogPosts: BlogPost[] = [
     title: 'The Health Benefits of Turmeric',
     category: 'Wellness',
     image: 'https://placehold.co/600x400.png',
-    aiHint: 'turmeric drink'
+    aiHint: 'turmeric drink',
+    content: "Turmeric, the golden spice, has been used for centuries in traditional medicine. Its active compound, curcumin, is a powerful antioxidant and has anti-inflammatory properties. Studies suggest that turmeric can help improve heart health, brain function, and may even have cancer-fighting properties. Incorporating a teaspoon of turmeric into your daily diet, whether in a curry, a smoothie, or a warm latte, can be a delicious way to boost your overall health."
   },
   {
     id: 2,
     title: 'A Guide to Ceylon vs. Cassia Cinnamon',
     category: 'Education',
     image: 'https://placehold.co/600x400.png',
-    aiHint: 'cinnamon types'
+    aiHint: 'cinnamon types',
+    content: "Not all cinnamon is created equal. Ceylon cinnamon, often called 'true cinnamon,' comes from Sri Lanka and has a delicate, sweet flavor. Cassia cinnamon, the more common variety, has a stronger, spicier flavor. Besides taste, the key difference lies in the coumarin content. Cassia has high levels of coumarin, which can be harmful in large doses, while Ceylon cinnamon has only trace amounts. For health-conscious consumers and culinary enthusiasts, Ceylon cinnamon is the superior choice."
   },
   {
     id: 3,
     title: 'Recipe: Authentic Sri Lankan Chicken Curry',
     category: 'Recipes',
     image: 'https://placehold.co/600x400.png',
-    aiHint: 'chicken curry'
+    aiHint: 'chicken curry',
+    content: "Ready to make a truly authentic Sri Lankan chicken curry? You'll need our special unroasted curry powder, coconut milk, and a blend of our finest spices like cardamom, cloves, and cinnamon. Sauté onions, garlic, and ginger, then add the chicken and spices. Let it simmer in coconut milk until the chicken is tender and the flavors have melded together beautifully. Serve with hot rice for a meal that will transport you to the heart of Sri Lanka."
   },
 ];

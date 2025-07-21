@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { BlogPost } from '@/lib/types';
+import Link from 'next/link';
 
 interface BlogSectionProps {
   posts: BlogPost[];
@@ -33,8 +34,10 @@ export function BlogSection({ posts }: BlogSectionProps) {
               <CardContent className="p-6 flex-1 flex flex-col">
                 <p className="text-sm text-muted-foreground mb-2">{post.category}</p>
                 <h3 className="font-headline text-xl font-bold mb-3 flex-1">{post.title}</h3>
-                <Button variant="secondary" className="mt-auto self-start">
-                  Read Post <ArrowRight className="ml-2" />
+                <Button variant="secondary" className="mt-auto self-start" asChild>
+                  <Link href={`/blog/${post.id}`}>
+                    Read Post <ArrowRight className="ml-2" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>

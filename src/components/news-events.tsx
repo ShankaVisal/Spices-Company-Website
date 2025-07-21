@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { NewsEvent } from '@/lib/types';
+import Link from 'next/link';
 
 interface NewsEventsProps {
   events: NewsEvent[];
@@ -26,8 +27,10 @@ export function NewsEvents({ events }: NewsEventsProps) {
                 <CardDescription>{event.description}</CardDescription>
               </CardContent>
               <div className="p-6 pt-0">
-                <Button variant="link" className="p-0 h-auto">
-                  Read More <ArrowRight className="ml-2 h-4 w-4" />
+                <Button variant="link" className="p-0 h-auto" asChild>
+                  <Link href={`/news/${event.id}`}>
+                    Read More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
             </Card>

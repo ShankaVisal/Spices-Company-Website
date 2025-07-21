@@ -45,6 +45,7 @@ export interface NewsEvent {
     title: string;
     date: string;
     description: string;
+    content: string;
 }
 
 export interface BlogPost {
@@ -53,4 +54,5 @@ export interface BlogPost {
     category: string;
     image: string;
     aiHint: string;
+    content: string;
 }
