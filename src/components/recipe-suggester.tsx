@@ -106,7 +106,7 @@ export function RecipeSuggester({ products }: RecipeSuggesterProps) {
                        <ul className="list-disc list-inside text-sm text-muted-foreground mb-4">
                          {recipe.ingredients.map((ing, i) => <li key={i}>{ing[language]}</li>)}
                        </ul>
-                       <p className="text-sm text-muted-foreground line-clamp-3">{recipe.instructions[language]}</p>
+                       <p className="text-sm text-muted-foreground">{recipe.instructions[language]}</p>
                      </CardContent>
                      <CardFooter>
                        <Button asChild variant="link" className="p-0 h-auto">
