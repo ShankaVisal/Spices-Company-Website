@@ -46,12 +46,27 @@ export default function Home() {
             />
           </div>
         </section>
-        <ProductList products={products} />
+        <ProductList products={products.slice(0, 3)} title="Our Most Popular Spices" />
+        <div className="text-center -mt-8 mb-16">
+            <Button asChild variant="outline">
+                <Link href="/products">View All Products</Link>
+            </Button>
+        </div>
         <FeaturedProduct product={featuredProduct} />
         <Testimonials testimonials={testimonials} />
         <PhotoGallery images={galleryImages} />
-        <NewsEvents events={newsAndEvents} />
-        <BlogSection posts={blogPosts} />
+        <NewsEvents events={newsAndEvents.slice(0, 3)} />
+         <div className="text-center -mt-16 mb-16">
+            <Button asChild variant="outline">
+                <Link href="/news">View All News & Events</Link>
+            </Button>
+        </div>
+        <BlogSection posts={blogPosts.slice(0, 3)} />
+         <div className="text-center -mt-16 mb-24">
+            <Button asChild variant="outline">
+                <Link href="/blog">View All Posts</Link>
+            </Button>
+        </div>
         <RecipeSuggester products={products} />
       </main>
       <Footer />
