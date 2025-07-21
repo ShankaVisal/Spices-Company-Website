@@ -86,36 +86,36 @@ export function RecipeSuggester({ products }: RecipeSuggesterProps) {
             </CardContent>
           </Card>
           
-          {(recipes.length > 0 || error) && (
-            <div className="mt-8">
+          <div className="mt-8">
+            {(recipes.length > 0 || error) && (
               <h3 className="text-2xl font-headline font-bold text-center mb-6">{uiStrings.suggestions[language]}</h3>
-              {error && (
-                <Alert variant="destructive">
-                  <AlertTitle>Error</AlertTitle>
-                  <AlertDescription>{error}</AlertDescription>
-                </Alert>
-              )}
-              <div className="grid gap-6">
-                {recipes.map((recipe, index) => (
-                   <Card key={index} className="overflow-hidden">
-                     <CardHeader>
-                       <CardTitle>{recipe.title[language]}</CardTitle>
-                     </CardHeader>
-                     <CardContent>
-                       <p className="font-semibold mb-2">Ingredients:</p>
-                       <ul className="list-disc list-inside text-sm text-muted-foreground mb-4">
-                         {recipe.ingredients.map((ing, i) => <li key={i}>{ing[language]}</li>)}
-                       </ul>
-                       <p className="font-semibold mb-2">Instructions:</p>
-                        <ol className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
-                            {recipe.instructions[language].map((step, i) => <li key={i}>{step}</li>)}
-                        </ol>
-                     </CardContent>
-                   </Card>
-                ))}
-              </div>
+            )}
+            {error && (
+              <Alert variant="destructive">
+                <AlertTitle>Error</AlertTitle>
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+            <div className="grid gap-6">
+              {recipes.map((recipe, index) => (
+                 <Card key={index} className="overflow-hidden">
+                   <CardHeader>
+                     <CardTitle>{recipe.title[language]}</CardTitle>
+                   </CardHeader>
+                   <CardContent>
+                     <p className="font-semibold mb-2">Ingredients:</p>
+                     <ul className="list-disc list-inside text-sm text-muted-foreground mb-4">
+                       {recipe.ingredients.map((ing, i) => <li key={i}>{ing[language]}</li>)}
+                     </ul>
+                     <p className="font-semibold mb-2">Instructions:</p>
+                      <ol className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
+                          {recipe.instructions[language].map((step, i) => <li key={i}>{step}</li>)}
+                      </ol>
+                   </CardContent>
+                 </Card>
+              ))}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>
