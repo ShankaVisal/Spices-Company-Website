@@ -46,7 +46,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <ProductList products={products.slice(0, 3)} title="Our Most Popular Spices" />
+        <ProductList products={products.slice(0, 6)} title="Our Most Popular Spices" />
         <div className="text-center -mt-8 mb-16">
             <Button asChild variant="outline">
                 <Link href="/products">View All Products</Link>
