@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 const navLinks = [
   { href: '/about', label: { en: 'About Us', si: 'අප ගැන' } },
   { href: '/products', label: { en: 'Products', si: 'නිෂ්පාදන' } },
+  { href: '/gallery', label: { en: 'Gallery', si: 'ගැලරිය' } },
   { href: '/blog', label: { en: 'Blog', si: 'බ්ලොග්' } },
   { href: '/news', label: { en: 'News & Events', si: 'පුවත් සහ සිදුවීම්' } },
   { href: '/contact', label: { en: 'Contact', si: 'සම්බන්ධ වන්න' } },

@@ -35,6 +35,7 @@ export function Footer() {
                             <h3 className="font-semibold mb-4">Company</h3>
                             <ul className="space-y-2">
                                 <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
+                                <li><Link href="/gallery" className="text-sm text-muted-foreground hover:text-primary">Gallery</Link></li>
                                 <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">Blog</Link></li>
                                 <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
                             </ul>
