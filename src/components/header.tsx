@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { LanguageToggle } from '@/components/language-toggle';
 import { useApp } from '@/hooks/use-app';
 import { uiStrings } from '@/data/products';
-import { Leaf, Menu } from 'lucide-react';
+import { Leaf, Menu, ShoppingCart } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
+import { CartSheet } from '@/components/cart-sheet';
 
 const navLinks = [
   { href: '/about', label: { en: 'About Us', si: 'අප ගැන' } },
@@ -19,8 +20,9 @@ const navLinks = [
 ];
 
 export function Header() {
-  const { language } = useApp();
-  
+  const { language, cart } = useApp();
+  const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -36,6 +38,19 @@ export function Header() {
               {link.label[language]}
             </Link>
           ))}
+          <CartSheet>
+            <SheetTrigger asChild>
+                <Button variant="ghost" className="relative">
+                    <ShoppingCart className="h-5 w-5" />
+                    <span className="sr-only">View Cart</span>
+                    {itemCount > 0 && (
+                         <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                            {itemCount}
+                        </span>
+                    )}
+                </Button>
+            </SheetTrigger>
+          </CartSheet>
         </nav>
         <div className="flex items-center gap-4 ml-4">
           <LanguageToggle />
@@ -57,6 +72,18 @@ export function Header() {
                     {link.label[language]}
                   </Link>
                 ))}
+                  <CartSheet>
+                    <SheetTrigger asChild>
+                        <a className="text-muted-foreground hover:text-foreground flex items-center gap-2">
+                            Cart
+                            {itemCount > 0 && (
+                                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                                    {itemCount}
+                                </span>
+                            )}
+                        </a>
+                    </SheetTrigger>
+                </CartSheet>
               </nav>
             </SheetContent>
           </Sheet>

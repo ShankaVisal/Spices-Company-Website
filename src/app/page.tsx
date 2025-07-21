@@ -2,7 +2,6 @@ import { ProductList } from '@/components/product-list';
 import { RecipeSuggester } from '@/components/recipe-suggester';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { CartSheet } from '@/components/cart-sheet';
 import { products } from '@/data/products';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -13,6 +12,7 @@ import { NewsEvents } from '@/components/news-events';
 import { BlogSection } from '@/components/blog-section';
 import { testimonials, galleryImages, newsAndEvents, blogPosts } from '@/data/content';
 import Link from 'next/link';
+import { CartSheet } from '@/components/cart-sheet';
 
 
 export default function Home() {

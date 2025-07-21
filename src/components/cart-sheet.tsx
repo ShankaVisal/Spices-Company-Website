@@ -11,10 +11,10 @@ import { Separator } from './ui/separator';
 
 const WHATSAPP_NUMBER = '1234567890'; // Replace with a valid WhatsApp number
 
-export function CartSheet() {
+export function CartSheet({ children }: { children?: React.ReactNode }) {
   const { language, cart, updateQuantity, clearCart } = useApp();
   const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const totalPrice = cart.reduce((sum, item) => sum + item.quantity * item.price, 0);
 
   const handleOrder = () => {
     const header = `Hello ${uiStrings.spiceverse[language]}! I would like to order:\n\n`;
@@ -24,25 +24,28 @@ export function CartSheet() {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
   };
 
-  if (itemCount === 0) {
-    return null;
-  }
+  const CartTrigger = children ? (
+    children
+  ) : (
+    <SheetTrigger asChild>
+      <Button
+        className="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-lg z-50 flex items-center justify-center bg-accent hover:bg-accent/90"
+        size="icon"
+        aria-label={`View cart with ${itemCount} items`}
+      >
+        <ShoppingCart className="h-8 w-8 text-accent-foreground" />
+        <span className="absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+          {itemCount}
+        </span>
+      </Button>
+    </SheetTrigger>
+  );
+
 
   return (
     <>
       <Sheet>
-        <SheetTrigger asChild>
-          <Button
-            className="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-lg z-50 flex items-center justify-center bg-accent hover:bg-accent/90"
-            size="icon"
-            aria-label={`View cart with ${itemCount} items`}
-          >
-            <ShoppingCart className="h-8 w-8 text-accent-foreground" />
-            <span className="absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
-              {itemCount}
-            </span>
-          </Button>
-        </SheetTrigger>
+        {CartTrigger}
         <SheetContent className="flex flex-col">
           <SheetHeader>
             <SheetTitle className="font-headline text-2xl">{uiStrings.cartTitle[language]}</SheetTitle>
