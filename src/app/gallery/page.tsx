@@ -2,8 +2,6 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { products } from '@/data/products';
 import Image from 'next/image';
-import { useApp } from '@/hooks/use-app';
-import { ProductCard } from '@/components/product-card';
 
 export default function GalleryPage() {
   return (
@@ -46,11 +44,8 @@ export default function GalleryPage() {
                     <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
                       {product.name.en}
                     </h2>
-                    <p className="text-muted-foreground text-lg mb-6">
+                    <p className="text-muted-foreground text-lg">
                       {product.description.en}
-                    </p>
-                     <p className="text-2xl font-bold text-primary">
-                      LKR {product.price.toFixed(2)}
                     </p>
                   </div>
                 </div>
