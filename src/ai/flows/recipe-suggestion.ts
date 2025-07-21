@@ -22,7 +22,7 @@ const RecipeSchema = z.object({
   title: z.string().describe('The title of the recipe.'),
   ingredients: z.array(z.string()).describe('The ingredients required for the recipe.'),
   instructions: z.string().describe('The instructions for the recipe.'),
-  url: z.string().url().describe('The URL of the recipe.'),
+  url: z.string().describe('The URL of the recipe.'),
 });
 
 const SuggestRecipesOutputSchema = z.object({
