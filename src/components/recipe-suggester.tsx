@@ -108,13 +108,6 @@ export function RecipeSuggester({ products }: RecipeSuggesterProps) {
                        </ul>
                        <p className="text-sm text-muted-foreground">{recipe.instructions[language]}</p>
                      </CardContent>
-                     <CardFooter>
-                       <Button asChild variant="link" className="p-0 h-auto">
-                         <a href={recipe.url} target="_blank" rel="noopener noreferrer">
-                           {uiStrings.viewRecipe[language]}
-                         </a>
-                       </Button>
-                     </CardFooter>
                    </Card>
                 ))}
               </div>
