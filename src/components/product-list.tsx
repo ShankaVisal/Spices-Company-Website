@@ -1,0 +1,29 @@
+'use client';
+
+import { ProductCard } from './product-card';
+import type { Product } from '@/lib/types';
+import { useApp } from '@/hooks/use-app';
+import { uiStrings } from '@/data/products';
+
+interface ProductListProps {
+  products: Product[];
+}
+
+export function ProductList({ products }: ProductListProps) {
+  const { language } = useApp();
+
+  return (
+    <section id="products" className="w-full py-12 md:py-20 lg:py-24">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-8 md:mb-12">
+          {uiStrings.ourProducts[language]}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
