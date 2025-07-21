@@ -32,3 +32,25 @@ export interface Recipe {
   };
   url: string;
 }
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  location: string;
+  quote: string;
+}
+
+export interface NewsEvent {
+    id: number;
+    title: string;
+    date: string;
+    description: string;
+}
+
+export interface BlogPost {
+    id: number;
+    title: string;
+    category: string;
+    image: string;
+    aiHint: string;
+}

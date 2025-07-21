@@ -6,8 +6,17 @@ import { CartSheet } from '@/components/cart-sheet';
 import { products } from '@/data/products';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import { FeaturedProduct } from '@/components/featured-product';
+import { Testimonials } from '@/components/testimonials';
+import { PhotoGallery } from '@/components/photo-gallery';
+import { NewsEvents } from '@/components/news-events';
+import { BlogSection } from '@/components/blog-section';
+import { testimonials, galleryImages, newsAndEvents, blogPosts } from '@/data/content';
+
 
 export default function Home() {
+  const featuredProduct = products[0];
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -37,6 +46,11 @@ export default function Home() {
           </div>
         </section>
         <ProductList products={products} />
+        <FeaturedProduct product={featuredProduct} />
+        <Testimonials testimonials={testimonials} />
+        <PhotoGallery images={galleryImages} />
+        <NewsEvents events={newsAndEvents} />
+        <BlogSection posts={blogPosts} />
         <RecipeSuggester products={products} />
       </main>
       <Footer />
