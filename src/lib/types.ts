@@ -56,3 +56,17 @@ export interface BlogPost {
     aiHint: string;
     content: string;
 }
+
+export interface GalleryContent {
+  id: number;
+  title: {
+    en: string;
+    si: string;
+  };
+  description: {
+    en: string;
+    si: string;
+  };
+  image: string;
+  aiHint: string;
+}

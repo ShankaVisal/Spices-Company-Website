@@ -1,6 +1,6 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { products } from '@/data/products';
+import { galleryContent } from '@/data/content';
 import Image from 'next/image';
 
 export default function GalleryPage() {
@@ -22,9 +22,9 @@ export default function GalleryPage() {
         <section className="w-full py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col gap-12 md:gap-20">
-              {products.map((product, index) => (
+              {galleryContent.map((item, index) => (
                 <div
-                  key={product.id}
+                  key={item.id}
                   className="grid md:grid-cols-2 gap-8 md:gap-12 items-center"
                 >
                   <div
@@ -33,19 +33,19 @@ export default function GalleryPage() {
                     }`}
                   >
                     <Image
-                      src={product.image}
-                      alt={product.name.en}
-                      data-ai-hint={product.aiHint}
+                      src={item.image}
+                      alt={item.title.en}
+                      data-ai-hint={item.aiHint}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="text-center md:text-left">
                     <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
-                      {product.name.en}
+                      {item.title.en}
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                      {product.description.en}
+                      {item.description.en}
                     </p>
                   </div>
                 </div>
