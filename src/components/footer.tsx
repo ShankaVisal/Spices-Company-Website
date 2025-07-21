@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useApp } from '@/hooks/use-app';
 import { uiStrings } from '@/data/products';
-import { Leaf, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Leaf, Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { TiktokIcon } from './icons/tiktok-icon';
 
 export function Footer() {
     const { language } = useApp();
@@ -54,6 +55,8 @@ export function Footer() {
                                 <a href="#" className="text-muted-foreground hover:text-primary"><Twitter /></a>
                                 <a href="#" className="text-muted-foreground hover:text-primary"><Facebook /></a>
                                 <a href="#" className="text-muted-foreground hover:text-primary"><Instagram /></a>
+                                <a href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
+                                <a href="#" className="text-muted-foreground hover:text-primary"><TiktokIcon className="h-6 w-6" /></a>
                             </div>
                         </div>
                     </div>
