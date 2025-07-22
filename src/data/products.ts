@@ -6,7 +6,7 @@ export const products: Product[] = [
     name: { en: 'Cinnamon Sticks', si: 'කුරුඳු පොතු' },
     description: { en: 'Premium quality Ceylon cinnamon sticks, perfect for both sweet and savory dishes.', si: 'පැණිරස හා රසවත් කෑම සඳහා සුදුසු, උසස් තත්ත්වයේ ලංකා කුරුඳු පොතු.' },
     price: 500,
-    image: 'https://placehold.co/600x600.png',
+    image: 'https://i.pinimg.com/736x/1f/b4/58/1fb458655de3143913c5a0db00921b9f.jpg',
     aiHint: 'cinnamon sticks'
   },
   {
@@ -14,7 +14,7 @@ export const products: Product[] = [
     name: { en: 'Whole Cloves', si: 'කරාබු නැටි' },
     description: { en: 'Aromatic whole cloves that add a warm, sweet flavor to your culinary creations.', si: 'ඔබේ සූපශාස්ත්‍ර නිර්මාණවලට උණුසුම්, මිහිරි රසයක් එක් කරන සුවඳැති කරාබු නැටි.' },
     price: 350,
-    image: 'https://placehold.co/600x600.png',
+    image: 'https://i.pinimg.com/736x/63/3c/5e/633c5e2d6fd7b4b516d10c11c4451c24.jpg',
     aiHint: 'cloves spice'
   },
   {
@@ -22,7 +22,7 @@ export const products: Product[] = [
     name: { en: 'Turmeric Powder', si: 'කහ කුඩු' },
     description: { en: 'Vibrant and earthy turmeric powder, a staple in Sri Lankan cooking for color and health benefits.', si: 'වර්ණය සහ සෞඛ්‍ය ප්‍රතිලාභ සඳහා ශ්‍රී ලාංකේය ඉවුම් පිහුම් වල ප්‍රධානතම, විචිත්‍රවත් සහ පස් රසැති කහ කුඩු.' },
     price: 400,
-    image: 'https://placehold.co/600x600.png',
+    image: 'https://i.pinimg.com/736x/17/91/e4/1791e458518b0910d9d41af5d99fbdeb.jpg',
     aiHint: 'turmeric powder'
   },
   {
@@ -30,7 +30,7 @@ export const products: Product[] = [
     name: { en: 'Black Peppercorns', si: 'කළු ගම්මිරිස්' },
     description: { en: 'Fiery and pungent whole black peppercorns to add a bold kick to any dish.', si: 'ඕනෑම කෑමකට තද රසයක් එක් කිරීමට සැර සහ තියුණු කළු ගම්මිරිස් ඇට.' },
     price: 600,
-    image: 'https://placehold.co/600x600.png',
+    image: 'https://i.pinimg.com/736x/74/32/ae/7432aed93e936f510a8d9be50aa90074.jpg',
     aiHint: 'black peppercorns'
   },
   {
@@ -38,7 +38,7 @@ export const products: Product[] = [
     name: { en: 'Cardamom Pods', si: 'කරදමුංගු' },
     description: { en: 'Fragrant green cardamom pods, offering a complex blend of minty, spicy, and citrusy notes.', si: 'මින්ටි, කුළුබඩු සහ පැඟිරි සටහන් වල සංකීර්ණ මිශ්‍රණයක් ලබා දෙන සුවඳැති කොළ කරදමුංගු කරල්.' },
     price: 750,
-    image: 'https://placehold.co/600x600.png',
+    image: 'https://i.pinimg.com/736x/28/c6/48/28c648b0a74979111f737955b05d05cd.jpg',
     aiHint: 'cardamom pods'
   },
 ];
