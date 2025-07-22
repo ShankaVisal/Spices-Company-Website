@@ -22,7 +22,7 @@ export const products: Product[] = [
     name: { en: 'Turmeric Powder', si: 'කහ කුඩු' },
     description: { en: 'Vibrant and earthy turmeric powder, a staple in Sri Lankan cooking for color and health benefits.', si: 'වර්ණය සහ සෞඛ්‍ය ප්‍රතිලාභ සඳහා ශ්‍රී ලාංකේය ඉවුම් පිහුම් වල ප්‍රධානතම, විචිත්‍රවත් සහ පස් රසැති කහ කුඩු.' },
     price: 400,
-    image: 'https://i.pinimg.com/736x/17/91/e4/1791e458518b0910d9d41af5d99fbdeb.jpg',
+    image: 'https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     aiHint: 'turmeric powder'
   },
   {
