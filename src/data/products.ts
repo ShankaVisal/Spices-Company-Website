@@ -14,7 +14,7 @@ export const products: Product[] = [
     name: { en: 'Whole Cloves', si: 'කරාබු නැටි' },
     description: { en: 'Aromatic whole cloves that add a warm, sweet flavor to your culinary creations.', si: 'ඔබේ සූපශාස්ත්‍ර නිර්මාණවලට උණුසුම්, මිහිරි රසයක් එක් කරන සුවඳැති කරාබු නැටි.' },
     price: 350,
-    image: 'https://placehold.co/600x600.png',
+    image: 'https://i.pinimg.com/736x/63/3c/5e/633c5e2d6fd7b4b516d10c11c4451c24.jpg',
     aiHint: 'cloves spice'
   },
   {
@@ -38,7 +38,7 @@ export const products: Product[] = [
     name: { en: 'Cardamom Pods', si: 'කරදමුංගු' },
     description: { en: 'Fragrant green cardamom pods, offering a complex blend of minty, spicy, and citrusy notes.', si: 'මින්ටි, කුළුබඩු සහ පැඟිරි සටහන් වල සංකීර්ණ මිශ්‍රණයක් ලබා දෙන සුවඳැති කොළ කරදමුංගු කරල්.' },
     price: 750,
-    image: 'https://placehold.co/600x600.png',
+    image: 'https://i.pinimg.com/736x/28/c6/48/28c648b0a74979111f737955b05d05cd.jpg',
     aiHint: 'cardamom pods'
   },
 ];

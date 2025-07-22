@@ -25,10 +25,10 @@ export default function Home() {
         <section className="relative w-full min-h-screen flex items-center justify-center bg-card overflow-hidden">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <div className="relative z-10">
-              <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
+              <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
                 Welcome to Spiceverse
               </h1>
-              <p className="mt-4 md:mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+              <p className="mt-4 md:mt-6 max-w-2xl mx-auto text-lg md:text-xl text-white">
                 The authentic taste of Sri Lanka, delivered to your kitchen.
               </p>
               <div className="mt-8">
@@ -38,11 +38,11 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="https://placehold.co/1200x600.png"
+              src="https://i.pinimg.com/1200x/a0/ef/0e/a0ef0e256f2895a1559b47464d5e07a3.jpg"
               alt="Spices background"
               data-ai-hint="spices Sri Lanka"
               fill
-              className="object-cover opacity-10 dark:opacity-5"
+              className="object-cover opacity-3 dark:opacity-1"
             />
           </div>
         </section>

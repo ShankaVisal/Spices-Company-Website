@@ -25,7 +25,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://placehold.co/600x600.png"
+                  src="https://i.pinimg.com/736x/be/b9/55/beb9559c9d6b4ebadd68dde27a66760f.jpg"
                   alt="Our Team"
                   data-ai-hint="team smiling"
                   fill
