@@ -38,7 +38,7 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="https://i.pinimg.com/1200x/7d/39/87/7d39872a743937dd9bdb3ee899a11daa.jpg"
+              src="https://i.pinimg.com/736x/57/b1/69/57b169156c38776167938afd08259b1a.jpg"
               alt="Spices background"
               data-ai-hint="spices Sri Lanka"
               fill
