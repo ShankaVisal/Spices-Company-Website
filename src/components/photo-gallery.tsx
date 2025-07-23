@@ -2,12 +2,18 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay"
+import React from 'react';
 
 interface PhotoGalleryProps {
   images: { src: string; alt: string; hint: string; }[];
 }
 
 export function PhotoGallery({ images }: PhotoGalleryProps) {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+
   return (
     <section className="w-full py-12 md:py-20 lg:py-24 bg-card">
       <div className="container mx-auto px-4 md:px-6">
@@ -15,11 +21,14 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
           Gallery
         </h2>
         <Carousel
+          plugins={[plugin.current]}
           opts={{
             align: "start",
             loop: true,
           }}
           className="w-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {images.map((image, index) => (
