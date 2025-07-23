@@ -27,7 +27,7 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
                 <div className="p-1">
                   <Card className="overflow-hidden">
                     <CardContent className="p-0">
-                       <div className="relative aspect-video">
+                       <div className="relative aspect-video md:aspect-square">
                         <Image
                           src={image.src}
                           alt={image.alt}
