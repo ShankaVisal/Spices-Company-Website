@@ -1,5 +1,7 @@
 'use client';
 import Image from 'next/image';
+import { Card, CardContent } from '@/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 interface PhotoGalleryProps {
   images: { src: string; alt: string; hint: string; }[];
@@ -12,19 +14,37 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
         <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-8 md:mb-12">
           Gallery
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {images.map((image, index) => (
-            <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-              <Image 
-                src={image.src}
-                alt={image.alt}
-                data-ai-hint={image.hint}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {images.map((image, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card className="overflow-hidden">
+                    <CardContent className="p-0">
+                       <div className="relative aspect-video">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          data-ai-hint={image.hint}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   );
