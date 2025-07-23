@@ -8,15 +8,23 @@ export default function GalleryPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-32 bg-card">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-foreground">
+        <section className="relative w-full py-20 md:py-32">
+          <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-white">
               Our Spice Stories
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-white/90">
               A closer look at the heart of our collection.
             </p>
           </div>
+          <Image
+              src="https://placehold.co/1920x1080.png"
+              alt="Gallery background"
+              data-ai-hint="photo album"
+              fill
+              className="object-cover object-center absolute inset-0 z-0 opacity-40"
+          />
+          <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>
 
         <section className="w-full py-16 md:py-24">

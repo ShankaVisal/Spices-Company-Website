@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { NewsEvents } from '@/components/news-events';
 import { newsAndEvents } from '@/data/content';
+import Image from 'next/image';
 
 
 export default function NewsPage() {
@@ -9,15 +10,23 @@ export default function NewsPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-32 bg-card">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-foreground">
+        <section className="relative w-full py-20 md:py-32">
+          <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-white">
               News & Events
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-white/90">
               Stay up-to-date with the latest happenings at Spiceverse.
             </p>
           </div>
+           <Image
+              src="https://placehold.co/1920x1080.png"
+              alt="News background"
+              data-ai-hint="newspaper"
+              fill
+              className="object-cover object-center absolute inset-0 z-0 opacity-40"
+            />
+             <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>
         <NewsEvents events={newsAndEvents} />
       </main>
