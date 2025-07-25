@@ -41,6 +41,14 @@ export const products: Product[] = [
     image: 'https://i.pinimg.com/736x/28/c6/48/28c648b0a74979111f737955b05d05cd.jpg',
     aiHint: 'cardamom pods'
   },
+  {
+    id: 6,
+    name: { en: 'Black Garcinia', si: 'කළු ගොරකා' },
+    description: { en: 'Sun-dried goraka, essential for authentic Sri Lankan fish curries and other sour dishes.', si: 'හිරු එළියෙන් වියලන ලද ගොරකා, ශ්‍රී ලාංකේය මාළු කරි සහ අනෙකුත් ඇඹුල් රසැති කෑම සඳහා අත්‍යවශ්‍ය වේ.' },
+    price: 450,
+    image: 'https://i.pinimg.com/736x/0e/6b/c8/0e6bc899818814725355a1a2380598f3.jpg',
+    aiHint: 'black garcinia'
+  }
 ];
 
 export const uiStrings = {
