@@ -66,6 +66,8 @@ export interface NewsEvent {
     date: string;
     description: string;
     content: string;
+    images: string[];
+    aiHints: string[];
 }
 
 export interface BlogPost {

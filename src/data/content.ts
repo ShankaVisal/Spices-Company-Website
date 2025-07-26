@@ -58,21 +58,39 @@ export const newsAndEvents: NewsEvent[] = [
     title: 'New Organic Spice Line Launched',
     date: 'August 15, 2024',
     description: 'We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms.',
-    content: 'We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms. This collection features our most popular spices, now available with organic certification, ensuring the purest quality and taste. We believe in supporting farming practices that are good for you and for the planet.'
+    content: 'We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms. This collection features our most popular spices, now available with organic certification, ensuring the purest quality and taste. We believe in supporting farming practices that are good for you and for the planet.',
+    images: [
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png'
+    ],
+    aiHints: ['organic spices', 'sustainable farm', 'spice packaging']
   },
   {
     id: 2,
     title: 'Spiceverse at the Good Food Show',
     date: 'July 28, 2024',
     description: 'Come visit our booth at the International Good Food Show in London. We will be offering samples and special discounts.',
-    content: 'Come visit our booth at the International Good Food Show in London. We will be offering samples of our latest products, special event-only discounts, and live cooking demonstrations. Meet the team and experience the world of Spiceverse firsthand!'
+    content: 'Come visit our booth at the International Good Food Show in London. We will be offering samples of our latest products, special event-only discounts, and live cooking demonstrations. Meet the team and experience the world of Spiceverse firsthand!',
+    images: [
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png'
+    ],
+    aiHints: ['food show', 'event booth', 'cooking demonstration']
   },
   {
     id: 3,
     title: 'Cooking Workshop: The Art of Curry',
     date: 'June 05, 2024',
     description: 'Join our masterclass on creating the perfect Sri Lankan curry. Limited spots available, book now!',
-    content: 'Join our masterclass on creating the perfect Sri Lankan curry. This hands-on workshop will guide you through the essential techniques and spice blends to create an authentic and delicious curry. Limited spots are available, so book now to avoid disappointment!'
+    content: 'Join our masterclass on creating the perfect Sri Lankan curry. This hands-on workshop will guide you through the essential techniques and spice blends to create an authentic and delicious curry. Limited spots are available, so book now to avoid disappointment!',
+    images: [
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x400.png'
+    ],
+    aiHints: ['cooking workshop', 'sri lankan curry', 'people cooking']
   },
 ];
 
