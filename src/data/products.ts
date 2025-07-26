@@ -13,8 +13,12 @@ export const products: Product[] = [
         { weight: '100g', price: 900 },
         { weight: '250g', price: 2000 },
     ],
-    image: 'https://i.pinimg.com/736x/1f/b4/58/1fb458655de3143913c5a0db00921b9f.jpg',
-    aiHint: 'cinnamon sticks',
+    images: [
+        'https://i.pinimg.com/736x/1f/b4/58/1fb458655de3143913c5a0db00921b9f.jpg',
+        'https://i.pinimg.com/736x/b2/47/3c/b2473c1f0a3278d6b1a3a415a639739e.jpg',
+        'https://i.pinimg.com/736x/2b/32/73/2b32734b3e4063518bb1d8a411f14a05.jpg'
+    ],
+    aiHints: ['cinnamon sticks', 'cinnamon bundle', 'cinnamon bowl'],
     reviews: [
       { id: 1, author: 'Anusha P.', rating: 5, comment: 'The best cinnamon I have ever used. The aroma is amazing!' },
       { id: 2, author: 'John Doe', rating: 4, comment: 'Good quality, but a bit pricey.' }
@@ -31,8 +35,12 @@ export const products: Product[] = [
         { weight: '100g', price: 650 },
         { weight: '250g', price: 1500 },
     ],
-    image: 'https://i.pinimg.com/736x/63/3c/5e/633c5e2d6fd7b4b516d10c11c4451c24.jpg',
-    aiHint: 'cloves spice',
+    images: [
+        'https://i.pinimg.com/736x/63/3c/5e/633c5e2d6fd7b4b516d10c11c4451c24.jpg',
+        'https://i.pinimg.com/736x/b3/82/38/b382382e7e4529d722a106173b29c913.jpg',
+        'https://i.pinimg.com/736x/3e/a2/5b/3ea25b03511855a80cb703a893046f49.jpg'
+    ],
+    aiHints: ['cloves spice', 'cloves pile', 'cloves wood bowl'],
     reviews: [
         { id: 1, author: 'Saman Silva', rating: 5, comment: 'Very fresh and fragrant. Excellent for my biryani.'}
     ]
@@ -48,8 +56,12 @@ export const products: Product[] = [
         { weight: '100g', price: 750 },
         { weight: '250g', price: 1700 },
     ],
-    image: 'https://i.pinimg.com/736x/17/91/e4/1791e458518b0910d9d41af5d99fbdeb.jpg',
-    aiHint: 'turmeric powder'
+    images: [
+        'https://i.pinimg.com/736x/17/91/e4/1791e458518b0910d9d41af5d99fbdeb.jpg',
+        'https://i.pinimg.com/736x/43/a1/5a/43a15a73e3518043b21703131a9de125.jpg',
+        'https://i.pinimg.com/736x/9e/75/f4/9e75f4a613583236c53e01931604815a.jpg'
+    ],
+    aiHints: ['turmeric powder', 'turmeric roots', 'turmeric spoon']
   },
   {
     id: 4,
@@ -62,8 +74,12 @@ export const products: Product[] = [
         { weight: '100g', price: 1100 },
         { weight: '250g', price: 2500 },
     ],
-    image: 'https://i.pinimg.com/736x/74/32/ae/7432aed93e936f510a8d9be50aa90074.jpg',
-    aiHint: 'black peppercorns'
+    images: [
+        'https://i.pinimg.com/736x/74/32/ae/7432aed93e936f510a8d9be50aa90074.jpg',
+        'https://i.pinimg.com/736x/a2/2e/d0/a22ed043a29037880b998246c59b5ae7.jpg',
+        'https://i.pinimg.com/736x/3d/c0/81/3dc081f21a4f0b2f54a85854067303e9.jpg'
+    ],
+    aiHints: ['black peppercorns', 'peppercorns background', 'peppercorns bowl']
   },
   {
     id: 5,
@@ -76,8 +92,12 @@ export const products: Product[] = [
         { weight: '100g', price: 1400 },
         { weight: '250g', price: 3200 },
     ],
-    image: 'https://i.pinimg.com/736x/28/c6/48/28c648b0a74979111f737955b05d05cd.jpg',
-    aiHint: 'cardamom pods'
+    images: [
+        'https://i.pinimg.com/736x/28/c6/48/28c648b0a74979111f737955b05d05cd.jpg',
+        'https://i.pinimg.com/736x/5b/e5/23/5be5233604f81014a6e2e5c6a1f4215f.jpg',
+        'https://i.pinimg.com/736x/a7/67/20/a76720f4b30689b78e12d48375494f1c.jpg'
+    ],
+    aiHints: ['cardamom pods', 'cardamom spice', 'cardamom pile']
   },
   {
     id: 6,
@@ -90,8 +110,12 @@ export const products: Product[] = [
         { weight: '100g', price: 850 },
         { weight: '250g', price: 1900 },
     ],
-    image: 'https://i.pinimg.com/736x/0e/6b/c8/0e6bc899818814725355a1a2380598f3.jpg',
-    aiHint: 'black garcinia'
+    images: [
+        'https://i.pinimg.com/736x/0e/6b/c8/0e6bc899818814725355a1a2380598f3.jpg',
+        'https://i.pinimg.com/736x/6c/20/4f/6c204f3f33887f4749f50353a273e878.jpg',
+        'https://i.pinimg.com/736x/88/52/63/8852636a0f7992994f131a403487926e.jpg'
+    ],
+    aiHints: ['black garcinia', 'garcinia cambogia', 'goraka spice']
   }
 ];
 

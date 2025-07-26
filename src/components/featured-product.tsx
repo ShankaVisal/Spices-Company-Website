@@ -45,9 +45,9 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
               <div className="relative aspect-square md:min-h-[500px]">
                 <Link href={`/products/${product.slug}`}>
                     <Image 
-                        src={product.image} 
+                        src={product.images[0]} 
                         alt={product.name.en}
-                        data-ai-hint={product.aiHint}
+                        data-ai-hint={product.aiHints[0]}
                         fill 
                         className="object-cover"
                     />

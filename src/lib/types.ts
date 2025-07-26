@@ -27,8 +27,8 @@ export interface Product {
     si: string;
   };
   variants: ProductVariant[];
-  image: string;
-  aiHint: string;
+  images: string[];
+  aiHints: string[];
   reviews?: Review[];
 }
 

@@ -43,9 +43,9 @@ export function ProductCard({ product }: ProductCardProps) {
         <Link href={`/products/${product.slug}`}>
             <div className="aspect-square relative">
                 <Image 
-                    src={product.image} 
+                    src={product.images[0]} 
                     alt={product.name.en} 
-                    data-ai-hint={product.aiHint}
+                    data-ai-hint={product.aiHints[0]}
                     fill 
                     className="object-cover"
                 />

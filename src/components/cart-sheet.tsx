@@ -58,7 +58,7 @@ export function CartSheet({ children }: { children?: React.ReactNode }) {
                   const cartItemId = `${item.id}-${item.selectedVariant.weight}`;
                   return (
                   <div key={cartItemId} className="flex items-center gap-4">
-                    <Image src={item.image} alt={item.name.en} width={64} height={64} className="rounded-md" />
+                    <Image src={item.images[0]} alt={item.name.en} width={64} height={64} className="rounded-md" />
                     <div className="flex-1">
                       <p className="font-semibold">{item.name[language]}</p>
                       <p className="text-sm text-muted-foreground">{item.selectedVariant.weight} - LKR {item.selectedVariant.price.toFixed(2)}</p>

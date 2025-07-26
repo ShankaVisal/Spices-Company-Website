@@ -13,6 +13,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Separator } from '@/components/ui/separator';
 import type { Product } from '@/lib/types';
+import { ImageCarousel } from './image-carousel';
 
 interface ProductDetailsProps {
     product: Product;
@@ -60,15 +61,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       <section className="w-full py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src={product.image}
-                alt={product.name.en}
-                data-ai-hint={product.aiHint}
-                fill
-                className="object-cover"
-              />
-            </div>
+            <ImageCarousel images={product.images} aiHints={product.aiHints} alt={product.name.en} />
             <div className="space-y-6">
               <h1 className="font-headline text-4xl md:text-5xl font-bold">{product.name[language]}</h1>
               <div className="flex items-center gap-2">
