@@ -16,9 +16,11 @@ export const products: Product[] = [
     images: [
         'https://i.pinimg.com/736x/1f/b4/58/1fb458655de3143913c5a0db00921b9f.jpg',
         'https://i.pinimg.com/736x/b2/47/3c/b2473c1f0a3278d6b1a3a415a639739e.jpg',
-        'https://i.pinimg.com/736x/2b/32/73/2b32734b3e4063518bb1d8a411f14a05.jpg'
+        'https://i.pinimg.com/736x/2b/32/73/2b32734b3e4063518bb1d8a411f14a05.jpg',
+        'https://i.pinimg.com/736x/d1/2f/2d/d12f2d34a8b54b0a88cb7e4726b245a4.jpg',
+        'https://i.pinimg.com/736x/e8/9c/6e/e89c6e3b5e7d5a570c9183ff558ac71a.jpg'
     ],
-    aiHints: ['cinnamon sticks', 'cinnamon bundle', 'cinnamon bowl'],
+    aiHints: ['cinnamon sticks', 'cinnamon bundle', 'cinnamon bowl', 'cinnamon powder', 'cinnamon tea'],
     reviews: [
       { id: 1, author: 'Anusha P.', rating: 5, comment: 'The best cinnamon I have ever used. The aroma is amazing!' },
       { id: 2, author: 'John Doe', rating: 4, comment: 'Good quality, but a bit pricey.' }
@@ -38,9 +40,11 @@ export const products: Product[] = [
     images: [
         'https://i.pinimg.com/736x/63/3c/5e/633c5e2d6fd7b4b516d10c11c4451c24.jpg',
         'https://i.pinimg.com/736x/b3/82/38/b382382e7e4529d722a106173b29c913.jpg',
-        'https://i.pinimg.com/736x/3e/a2/5b/3ea25b03511855a80cb703a893046f49.jpg'
+        'https://i.pinimg.com/736x/3e/a2/5b/3ea25b03511855a80cb703a893046f49.jpg',
+        'https://i.pinimg.com/736x/1a/1b/b6/1a1bb649c669389e47192839958c89b8.jpg',
+        'https://i.pinimg.com/736x/c6/35/d5/c635d5a525a7a513c2069b33100693dc.jpg'
     ],
-    aiHints: ['cloves spice', 'cloves pile', 'cloves wood bowl'],
+    aiHints: ['cloves spice', 'cloves pile', 'cloves wood bowl', 'cloves dry', 'cloves tree'],
     reviews: [
         { id: 1, author: 'Saman Silva', rating: 5, comment: 'Very fresh and fragrant. Excellent for my biryani.'}
     ]
@@ -59,9 +63,11 @@ export const products: Product[] = [
     images: [
         'https://i.pinimg.com/736x/17/91/e4/1791e458518b0910d9d41af5d99fbdeb.jpg',
         'https://i.pinimg.com/736x/43/a1/5a/43a15a73e3518043b21703131a9de125.jpg',
-        'https://i.pinimg.com/736x/9e/75/f4/9e75f4a613583236c53e01931604815a.jpg'
+        'https://i.pinimg.com/736x/9e/75/f4/9e75f4a613583236c53e01931604815a.jpg',
+        'https://i.pinimg.com/736x/a2/29/73/a22973f511995116742a03463a03521e.jpg',
+        'https://i.pinimg.com/736x/e9/8a/7e/e98a7e40e6332e185cd2a3c75d97a48d.jpg'
     ],
-    aiHints: ['turmeric powder', 'turmeric roots', 'turmeric spoon']
+    aiHints: ['turmeric powder', 'turmeric roots', 'turmeric spoon', 'turmeric latte', 'turmeric plant']
   },
   {
     id: 4,
@@ -77,9 +83,11 @@ export const products: Product[] = [
     images: [
         'https://i.pinimg.com/736x/74/32/ae/7432aed93e936f510a8d9be50aa90074.jpg',
         'https://i.pinimg.com/736x/a2/2e/d0/a22ed043a29037880b998246c59b5ae7.jpg',
-        'https://i.pinimg.com/736x/3d/c0/81/3dc081f21a4f0b2f54a85854067303e9.jpg'
+        'https://i.pinimg.com/736x/3d/c0/81/3dc081f21a4f0b2f54a85854067303e9.jpg',
+        'https://i.pinimg.com/736x/97/8f/ce/978fce56526106d3954460a59ed0a1cf.jpg',
+        'https://i.pinimg.com/736x/01/6a/df/016adf0055486552a425f82216b8b51d.jpg'
     ],
-    aiHints: ['black peppercorns', 'peppercorns background', 'peppercorns bowl']
+    aiHints: ['black peppercorns', 'peppercorns background', 'peppercorns bowl', 'peppercorns grinder', 'peppercorns plant']
   },
   {
     id: 5,
@@ -95,9 +103,11 @@ export const products: Product[] = [
     images: [
         'https://i.pinimg.com/736x/28/c6/48/28c648b0a74979111f737955b05d05cd.jpg',
         'https://i.pinimg.com/736x/5b/e5/23/5be5233604f81014a6e2e5c6a1f4215f.jpg',
-        'https://i.pinimg.com/736x/a7/67/20/a76720f4b30689b78e12d48375494f1c.jpg'
+        'https://i.pinimg.com/736x/a7/67/20/a76720f4b30689b78e12d48375494f1c.jpg',
+        'https://i.pinimg.com/736x/9f/34/a0/9f34a07d3db974b6a9514f775d7b512c.jpg',
+        'https://i.pinimg.com/736x/39/10/d8/3910d8a57631853a0675713431a44c4b.jpg'
     ],
-    aiHints: ['cardamom pods', 'cardamom spice', 'cardamom pile']
+    aiHints: ['cardamom pods', 'cardamom spice', 'cardamom pile', 'cardamom seeds', 'cardamom drink']
   },
   {
     id: 6,
@@ -113,9 +123,11 @@ export const products: Product[] = [
     images: [
         'https://i.pinimg.com/736x/0e/6b/c8/0e6bc899818814725355a1a2380598f3.jpg',
         'https://i.pinimg.com/736x/6c/20/4f/6c204f3f33887f4749f50353a273e878.jpg',
-        'https://i.pinimg.com/736x/88/52/63/8852636a0f7992994f131a403487926e.jpg'
+        'https://i.pinimg.com/736x/88/52/63/8852636a0f7992994f131a403487926e.jpg',
+        'https://i.pinimg.com/736x/e4/c7/44/e4c744f48e4266158c383187a02d53d2.jpg',
+        'https://i.pinimg.com/736x/b3/89/37/b38937071650b29792e34226f9d774f3.jpg'
     ],
-    aiHints: ['black garcinia', 'garcinia cambogia', 'goraka spice']
+    aiHints: ['black garcinia', 'garcinia cambogia', 'goraka spice', 'garcinia fruit', 'garcinia tree']
   }
 ];
 
