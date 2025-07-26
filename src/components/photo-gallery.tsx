@@ -1,18 +1,45 @@
 'use client';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Autoplay from "embla-carousel-autoplay"
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { cn } from '@/lib/utils';
 
 interface PhotoGalleryProps {
   images: { src: string; alt: string; hint: string; }[];
 }
 
 export function PhotoGallery({ images }: PhotoGalleryProps) {
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrent(api.selectedScrollSnap())
+
+    const onSelect = (api: CarouselApi) => {
+        setCurrent(api.selectedScrollSnap())
+    }
+
+    api.on("select", onSelect)
+
+    return () => {
+      api.off("select", onSelect)
+    }
+  }, [api])
+
+    const scrollTo = useCallback((index: number) => {
+    api?.scrollTo(index)
+  }, [api])
+
 
   return (
     <section className="w-full py-12 md:py-20 lg:py-24 bg-card">
@@ -21,12 +48,13 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
           Gallery
         </h2>
         <Carousel
+          setApi={setApi}
           plugins={[plugin.current]}
           opts={{
             align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-full relative"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
@@ -51,8 +79,15 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
+           <div className="embla__dots">
+                {images.map((_, index) => (
+                    <button
+                    key={index}
+                    onClick={() => scrollTo(index)}
+                    className={cn("embla__dot", { "embla__dot--selected": index === current })}
+                    />
+                ))}
+            </div>
         </Carousel>
       </div>
     </section>
