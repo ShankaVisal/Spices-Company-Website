@@ -36,10 +36,10 @@ export function BlogSection({ posts }: BlogSectionProps) {
               </CardHeader>
               <CardContent className="p-6 flex-1 flex flex-col">
                 <p className="text-sm text-primary font-semibold uppercase tracking-wider mb-2">{post.category}</p>
-                <h3 className="font-headline text-xl font-bold mb-3">
+                <h3 className="font-headline text-xl font-bold mb-3 flex-1">
                     <Link href={`/blog/${post.id}`} className="hover:text-primary transition-colors">{post.title}</Link>
                 </h3>
-                <p className="text-muted-foreground text-sm line-clamp-2 mb-4 flex-1">
+                <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
                   {post.content}
                 </p>
                 <Button variant="secondary" className="mt-auto self-start" asChild>
