@@ -1,3 +1,9 @@
+
+export interface ProductVariant {
+  weight: string;
+  price: number;
+}
+
 export interface Product {
   id: number;
   name: {
@@ -8,13 +14,14 @@ export interface Product {
     en: string;
     si: string;
   };
-  price: number;
+  variants: ProductVariant[];
   image: string;
   aiHint: string;
 }
 
 export interface CartItem extends Product {
   quantity: number;
+  selectedVariant: ProductVariant;
 }
 
 export interface Recipe {

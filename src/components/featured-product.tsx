@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -15,12 +16,14 @@ interface FeaturedProductProps {
 export function FeaturedProduct({ product }: FeaturedProductProps) {
   const { language, addToCart } = useApp();
   const { toast } = useToast()
+  
+  const defaultVariant = product.variants[0];
 
   const handleAddToCart = () => {
-    addToCart(product);
+    addToCart(product, defaultVariant);
     toast({
       title: uiStrings.addedToCart[language],
-      description: product.name[language],
+      description: `${product.name[language]} (${defaultVariant.weight})`,
     })
   };
 
@@ -52,7 +55,7 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                 <p className="text-muted-foreground text-lg mb-8">{product.description[language]}</p>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
                   <p className="text-4xl font-bold text-foreground">
-                    LKR {product.price.toFixed(2)}
+                    LKR {defaultVariant.price.toFixed(2)}
                   </p>
                   <Button onClick={handleAddToCart} size="lg" className="text-lg py-7 px-10">
                     <ShoppingCart className="mr-2 h-6 w-6"/>

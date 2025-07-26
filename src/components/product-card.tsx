@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -17,11 +18,13 @@ export function ProductCard({ product }: ProductCardProps) {
   const { language, addToCart } = useApp();
   const { toast } = useToast()
 
+  const defaultVariant = product.variants[0];
+
   const handleAddToCart = () => {
-    addToCart(product);
+    addToCart(product, defaultVariant);
     toast({
       title: uiStrings.addedToCart[language],
-      description: product.name[language],
+      description: `${product.name[language]} (${defaultVariant.weight})`,
     })
   };
 
@@ -44,7 +47,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </CardContent>
       <CardFooter className="p-6 pt-0 flex justify-between items-center">
         <p className="text-xl font-bold text-foreground">
-          LKR {product.price.toFixed(2)}
+          LKR {defaultVariant.price.toFixed(2)}
         </p>
         <Button onClick={handleAddToCart} variant="secondary">
           <ShoppingCart className="mr-2 h-4 w-4"/>

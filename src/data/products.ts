@@ -1,3 +1,4 @@
+
 import type { Product } from '@/lib/types';
 
 export const products: Product[] = [
@@ -5,7 +6,11 @@ export const products: Product[] = [
     id: 1,
     name: { en: 'Cinnamon Sticks', si: 'කුරුඳු පොතු' },
     description: { en: 'Premium quality Ceylon cinnamon sticks, perfect for both sweet and savory dishes.', si: 'පැණිරස හා රසවත් කෑම සඳහා සුදුසු, උසස් තත්ත්වයේ ලංකා කුරුඳු පොතු.' },
-    price: 500,
+    variants: [
+        { weight: '50g', price: 500 },
+        { weight: '100g', price: 900 },
+        { weight: '250g', price: 2000 },
+    ],
     image: 'https://i.pinimg.com/736x/1f/b4/58/1fb458655de3143913c5a0db00921b9f.jpg',
     aiHint: 'cinnamon sticks'
   },
@@ -13,7 +18,11 @@ export const products: Product[] = [
     id: 2,
     name: { en: 'Whole Cloves', si: 'කරාබු නැටි' },
     description: { en: 'Aromatic whole cloves that add a warm, sweet flavor to your culinary creations.', si: 'ඔබේ සූපශාස්ත්‍ර නිර්මාණවලට උණුසුම්, මිහිරි රසයක් එක් කරන සුවඳැති කරාබු නැටි.' },
-    price: 350,
+    variants: [
+        { weight: '50g', price: 350 },
+        { weight: '100g', price: 650 },
+        { weight: '250g', price: 1500 },
+    ],
     image: 'https://i.pinimg.com/736x/63/3c/5e/633c5e2d6fd7b4b516d10c11c4451c24.jpg',
     aiHint: 'cloves spice'
   },
@@ -21,7 +30,11 @@ export const products: Product[] = [
     id: 3,
     name: { en: 'Turmeric Powder', si: 'කහ කුඩු' },
     description: { en: 'Vibrant and earthy turmeric powder, a staple in Sri Lankan cooking for color and health benefits.', si: 'වර්ණය සහ සෞඛ්‍ය ප්‍රතිලාභ සඳහා ශ්‍රී ලාංකේය ඉවුම් පිහුම් වල ප්‍රධානතම, විචිත්‍රවත් සහ පස් රසැති කහ කුඩු.' },
-    price: 400,
+    variants: [
+        { weight: '50g', price: 400 },
+        { weight: '100g', price: 750 },
+        { weight: '250g', price: 1700 },
+    ],
     image: 'https://i.pinimg.com/736x/17/91/e4/1791e458518b0910d9d41af5d99fbdeb.jpg',
     aiHint: 'turmeric powder'
   },
@@ -29,7 +42,11 @@ export const products: Product[] = [
     id: 4,
     name: { en: 'Black Peppercorns', si: 'කළු ගම්මිරිස්' },
     description: { en: 'Fiery and pungent whole black peppercorns to add a bold kick to any dish.', si: 'ඕනෑම කෑමකට තද රසයක් එක් කිරීමට සැර සහ තියුණු කළු ගම්මිරිස් ඇට.' },
-    price: 600,
+    variants: [
+        { weight: '50g', price: 600 },
+        { weight: '100g', price: 1100 },
+        { weight: '250g', price: 2500 },
+    ],
     image: 'https://i.pinimg.com/736x/74/32/ae/7432aed93e936f510a8d9be50aa90074.jpg',
     aiHint: 'black peppercorns'
   },
@@ -37,7 +54,11 @@ export const products: Product[] = [
     id: 5,
     name: { en: 'Cardamom Pods', si: 'කරදමුංගු' },
     description: { en: 'Fragrant green cardamom pods, offering a complex blend of minty, spicy, and citrusy notes.', si: 'මින්ටි, කුළුබඩු සහ පැඟිරි සටහන් වල සංකීර්ණ මිශ්‍රණයක් ලබා දෙන සුවඳැති කොළ කරදමුංගු කරල්.' },
-    price: 750,
+    variants: [
+        { weight: '50g', price: 750 },
+        { weight: '100g', price: 1400 },
+        { weight: '250g', price: 3200 },
+    ],
     image: 'https://i.pinimg.com/736x/28/c6/48/28c648b0a74979111f737955b05d05cd.jpg',
     aiHint: 'cardamom pods'
   },
@@ -45,7 +66,11 @@ export const products: Product[] = [
     id: 6,
     name: { en: 'Black Garcinia', si: 'කළු ගොරකා' },
     description: { en: 'Sun-dried goraka, essential for authentic Sri Lankan fish curries and other sour dishes.', si: 'හිරු එළියෙන් වියලන ලද ගොරකා, ශ්‍රී ලාංකේය මාළු කරි සහ අනෙකුත් ඇඹුල් රසැති කෑම සඳහා අත්‍යවශ්‍ය වේ.' },
-    price: 450,
+    variants: [
+        { weight: '50g', price: 450 },
+        { weight: '100g', price: 850 },
+        { weight: '250g', price: 1900 },
+    ],
     image: 'https://i.pinimg.com/736x/0e/6b/c8/0e6bc899818814725355a1a2380598f3.jpg',
     aiHint: 'black garcinia'
   }

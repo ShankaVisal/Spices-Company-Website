@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -14,11 +15,11 @@ const WHATSAPP_NUMBER = '+94741156797';
 export function CartSheet({ children }: { children?: React.ReactNode }) {
   const { language, cart, updateQuantity, clearCart } = useApp();
   const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const totalPrice = cart.reduce((sum, item) => sum + item.quantity * item.price, 0);
+  const totalPrice = cart.reduce((sum, item) => sum + item.quantity * item.selectedVariant.price, 0);
 
   const handleOrder = () => {
     const header = `Hello ${uiStrings.spiceverse[language]}! I would like to order:\n\n`;
-    const orderItems = cart.map(item => `- ${item.name[language]} x ${item.quantity}`).join('\n');
+    const orderItems = cart.map(item => `- ${item.name[language]} (${item.selectedVariant.weight}) x ${item.quantity}`).join('\n');
     const footer = `\n\n${uiStrings.total[language]}: LKR ${totalPrice.toFixed(2)}`;
     const message = encodeURIComponent(header + orderItems + footer);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
@@ -53,24 +54,26 @@ export function CartSheet({ children }: { children?: React.ReactNode }) {
           <div className="flex-1 overflow-y-auto -mx-6 px-6 py-4">
             {cart.length > 0 ? (
               <div className="flex flex-col gap-4">
-                {cart.map((item) => (
-                  <div key={item.id} className="flex items-center gap-4">
+                {cart.map((item) => {
+                  const cartItemId = `${item.id}-${item.selectedVariant.weight}`;
+                  return (
+                  <div key={cartItemId} className="flex items-center gap-4">
                     <Image src={item.image} alt={item.name.en} width={64} height={64} className="rounded-md" />
                     <div className="flex-1">
                       <p className="font-semibold">{item.name[language]}</p>
-                      <p className="text-sm text-muted-foreground">LKR {item.price.toFixed(2)}</p>
+                      <p className="text-sm text-muted-foreground">{item.selectedVariant.weight} - LKR {item.selectedVariant.price.toFixed(2)}</p>
                     </div>
                     <div className="flex items-center gap-2">
-                        <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
+                        <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => updateQuantity(cartItemId, item.quantity - 1)}>
                             <Minus className="h-4 w-4" />
                         </Button>
                         <span>{item.quantity}</span>
-                         <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
+                         <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => updateQuantity(cartItemId, item.quantity + 1)}>
                             <Plus className="h-4 w-4" />
                         </Button>
                     </div>
                   </div>
-                ))}
+                )})}
               </div>
             ) : (
               <p className="text-muted-foreground text-center py-10">{uiStrings.emptyCart[language]}</p>
