@@ -36,7 +36,7 @@ export function NewsEvents({ events }: NewsEventsProps) {
               <CardContent className="p-6 flex-1 flex flex-col">
                 <p className="text-sm text-muted-foreground mb-2">{event.date}</p>
                 <CardTitle className="font-headline text-xl mb-3 flex-1">{event.title}</CardTitle>
-                <CardDescription className="line-clamp-2">{event.description}</CardDescription>
+                <CardDescription className="line-clamp-2 mb-4">{event.description}</CardDescription>
                 <Button variant="secondary" className="mt-auto self-start" asChild>
                   <Link href={`/news/${event.id}`}>
                     Read More <ArrowRight className="ml-2 h-4 w-4" />
