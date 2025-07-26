@@ -4,6 +4,7 @@ import type { Product } from '@/lib/types';
 export const products: Product[] = [
   {
     id: 1,
+    slug: 'cinnamon-sticks',
     name: { en: 'Cinnamon Sticks', si: 'කුරුඳු පොතු' },
     description: { en: 'Premium quality Ceylon cinnamon sticks, perfect for both sweet and savory dishes.', si: 'පැණිරස හා රසවත් කෑම සඳහා සුදුසු, උසස් තත්ත්වයේ ලංකා කුරුඳු පොතු.' },
     variants: [
@@ -16,6 +17,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
+    slug: 'whole-cloves',
     name: { en: 'Whole Cloves', si: 'කරාබු නැටි' },
     description: { en: 'Aromatic whole cloves that add a warm, sweet flavor to your culinary creations.', si: 'ඔබේ සූපශාස්ත්‍ර නිර්මාණවලට උණුසුම්, මිහිරි රසයක් එක් කරන සුවඳැති කරාබු නැටි.' },
     variants: [
@@ -28,6 +30,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
+    slug: 'turmeric-powder',
     name: { en: 'Turmeric Powder', si: 'කහ කුඩු' },
     description: { en: 'Vibrant and earthy turmeric powder, a staple in Sri Lankan cooking for color and health benefits.', si: 'වර්ණය සහ සෞඛ්‍ය ප්‍රතිලාභ සඳහා ශ්‍රී ලාංකේය ඉවුම් පිහුම් වල ප්‍රධානතම, විචිත්‍රවත් සහ පස් රසැති කහ කුඩු.' },
     variants: [
@@ -40,6 +43,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
+    slug: 'black-peppercorns',
     name: { en: 'Black Peppercorns', si: 'කළු ගම්මිරිස්' },
     description: { en: 'Fiery and pungent whole black peppercorns to add a bold kick to any dish.', si: 'ඕනෑම කෑමකට තද රසයක් එක් කිරීමට සැර සහ තියුණු කළු ගම්මිරිස් ඇට.' },
     variants: [
@@ -52,6 +56,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
+    slug: 'cardamom-pods',
     name: { en: 'Cardamom Pods', si: 'කරදමුංගු' },
     description: { en: 'Fragrant green cardamom pods, offering a complex blend of minty, spicy, and citrusy notes.', si: 'මින්ටි, කුළුබඩු සහ පැඟිරි සටහන් වල සංකීර්ණ මිශ්‍රණයක් ලබා දෙන සුවඳැති කොළ කරදමුංගු කරල්.' },
     variants: [
@@ -64,6 +69,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
+    slug: 'black-garcinia',
     name: { en: 'Black Garcinia', si: 'කළු ගොරකා' },
     description: { en: 'Sun-dried goraka, essential for authentic Sri Lankan fish curries and other sour dishes.', si: 'හිරු එළියෙන් වියලන ලද ගොරකා, ශ්‍රී ලාංකේය මාළු කරි සහ අනෙකුත් ඇඹුල් රසැති කෑම සඳහා අත්‍යවශ්‍ය වේ.' },
     variants: [

@@ -6,6 +6,7 @@ export interface ProductVariant {
 
 export interface Product {
   id: number;
+  slug: string;
   name: {
     en: string;
     si: string;
