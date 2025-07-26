@@ -21,22 +21,27 @@ export function BlogSection({ posts }: BlogSectionProps) {
           {posts.map((post) => (
             <Card key={post.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <CardHeader className="p-0">
-                <div className="aspect-video relative">
-                  <Image 
-                    src={post.image} 
-                    alt={post.title}
-                    data-ai-hint={post.aiHint} 
-                    fill 
-                    className="object-cover"
-                  />
-                </div>
+                <Link href={`/blog/${post.id}`}>
+                    <div className="aspect-video relative">
+                    <Image 
+                        src={post.image} 
+                        alt={post.title}
+                        data-ai-hint={post.aiHint} 
+                        fill 
+                        className="object-cover"
+                    />
+                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                </Link>
               </CardHeader>
               <CardContent className="p-6 flex-1 flex flex-col">
-                <p className="text-sm text-muted-foreground mb-2">{post.category}</p>
-                <h3 className="font-headline text-xl font-bold mb-3 flex-1">{post.title}</h3>
+                <p className="text-sm text-primary font-semibold uppercase tracking-wider mb-2">{post.category}</p>
+                <h3 className="font-headline text-xl font-bold mb-3 flex-1">
+                    <Link href={`/blog/${post.id}`} className="hover:text-primary transition-colors">{post.title}</Link>
+                </h3>
                 <Button variant="secondary" className="mt-auto self-start" asChild>
                   <Link href={`/blog/${post.id}`}>
-                    Read Post <ArrowRight className="ml-2" />
+                    Read Post <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>
