@@ -1,7 +1,7 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
-import { Leaf, Users, Target } from 'lucide-react';
+import { Leaf, Users, Target, Eye, Goal } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function AboutPage() {
@@ -49,6 +49,36 @@ export default function AboutPage() {
                   We believe in sustainable farming, ethical sourcing, and preserving the rich heritage of Sri Lankan spice traditions. Every product we offer is a testament to our commitment to quality and authenticity.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-16 md:py-24 bg-secondary/50">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Our Vision & Mission</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <Card className="text-center">
+                <CardHeader>
+                  <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
+                      <Eye className="h-8 w-8 text-primary" />
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle className="mb-2 font-headline">Our Vision</CardTitle>
+                  <p className="text-muted-foreground">To be the most trusted and beloved provider of authentic Sri Lankan spices, bringing the true taste of our heritage to kitchens around the globe.</p>
+                </CardContent>
+              </Card>
+               <Card className="text-center">
+                <CardHeader>
+                  <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
+                      <Goal className="h-8 w-8 text-primary" />
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle className="mb-2 font-headline">Our Mission</CardTitle>
+                  <p className="text-muted-foreground">To ethically source the highest quality spices from local Sri Lankan communities, celebrate our culinary traditions, and inspire a passion for flavorful, authentic cooking.</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
