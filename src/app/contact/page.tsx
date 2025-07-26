@@ -1,3 +1,4 @@
+
 'use client';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
@@ -7,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ContactPage() {
@@ -70,6 +71,13 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="font-semibold text-lg">Address</h3>
                                     <p className="text-muted-foreground">123 Spice Grove, Colombo, Sri Lanka</p>
+                                </div>
+                            </div>
+                             <div className="flex items-start gap-4">
+                                <Globe className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
+                                <div>
+                                    <h3 className="font-semibold text-lg">Website</h3>
+                                    <a href="https://www.spiceverse.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">www.spiceverse.com</a>
                                 </div>
                             </div>
                         </div>
