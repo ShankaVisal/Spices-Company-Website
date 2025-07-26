@@ -3,6 +3,7 @@ import { Footer } from '@/components/footer';
 import { blogPosts } from '@/data/content';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import React from 'react';
 
 export default function BlogPostPage({ params }: { params: { id: string } }) {
   const post = blogPosts.find((p) => p.id.toString() === params.id);
