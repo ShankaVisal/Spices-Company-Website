@@ -10,7 +10,7 @@ import { useApp } from '@/hooks/use-app';
 import type { Product, ProductVariant } from '@/lib/types';
 import { uiStrings } from '@/data/products';
 import { useToast } from "@/hooks/use-toast"
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 interface ProductCardProps {
@@ -56,7 +56,12 @@ export function ProductCard({ product }: ProductCardProps) {
         <Link href={`/products/${product.slug}`}>
             <CardTitle className="font-headline text-2xl mb-2 hover:text-primary transition-colors">{product.name[language]}</CardTitle>
         </Link>
-        <CardDescription>{product.description[language]}</CardDescription>
+        <CardDescription className="line-clamp-2">{product.description[language]}</CardDescription>
+         <Button variant="link" asChild className="p-0 h-auto mt-2">
+            <Link href={`/products/${product.slug}`}>
+                See More <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+        </Button>
       </CardContent>
       <CardFooter className="p-6 pt-0 flex flex-col items-start gap-4">
         <div className="flex justify-between items-center w-full">

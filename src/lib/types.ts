@@ -4,6 +4,13 @@ export interface ProductVariant {
   price: number;
 }
 
+export interface Review {
+  id: number;
+  author: string;
+  rating: number;
+  comment: string;
+}
+
 export interface Product {
   id: number;
   slug: string;
@@ -15,9 +22,14 @@ export interface Product {
     en: string;
     si: string;
   };
+  longDescription?: {
+    en: string;
+    si: string;
+  };
   variants: ProductVariant[];
   image: string;
   aiHint: string;
+  reviews?: Review[];
 }
 
 export interface CartItem extends Product {
