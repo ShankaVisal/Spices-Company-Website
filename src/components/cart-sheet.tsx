@@ -80,7 +80,7 @@ export function CartSheet({ children }: { children?: React.ReactNode }) {
             )}
           </div>
           {cart.length > 0 && (
-            <SheetFooter className="mt-auto flex-col gap-4">
+            <SheetFooter className="mt-auto flex flex-col gap-4 sm:flex-col">
               <Separator />
               <div className="flex justify-between items-center font-bold text-lg">
                 <span>{uiStrings.total[language]}</span>
