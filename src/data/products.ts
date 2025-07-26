@@ -18,7 +18,7 @@ export const products: Product[] = [
         'https://i.pinimg.com/736x/b2/47/3c/b2473c1f0a3278d6b1a3a415a639739e.jpg',
         'https://i.pinimg.com/736x/2b/32/73/2b32734b3e4063518bb1d8a411f14a05.jpg',
         'https://i.pinimg.com/736x/d1/2f/2d/d12f2d34a8b54b0a88cb7e4726b245a4.jpg',
-        'https://i.pinimg.com/736x/e8/9c/6e/e89c6e3b5e7d5a570c9183ff558ac71a.jpg'
+        'https://i.pinimg.com/736x/e8/9c/6e/e89c6e3b5e7d5a570c9183ff558ac71a.jpg',
     ],
     aiHints: ['cinnamon sticks', 'cinnamon bundle', 'cinnamon bowl', 'cinnamon powder', 'cinnamon tea'],
     reviews: [
@@ -121,8 +121,8 @@ export const products: Product[] = [
         { weight: '250g', price: 1900 },
     ],
     images: [
-        'https://i.pinimg.com/736x/0e/6b/c8/0e6bc899818814725355a1a2380598f3.jpg',
-        'https://i.pinimg.com/736x/6c/20/4f/6c204f3f33887f4749f50353a273e878.jpg',
+        'https://i.pinimg.com/736x/8f/6f/e5/8f6fe529153d56009d3f7d73ce6eba74.jpg',
+        'https://i.pinimg.com/736x/6c/31/35/6c31351d4dfc9e0e48476a6b8e441b04.jpg',
         'https://i.pinimg.com/736x/88/52/63/8852636a0f7992994f131a403487926e.jpg',
         'https://i.pinimg.com/736x/e4/c7/44/e4c744f48e4266158c383187a02d53d2.jpg',
         'https://i.pinimg.com/736x/b3/89/37/b38937071650b29792e34226f9d774f3.jpg'

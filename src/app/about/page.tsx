@@ -19,11 +19,11 @@ export default function AboutPage() {
             </p>
           </div>
            <Image
-              src="https://placehold.co/1920x1080.png"
+              src="https://images.alphacoders.com/114/thumb-1920-1140315.jpg"
               alt="About background"
               data-ai-hint="spices texture"
               fill
-              className="object-cover object-center absolute inset-0 z-0 opacity-40"
+              className="object-cover object-center absolute inset-0 z-0 opacity-100"
             />
              <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>

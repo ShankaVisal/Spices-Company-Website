@@ -37,11 +37,11 @@ export default function ContactPage() {
             </p>
           </div>
             <Image
-                src="https://placehold.co/1920x1080.png"
+                src="https://i.pinimg.com/736x/0f/96/13/0f96138a521cbe134e816fafa8b5fd55.jpg"
                 alt="Contact background"
                 data-ai-hint="contact us"
                 fill
-                className="object-cover object-center absolute inset-0 z-0 opacity-40"
+                className="object-cover object-center absolute inset-0 z-0 opacity-100"
             />
             <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>

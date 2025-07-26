@@ -20,11 +20,11 @@ export default function NewsPage() {
             </p>
           </div>
            <Image
-              src="https://placehold.co/1920x1080.png"
+              src="https://i.pinimg.com/736x/db/23/e7/db23e75acaa20b0147dc4a9b32238faf.jpg"
               alt="News background"
               data-ai-hint="newspaper"
               fill
-              className="object-cover object-center absolute inset-0 z-0 opacity-40"
+              className="object-cover object-center absolute inset-0 z-0 opacity-100"
             />
              <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>

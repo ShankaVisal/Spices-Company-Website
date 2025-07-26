@@ -46,11 +46,11 @@ export default function FAQPage() {
             </p>
           </div>
             <Image
-                src="https://placehold.co/1920x1080.png"
+                src="https://i.pinimg.com/1200x/f4/a3/6c/f4a36cf68220ea119daebe3136067e8b.jpg"
                 alt="FAQ background"
                 data-ai-hint="question mark"
                 fill
-                className="object-cover object-center absolute inset-0 z-0 opacity-40"
+                className="object-cover object-center absolute inset-0 z-0 opacity-100"
             />
             <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>

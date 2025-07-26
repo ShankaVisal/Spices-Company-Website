@@ -19,11 +19,11 @@ export default function BlogPage() {
             </p>
           </div>
             <Image
-                src="https://placehold.co/1920x1080.png"
+                src="https://i.pinimg.com/736x/9d/60/fb/9d60fbced3582280ebbfebf1e544a30b.jpg"
                 alt="Blog background"
                 data-ai-hint="writing desk"
                 fill
-                className="object-cover object-center absolute inset-0 z-0 opacity-40"
+                className="object-cover object-center absolute inset-0 z-0 opacity-100"
             />
             <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>

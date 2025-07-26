@@ -60,7 +60,7 @@ export const newsAndEvents: NewsEvent[] = [
     description: 'We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms.',
     content: 'We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms. This collection features our most popular spices, now available with organic certification, ensuring the purest quality and taste. We believe in supporting farming practices that are good for you and for the planet.',
     images: [
-      'https://placehold.co/600x400.png',
+      'https://i.pinimg.com/736x/9f/75/2b/9f752bc07d30674cb2d1195cce374a86.jpg',
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png'
     ],
@@ -73,7 +73,7 @@ export const newsAndEvents: NewsEvent[] = [
     description: 'Come visit our booth at the International Good Food Show in London. We will be offering samples and special discounts.',
     content: 'Come visit our booth at the International Good Food Show in London. We will be offering samples of our latest products, special event-only discounts, and live cooking demonstrations. Meet the team and experience the world of Spiceverse firsthand!',
     images: [
-      'https://placehold.co/600x400.png',
+      'https://i.pinimg.com/736x/3d/6d/5c/3d6d5ccb052a9c8d0e24b06cb78c3657.jpg',
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png'
     ],
@@ -86,7 +86,7 @@ export const newsAndEvents: NewsEvent[] = [
     description: 'Join our masterclass on creating the perfect Sri Lankan curry. Limited spots available, book now!',
     content: 'Join our masterclass on creating the perfect Sri Lankan curry. This hands-on workshop will guide you through the essential techniques and spice blends to create an authentic and delicious curry. Limited spots are available, so book now to avoid disappointment!',
     images: [
-      'https://placehold.co/600x400.png',
+      'https://i.pinimg.com/736x/a5/12/d3/a512d3af7dd550668c051456951f02f1.jpg',
       'https://placehold.co/600x400.png',
       'https://placehold.co/600x400.png'
     ],

@@ -21,11 +21,11 @@ export default function ProductsPage() {
             </p>
           </div>
             <Image
-                src="https://placehold.co/1920x1080.png"
+                src="https://picfiles.alphacoders.com/376/thumb-1920-376496.jpg"
                 alt="Products background"
                 data-ai-hint="spice market"
                 fill
-                className="object-cover object-center absolute inset-0 z-0 opacity-40"
+                className="object-cover object-center absolute inset-0 z-0 opacity-100"
             />
             <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>
