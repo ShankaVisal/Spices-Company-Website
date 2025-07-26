@@ -56,3 +56,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .embla__dots {
+    @apply absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2;
+  }
+  .embla__dot {
+    @apply h-2 w-2 rounded-full bg-white/50 transition-all duration-300;
+  }
+  .embla__dot--selected {
+    @apply w-4 bg-white;
+  }
+}
