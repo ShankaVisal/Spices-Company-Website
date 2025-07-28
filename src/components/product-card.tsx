@@ -49,6 +49,11 @@ export function ProductCard({ product }: ProductCardProps) {
                     fill 
                     className="object-cover"
                 />
+                 {!product.available && (
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                        <span className="text-white font-bold text-lg bg-red-600 px-4 py-2 rounded-md">Out of Stock</span>
+                    </div>
+                )}
             </div>
         </Link>
       </CardHeader>
@@ -64,27 +69,35 @@ export function ProductCard({ product }: ProductCardProps) {
         </Button>
       </CardContent>
       <CardFooter className="p-6 pt-0 flex flex-col items-start gap-4">
-        <div className="flex justify-between items-center w-full">
-            <p className="text-xl font-bold text-foreground">
-            LKR {selectedVariant.price.toFixed(2)}
-            </p>
-            <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
-                <SelectTrigger className="w-[120px]">
-                    <SelectValue placeholder="Select weight" />
-                </SelectTrigger>
-                <SelectContent>
-                    {product.variants.map(variant => (
-                    <SelectItem key={variant.weight} value={variant.weight}>
-                        {variant.weight}
-                    </SelectItem>
-                    ))}
-                </SelectContent>
-            </Select>
-        </div>
-        <Button onClick={handleAddToCart} className="w-full">
-          <ShoppingCart className="mr-2 h-4 w-4"/>
-          {uiStrings.addToCart[language]}
-        </Button>
+        {product.available ? (
+            <>
+                <div className="flex justify-between items-center w-full">
+                    <p className="text-xl font-bold text-foreground">
+                    LKR {selectedVariant.price.toFixed(2)}
+                    </p>
+                    <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
+                        <SelectTrigger className="w-[120px]">
+                            <SelectValue placeholder="Select weight" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            {product.variants.map(variant => (
+                            <SelectItem key={variant.weight} value={variant.weight}>
+                                {variant.weight}
+                            </SelectItem>
+                            ))}
+                        </SelectContent>
+                    </Select>
+                </div>
+                <Button onClick={handleAddToCart} className="w-full">
+                <ShoppingCart className="mr-2 h-4 w-4"/>
+                {uiStrings.addToCart[language]}
+                </Button>
+            </>
+        ) : (
+             <Button disabled className="w-full">
+                Out of Stock
+            </Button>
+        )}
       </CardFooter>
     </Card>
   );

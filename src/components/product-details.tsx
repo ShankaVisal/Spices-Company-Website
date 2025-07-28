@@ -61,7 +61,14 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       <section className="w-full py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            <ImageCarousel images={product.images} aiHints={product.aiHints} alt={product.name.en} />
+            <div className="relative">
+                <ImageCarousel images={product.images} aiHints={product.aiHints} alt={product.name.en} />
+                 {!product.available && (
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center rounded-xl">
+                        <span className="text-white font-bold text-2xl bg-red-600 px-6 py-3 rounded-md">Out of Stock</span>
+                    </div>
+                )}
+            </div>
             <div className="space-y-6">
               <h1 className="font-headline text-4xl md:text-5xl font-bold">{product.name[language]}</h1>
               <div className="flex items-center gap-2">
@@ -73,27 +80,37 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                 <span className="text-muted-foreground ml-2 text-sm">({product.reviews?.length || 0} reviews)</span>
               </div>
               <p className="text-muted-foreground text-lg">{product.longDescription ? product.longDescription[language] : product.description[language]}</p>
-              <div className="flex items-center gap-4">
-                <p className="text-4xl font-bold text-foreground">
-                  LKR {selectedVariant.price.toFixed(2)}
-                </p>
-                <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
-                  <SelectTrigger className="w-[150px] text-base py-6 px-4">
-                    <SelectValue placeholder="Select weight" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {product.variants.map(variant => (
-                      <SelectItem key={variant.weight} value={variant.weight}>
-                        {variant.weight}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <Button onClick={handleAddToCart} size="lg" className="text-lg py-7 px-10 w-full sm:w-auto">
-                <ShoppingCart className="mr-2 h-6 w-6"/>
-                {uiStrings.addToCart[language]}
-              </Button>
+              
+              {product.available ? (
+                <>
+                    <div className="flex items-center gap-4">
+                        <p className="text-4xl font-bold text-foreground">
+                        LKR {selectedVariant.price.toFixed(2)}
+                        </p>
+                        <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
+                        <SelectTrigger className="w-[150px] text-base py-6 px-4">
+                            <SelectValue placeholder="Select weight" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            {product.variants.map(variant => (
+                            <SelectItem key={variant.weight} value={variant.weight}>
+                                {variant.weight}
+                            </SelectItem>
+                            ))}
+                        </SelectContent>
+                        </Select>
+                    </div>
+                    <Button onClick={handleAddToCart} size="lg" className="text-lg py-7 px-10 w-full sm:w-auto">
+                        <ShoppingCart className="mr-2 h-6 w-6"/>
+                        {uiStrings.addToCart[language]}
+                    </Button>
+                </>
+              ) : (
+                 <Button disabled size="lg" className="text-lg py-7 px-10 w-full sm:w-auto">
+                    Out of Stock
+                </Button>
+              )}
+
             </div>
           </div>
         </div>

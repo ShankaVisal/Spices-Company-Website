@@ -30,6 +30,7 @@ export interface Product {
   images: string[];
   aiHints: string[];
   reviews?: Review[];
+  available: boolean;
 }
 
 export interface CartItem extends Product {

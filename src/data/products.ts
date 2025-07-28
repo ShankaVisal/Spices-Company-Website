@@ -24,7 +24,8 @@ export const products: Product[] = [
     reviews: [
       { id: 1, author: 'Anusha P.', rating: 5, comment: 'The best cinnamon I have ever used. The aroma is amazing!' },
       { id: 2, author: 'John Doe', rating: 4, comment: 'Good quality, but a bit pricey.' }
-    ]
+    ],
+    available: true,
   },
   {
     id: 2,
@@ -47,7 +48,8 @@ export const products: Product[] = [
     aiHints: ['cloves spice', 'cloves pile', 'cloves wood bowl', 'cloves dry', 'cloves tree'],
     reviews: [
         { id: 1, author: 'Saman Silva', rating: 5, comment: 'Very fresh and fragrant. Excellent for my biryani.'}
-    ]
+    ],
+    available: false,
   },
   {
     id: 3,
@@ -67,7 +69,8 @@ export const products: Product[] = [
         'https://i.pinimg.com/736x/a2/29/73/a22973f511995116742a03463a03521e.jpg',
         'https://i.pinimg.com/736x/e9/8a/7e/e98a7e40e6332e185cd2a3c75d97a48d.jpg'
     ],
-    aiHints: ['turmeric powder', 'turmeric roots', 'turmeric spoon', 'turmeric latte', 'turmeric plant']
+    aiHints: ['turmeric powder', 'turmeric roots', 'turmeric spoon', 'turmeric latte', 'turmeric plant'],
+    available: false,
   },
   {
     id: 4,
@@ -87,7 +90,8 @@ export const products: Product[] = [
         'https://i.pinimg.com/736x/97/8f/ce/978fce56526106d3954460a59ed0a1cf.jpg',
         'https://i.pinimg.com/736x/01/6a/df/016adf0055486552a425f82216b8b51d.jpg'
     ],
-    aiHints: ['black peppercorns', 'peppercorns background', 'peppercorns bowl', 'peppercorns grinder', 'peppercorns plant']
+    aiHints: ['black peppercorns', 'peppercorns background', 'peppercorns bowl', 'peppercorns grinder', 'peppercorns plant'],
+    available: true,
   },
   {
     id: 5,
@@ -107,7 +111,8 @@ export const products: Product[] = [
         'https://i.pinimg.com/736x/9f/34/a0/9f34a07d3db974b6a9514f775d7b512c.jpg',
         'https://i.pinimg.com/736x/39/10/d8/3910d8a57631853a0675713431a44c4b.jpg'
     ],
-    aiHints: ['cardamom pods', 'cardamom spice', 'cardamom pile', 'cardamom seeds', 'cardamom drink']
+    aiHints: ['cardamom pods', 'cardamom spice', 'cardamom pile', 'cardamom seeds', 'cardamom drink'],
+    available: false,
   },
   {
     id: 6,
@@ -127,7 +132,8 @@ export const products: Product[] = [
         'https://i.pinimg.com/736x/e4/c7/44/e4c744f48e4266158c383187a02d53d2.jpg',
         'https://i.pinimg.com/736x/b3/89/37/b38937071650b29792e34226f9d774f3.jpg'
     ],
-    aiHints: ['black garcinia', 'garcinia cambogia', 'goraka spice', 'garcinia fruit', 'garcinia tree']
+    aiHints: ['black garcinia', 'garcinia cambogia', 'goraka spice', 'garcinia fruit', 'garcinia tree'],
+    available: true,
   }
 ];
 
