@@ -14,6 +14,7 @@ import { testimonials, galleryImages, newsAndEvents, blogPosts } from '@/data/co
 import Link from 'next/link';
 import { CartSheet } from '@/components/cart-sheet';
 import { WhyChooseUs } from '@/components/why-choose-us';
+import { HeroCta } from '@/components/hero-cta';
 
 
 export default function Home() {
@@ -47,6 +48,7 @@ export default function Home() {
             />
           </div>
         </section>
+        <HeroCta />
         <ProductList products={products.slice(0, 6)} title="Our Most Popular Spices" />
         <div className="text-center -mt-8 mb-16">
             <Button asChild variant="outline">
