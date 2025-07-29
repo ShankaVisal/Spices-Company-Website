@@ -1,95 +1,95 @@
 'use client';
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
-import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import Autoplay from "embla-carousel-autoplay"
 import React, { useState, useEffect, useCallback } from 'react';
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import type { GalleryContent } from '@/lib/types';
+import { useApp } from '@/hooks/use-app';
 
 interface PhotoGalleryProps {
-  images: { src: string; alt: string; hint: string; }[];
+  items: GalleryContent[];
 }
 
-export function PhotoGallery({ images }: PhotoGalleryProps) {
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
+export function PhotoGallery({ items }: PhotoGalleryProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const { language } = useApp();
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+  const nextItem = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  }, [items.length]);
 
+  const prevItem = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
+  };
+  
   useEffect(() => {
-    if (!api) {
-      return
-    }
+    const timer = setTimeout(nextItem, 5000); // Auto-scroll every 5 seconds
+    return () => clearTimeout(timer);
+  }, [currentIndex, nextItem]);
 
-    setCurrent(api.selectedScrollSnap())
-
-    const onSelect = (api: CarouselApi) => {
-        setCurrent(api.selectedScrollSnap())
-    }
-
-    api.on("select", onSelect)
-
-    return () => {
-      api.off("select", onSelect)
-    }
-  }, [api])
-
-    const scrollTo = useCallback((index: number) => {
-    api?.scrollTo(index)
-  }, [api])
-
+  const currentItem = items[currentIndex];
 
   return (
-    <section className="w-full py-12 md:py-20 lg:py-24 bg-card">
+    <section className="w-full py-12 md:py-20 lg:py-24 bg-card relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-8 md:mb-12">
-          Gallery
-        </h2>
-        <Carousel
-          setApi={setApi}
-          plugins={[plugin.current]}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full relative"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
-        >
-          <CarouselContent>
-            {images.map((image, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card className="overflow-hidden">
-                    <CardContent className="p-0">
-                       <div className="relative aspect-video md:aspect-square">
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          data-ai-hint={image.hint}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-           <div className="embla__dots">
-                {images.map((_, index) => (
-                    <button
-                    key={index}
-                    onClick={() => scrollTo(index)}
-                    className={cn("embla__dot", { "embla__dot--selected": index === current })}
-                    />
-                ))}
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="z-10">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
+              {currentItem.title[language]}
+            </h2>
+            <p className="text-muted-foreground text-lg mb-8">
+              {currentItem.description[language]}
+            </p>
+             <div className="flex gap-2">
+                <Button variant="outline" size="icon" onClick={prevItem}>
+                    <ArrowLeft />
+                </Button>
+                 <Button variant="outline" size="icon" onClick={nextItem}>
+                    <ArrowRight />
+                </Button>
             </div>
-        </Carousel>
+          </div>
+          <div className="relative aspect-square">
+            <AnimatePresence>
+                <motion.div
+                    key={currentItem.id}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.5 }}
+                    className="absolute inset-0"
+                >
+                    <Image
+                      src={currentItem.image}
+                      alt={currentItem.title.en}
+                      data-ai-hint={currentItem.aiHint}
+                      fill
+                      className="object-cover rounded-lg shadow-lg"
+                    />
+                </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
+// Minimal Framer Motion components to avoid adding a new dependency
+const AnimatePresence: React.FC<{ children: React.ReactNode }> = ({ children }) => <>{children}</>;
+const motion = {
+  div: React.forwardRef<HTMLDivElement, {
+    children: React.ReactNode;
+    key: any;
+    initial?: object;
+    animate?: object;
+    exit?: object;
+    transition?: object;
+    className?: string;
+  }>(({ children, ...props }, ref) => (
+    <div ref={ref} {...props}>
+      {children}
+    </div>
+  )),
+};
+motion.div.displayName = 'motion.div';

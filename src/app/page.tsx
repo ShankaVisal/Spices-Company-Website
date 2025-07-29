@@ -10,7 +10,7 @@ import { Testimonials } from '@/components/testimonials';
 import { PhotoGallery } from '@/components/photo-gallery';
 import { NewsEvents } from '@/components/news-events';
 import { BlogSection } from '@/components/blog-section';
-import { testimonials, galleryImages, newsAndEvents, blogPosts } from '@/data/content';
+import { testimonials, galleryContent, newsAndEvents, blogPosts } from '@/data/content';
 import Link from 'next/link';
 import { CartSheet } from '@/components/cart-sheet';
 import { WhyChooseUs } from '@/components/why-choose-us';
@@ -58,7 +58,7 @@ export default function Home() {
         <WhyChooseUs />
         <FeaturedProduct product={featuredProduct} />
         <Testimonials testimonials={testimonials} />
-        <PhotoGallery images={galleryImages} />
+        <PhotoGallery items={galleryContent} />
         <NewsEvents events={newsAndEvents.slice(0, 3)} />
          <div className="text-center -mt-16 mb-16">
             <Button asChild variant="outline">
