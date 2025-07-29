@@ -53,8 +53,8 @@ export default function Home() {
                 <Link href="/products">View All Products</Link>
             </Button>
         </div>
-        <FeaturedProduct product={featuredProduct} />
         <WhyChooseUs />
+        <FeaturedProduct product={featuredProduct} />
         <Testimonials testimonials={testimonials} />
         <PhotoGallery images={galleryImages} />
         <NewsEvents events={newsAndEvents.slice(0, 3)} />
