@@ -15,10 +15,17 @@ import Link from 'next/link';
 import { CartSheet } from '@/components/cart-sheet';
 import { WhyChooseUs } from '@/components/why-choose-us';
 import { HeroCta } from '@/components/hero-cta';
+import { GiftBanner } from '@/components/gift-banner';
 
 
 export default function Home() {
-  const featuredProduct = products[0];
+  const featuredProduct = products.find(p => p.category === 'Spice');
+  const giftBoxes = products.filter(p => p.category === 'Gift Box');
+
+  if (!featuredProduct) {
+    // Fallback in case no spice product is found
+    return <div>Error: No spice products available.</div>;
+  }
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -49,7 +56,7 @@ export default function Home() {
           </div>
         </section>
         <HeroCta />
-        <ProductList products={products.slice(0, 6)} title="Our Most Popular Spices" />
+        <ProductList products={products.filter(p => p.category === 'Spice').slice(0, 6)} title="Our Most Popular Spices" />
         <div className="text-center -mt-8 mb-16">
             <Button asChild variant="outline">
                 <Link href="/products">View All Products</Link>
@@ -65,13 +72,15 @@ export default function Home() {
                 <Link href="/news">View All News & Events</Link>
             </Button>
         </div>
+        <GiftBanner />
+        <ProductList products={giftBoxes} title="Our Gift Boxes"/>
         <BlogSection posts={blogPosts.slice(0, 3)} />
          <div className="text-center -mt-16 mb-24">
             <Button asChild variant="outline">
                 <Link href="/blog">View All Posts</Link>
             </Button>
         </div>
-        <RecipeSuggester products={products} />
+        <RecipeSuggester products={products.filter(p => p.category === 'Spice')} />
       </main>
       <Footer />
       <CartSheet />

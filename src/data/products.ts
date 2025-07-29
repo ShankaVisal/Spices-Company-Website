@@ -6,6 +6,7 @@ export const products: Product[] = [
     id: 1,
     slug: 'cinnamon-sticks',
     name: { en: 'Cinnamon Sticks', si: 'කුරුඳු පොතු' },
+    category: 'Spice',
     description: { en: 'Premium quality Ceylon cinnamon sticks, perfect for both sweet and savory dishes.', si: 'පැණිරස හා රසවත් කෑම සඳහා සුදුසු, උසස් තත්ත්වයේ ලංකා කුරුඳු පොතු.' },
     longDescription: { en: 'Sourced from the bark of the Cinnamomum verum tree, our Ceylon cinnamon sticks are known for their delicate, sweet flavor and numerous health benefits. Unlike the more common Cassia cinnamon, Ceylon cinnamon has lower levels of coumarin, making it a safer choice for regular consumption. Perfect for flavoring teas, curries, and baked goods.', si: 'Cinnamomum verum ගසේ පොත්තෙන් ලබාගත් අපගේ ලංකා කුරුඳු පොතු, එහි සියුම්, මිහිරි රසය සහ බොහෝ සෞඛ්‍ය ප්‍රතිලාභ සඳහා ප්‍රසිද්ධය. වඩාත් සුලභ Cassia කුරුඳු මෙන් නොව, ලංකා කුරුඳු වල කූමරින් මට්ටම අඩු බැවින්, එය නිතිපතා පරිභෝජනය සඳහා ආරක්ෂිත තේරීමක් වේ. තේ, කරි සහ බේක් කරන ලද භාණ්ඩ රස ගැන්වීම සඳහා පරිපූර්ණයි.' },
     variants: [
@@ -31,6 +32,7 @@ export const products: Product[] = [
     id: 2,
     slug: 'whole-cloves',
     name: { en: 'Whole Cloves', si: 'කරාබු නැටි' },
+    category: 'Spice',
     description: { en: 'Aromatic whole cloves that add a warm, sweet flavor to your culinary creations.', si: 'ඔබේ සූපශාස්ත්‍ර නිර්මාණවලට උණුසුම්, මිහිරි රසයක් එක් කරන සුවඳැති කරාබු නැටි.' },
     longDescription: { en: 'Our whole cloves are hand-picked to ensure the highest quality. They have a strong, sweet aroma and are perfect for studding meats, flavoring sauces, and making mulled wines. A staple in both Asian and Western cuisines.', si: 'අපගේ කරාබු නැටි ඉහළම ගුණාත්මක බව සහතික කිරීම සඳහා අතින් නෙළනු ලැබේ. ඒවාට ශක්තිමත්, මිහිරි සුවඳක් ඇති අතර මස්, රසකාරක සෝස් සහ මල්ඩ් වයින් සෑදීම සඳහා පරිපූර්ණයි. ආසියානු සහ බටහිර ආහාර පිසීමේ ප්‍රධාන අංගයකි.' },
     variants: [
@@ -55,6 +57,7 @@ export const products: Product[] = [
     id: 3,
     slug: 'turmeric-powder',
     name: { en: 'Turmeric Powder', si: 'කහ කුඩු' },
+    category: 'Spice',
     description: { en: 'Vibrant and earthy turmeric powder, a staple in Sri Lankan cooking for color and health benefits.', si: 'වර්ණය සහ සෞඛ්‍ය ප්‍රතිලාභ සඳහා ශ්‍රී ලාංකේය ඉවුම් පිහුම් වල ප්‍රධානතම, විචිත්‍රවත් සහ පස් රසැති කහ කුඩු.' },
     longDescription: { en: "Our turmeric powder is ground from the finest quality turmeric roots. It has a bright yellow color and a warm, slightly bitter flavor. Known for its anti-inflammatory properties, it's a must-have in any kitchen.", si: "අපගේ කහ කුඩු හොඳම තත්ත්වයේ කහ අල වලින් අඹරා ඇත. එය දීප්තිමත් කහ පැහැයක් සහ උණුසුම්, තරමක් කටුක රසයක් ඇත. එහි ප්‍රති-ගිනි අවුලුවන ගුණාංග සඳහා ප්‍රසිද්ධ, එය ඕනෑම මුළුතැන්ගෙයක තිබිය යුතුම දෙයකි." },
     variants: [
@@ -76,6 +79,7 @@ export const products: Product[] = [
     id: 4,
     slug: 'black-peppercorns',
     name: { en: 'Black Peppercorns', si: 'කළු ගම්මිරිස්' },
+    category: 'Spice',
     description: { en: 'Fiery and pungent whole black peppercorns to add a bold kick to any dish.', si: 'ඕනෑම කෑමකට තද රසයක් එක් කිරීමට සැර සහ තියුණු කළු ගම්මිරිස් ඇට.' },
     longDescription: { en: "Experience the robust flavor of our premium black peppercorns. Sourced from the best pepper vines in Sri Lanka, they offer a sharp, pungent heat that enhances any savory dish. Grind them fresh for the best results.", si: "අපගේ උසස් තත්ත්වයේ කළු ගම්මිරිස්වල ශක්තිමත් රසය අත්විඳින්න. ශ්‍රී ලංකාවේ හොඳම ගම්මිරිස් වැල් වලින් ලබාගත් ඒවා, ඕනෑම රසවත් කෑමක් වැඩි දියුණු කරන තියුණු, සැර තාපයක් ලබා දෙයි. හොඳම ප්‍රතිඵල සඳහා ඒවා නැවුම්ව අඹරන්න." },
     variants: [
@@ -97,6 +101,7 @@ export const products: Product[] = [
     id: 5,
     slug: 'cardamom-pods',
     name: { en: 'Cardamom Pods', si: 'කරදමුංගු' },
+    category: 'Spice',
     description: { en: 'Fragrant green cardamom pods, offering a complex blend of minty, spicy, and citrusy notes.', si: 'මින්ටි, කුළුබඩු සහ පැඟිරි සටහන් වල සංකීර්ණ මිශ්‍රණයක් ලබා දෙන සුවඳැති කොළ කරදමුංගු කරල්.' },
     longDescription: { en: "Our green cardamom pods are prized for their intense aroma and flavor. A versatile spice, they can be used in both sweet and savory dishes, from curries and rice pilafs to desserts and beverages. A little goes a long way.", si: "අපගේ කොළ කරදමුංගු කරල් ඒවායේ තීව්‍ර සුවඳ සහ රසය සඳහා ඉහළ අගයක් ගනී. බහුකාර්ය කුළුබඩුවක් වන, ඒවා ව්‍යංජන සහ බත් පිලාෆ් සිට අතුරුපස සහ බීම දක්වා පැණිරස හා රසවත් කෑම වර්ග දෙකෙහිම භාවිතා කළ හැකිය. ස්වල්පයක් බොහෝ දුර යයි." },
     variants: [
@@ -118,6 +123,7 @@ export const products: Product[] = [
     id: 6,
     slug: 'black-garcinia',
     name: { en: 'Black Garcinia', si: 'කළු ගොරකා' },
+    category: 'Spice',
     description: { en: 'Sun-dried goraka, essential for authentic Sri Lankan fish curries and other sour dishes.', si: 'හිරු එළියෙන් වියලන ලද ගොරකා, ශ්‍රී ලාංකේය මාළු කරි සහ අනෙකුත් ඇඹුල් රසැති කෑම සඳහා අත්‍යවශ්‍ය වේ.' },
     longDescription: { en: "Also known as Garcinia Cambogia, black garcinia (goraka) is a souring agent used in Sri Lankan cuisine, particularly in fish curries. It imparts a unique sour and slightly smoky flavor. Our goraka is naturally sun-dried to preserve its authentic taste.", si: "Garcinia Cambogia ලෙසද හැඳින්වෙන, කළු ගොරකා යනු ශ්‍රී ලාංකේය ආහාර පිසීමේදී, විශේෂයෙන් මාළු කරි වල භාවිතා වන ඇඹුල් කාරකයකි. එය අද්විතීය ඇඹුල් සහ තරමක් දුම් රසයක් ලබා දෙයි. අපගේ ගොරකා එහි සැබෑ රසය ආරක්ෂා කර ගැනීම සඳහා ස්වභාවිකව හිරු එළියෙන් වියළනු ලැබේ." },
     variants: [
@@ -133,6 +139,39 @@ export const products: Product[] = [
         'https://i.pinimg.com/736x/b3/89/37/b38937071650b29792e34226f9d774f3.jpg'
     ],
     aiHints: ['black garcinia', 'garcinia cambogia', 'goraka spice', 'garcinia fruit', 'garcinia tree'],
+    available: true,
+  },
+  {
+    id: 7,
+    slug: 'starter-spice-set',
+    name: { en: 'Starter Spice Set', si: 'ආරම්භක කුළුබඩු කට්ටලය' },
+    category: 'Gift Box',
+    description: { en: 'The perfect set for anyone beginning their Sri Lankan culinary journey.', si: 'ශ්‍රී ලාංකේය සූපශාස්ත්‍ර ගමන ආරම්භ කරන ඕනෑම කෙනෙකුට පරිපූර්ණ කට්ටලය.' },
+    variants: [{ weight: 'Set', price: 3500 }],
+    images: ['https://i.pinimg.com/736x/b2/24/8c/b2248c8946a4855a8052565b9a81878d.jpg'],
+    aiHints: ['spice gift set'],
+    available: true,
+  },
+  {
+    id: 8,
+    slug: 'curry-lovers-collection',
+    name: { en: "Curry Lover's Collection", si: 'කරි ලෝලීන්ගේ එකතුව' },
+    category: 'Gift Box',
+    description: { en: 'A collection of our finest curry powders and essential spices for the perfect curry.', si: 'පරිපූර්ණ කරියක් සඳහා අපගේ හොඳම කරි කුඩු සහ අත්‍යවශ්‍ය කුළුබඩු එකතුවකි.' },
+    variants: [{ weight: 'Set', price: 4500 }],
+    images: ['https://i.pinimg.com/736x/5f/79/d3/5f79d345f69c4d874533a3c98fe712e0.jpg'],
+    aiHints: ['curry spice set'],
+    available: true,
+  },
+  {
+    id: 9,
+    slug: 'sweet-spice-selection',
+    name: { en: 'Sweet Spice Selection', si: 'පැණිරස කුළුබඩු තේරීම' },
+    category: 'Gift Box',
+    description: { en: 'A delightful selection of our sweet spices, perfect for baking and desserts.', si: 'බේක් කිරීම සහ අතුරුපස සඳහා පරිපූර්ණ අපගේ මිහිරි කුළුබඩු වල ප්‍රියජනක තේරීමක්.' },
+    variants: [{ weight: 'Set', price: 4000 }],
+    images: ['https://i.pinimg.com/736x/11/4a/4a/114a4ab0357e60e5881a53e4142f9b8c.jpg'],
+    aiHints: ['sweet spice set'],
     available: true,
   }
 ];

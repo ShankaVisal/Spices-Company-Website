@@ -6,6 +6,8 @@ import { uiStrings } from '@/data/products';
 import Image from 'next/image';
 
 export default function ProductsPage() {
+  const spiceProducts = products.filter(p => p.category === 'Spice');
+  const giftBoxProducts = products.filter(p => p.category === 'Gift Box');
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -29,7 +31,10 @@ export default function ProductsPage() {
             />
             <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>
-        <ProductList products={products} />
+        <ProductList products={spiceProducts} title="Spices" />
+        <section id="gift-boxes" className="w-full pt-12 md:pt-20">
+          <ProductList products={giftBoxProducts} title="Gift Boxes" />
+        </section>
       </main>
       <Footer />
     </div>

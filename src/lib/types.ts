@@ -18,6 +18,7 @@ export interface Product {
     en: string;
     si: string;
   };
+  category?: 'Spice' | 'Gift Box';
   description: {
     en: string;
     si: string;
