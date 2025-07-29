@@ -13,6 +13,7 @@ import { BlogSection } from '@/components/blog-section';
 import { testimonials, galleryImages, newsAndEvents, blogPosts } from '@/data/content';
 import Link from 'next/link';
 import { CartSheet } from '@/components/cart-sheet';
+import { WhyChooseUs } from '@/components/why-choose-us';
 
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
             </Button>
         </div>
         <FeaturedProduct product={featuredProduct} />
+        <WhyChooseUs />
         <Testimonials testimonials={testimonials} />
         <PhotoGallery images={galleryImages} />
         <NewsEvents events={newsAndEvents.slice(0, 3)} />
