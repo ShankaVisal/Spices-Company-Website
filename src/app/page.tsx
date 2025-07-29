@@ -20,7 +20,6 @@ import { GiftBanner } from '@/components/gift-banner';
 
 export default function Home() {
   const featuredProduct = products.find(p => p.category === 'Spice');
-  const giftBoxes = products.filter(p => p.category === 'Gift Box');
 
   if (!featuredProduct) {
     // Fallback in case no spice product is found
@@ -73,7 +72,6 @@ export default function Home() {
             </Button>
         </div>
         <GiftBanner />
-        <ProductList products={giftBoxes} title="Our Gift Boxes"/>
         <BlogSection posts={blogPosts.slice(0, 3)} />
          <div className="text-center -mt-16 mb-24">
             <Button asChild variant="outline">
