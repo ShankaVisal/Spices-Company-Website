@@ -30,21 +30,21 @@ export function PhotoGallery({ items }: PhotoGalleryProps) {
   const currentItem = items[currentIndex];
 
   return (
-    <section className="w-full py-12 md:py-20 lg:py-24 bg-card relative overflow-hidden">
+    <section className="w-full py-12 md:py-20 lg:py-24 bg-black relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="z-10">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-white">
               {currentItem.title[language]}
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-white/80 text-lg mb-8">
               {currentItem.description[language]}
             </p>
              <div className="flex gap-2">
-                <Button variant="outline" size="icon" onClick={prevItem}>
+                <Button variant="outline" size="icon" onClick={prevItem} className="bg-transparent text-white border-white/50 hover:bg-white/10 hover:text-white">
                     <ArrowLeft />
                 </Button>
-                 <Button variant="outline" size="icon" onClick={nextItem}>
+                 <Button variant="outline" size="icon" onClick={nextItem} className="bg-transparent text-white border-white/50 hover:bg-white/10 hover:text-white">
                     <ArrowRight />
                 </Button>
             </div>
