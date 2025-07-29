@@ -30,10 +30,9 @@ export function PhotoGallery({ items }: PhotoGalleryProps) {
   const currentItem = items[currentIndex];
 
   return (
-    <section className="w-full py-12 md:py-20 lg:py-24 bg-black relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="z-10">
+    <section className="w-full bg-black relative overflow-hidden">
+      <div className="grid md:grid-cols-2 min-h-[600px]">
+          <div className="flex flex-col justify-center p-8 md:p-16 z-10">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-white">
               {currentItem.title[language]}
             </h2>
@@ -49,14 +48,14 @@ export function PhotoGallery({ items }: PhotoGalleryProps) {
                 </Button>
             </div>
           </div>
-          <div className="relative aspect-square">
+          <div className="relative min-h-[300px] md:min-h-full">
             <AnimatePresence>
                 <motion.div
                     key={currentItem.id}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.05 }}
+                    transition={{ duration: 0.8 }}
                     className="absolute inset-0"
                 >
                     <Image
@@ -64,13 +63,13 @@ export function PhotoGallery({ items }: PhotoGalleryProps) {
                       alt={currentItem.title.en}
                       data-ai-hint={currentItem.aiHint}
                       fill
-                      className="object-cover rounded-lg shadow-lg"
+                      className="object-cover"
                     />
+                     <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent md:from-transparent"></div>
                 </motion.div>
             </AnimatePresence>
           </div>
         </div>
-      </div>
     </section>
   );
 }
