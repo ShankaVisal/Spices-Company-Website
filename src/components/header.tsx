@@ -29,7 +29,7 @@ export function Header() {
         <Link href="/" className="mr-auto flex items-center gap-2">
           <Leaf className="h-6 w-6 text-primary" />
           <span className="font-headline text-2xl font-bold">
-            {uiStrings.spiceverse[language]}
+            {uiStrings.deviProducts[language]}
           </span>
         </Link>
         <nav className="hidden md:flex gap-6 items-center">
@@ -65,7 +65,7 @@ export function Header() {
                <nav className="grid gap-4 text-base font-medium mt-10">
                  <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
                     <Leaf className="h-6 w-6 text-primary" />
-                    <span className="font-headline text-2xl font-bold">{uiStrings.spiceverse[language]}</span>
+                    <span className="font-headline text-2xl font-bold">{uiStrings.deviProducts[language]}</span>
                   </Link>
                 {navLinks.map(link => (
                   <Link key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground">

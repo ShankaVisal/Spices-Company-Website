@@ -57,28 +57,28 @@ export interface Recipe {
 
 export interface Testimonial {
   id: number;
-  name: string;
-  location: string;
-  quote: string;
+  name: { en: string; si: string; };
+  location: { en: string; si: string; };
+  quote: { en: string; si: string; };
 }
 
 export interface NewsEvent {
     id: number;
-    title: string;
-    date: string;
-    description: string;
-    content: string;
+    title: { en: string; si: string; };
+    date: { en: string; si: string; };
+    description: { en: string; si: string; };
+    content: { en: string; si: string; };
     images: string[];
     aiHints: string[];
 }
 
 export interface BlogPost {
     id: number;
-    title: string;
-    category: string;
+    title: { en: string; si: string; };
+    category: { en: string; si: string; };
     image: string;
     aiHint: string;
-    content: string;
+    content: { en: string; si: string; };
 }
 
 export interface GalleryContent {

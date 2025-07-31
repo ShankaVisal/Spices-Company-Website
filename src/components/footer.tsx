@@ -16,7 +16,7 @@ export function Footer() {
                          <div className="flex items-center gap-2">
                             <Leaf className="h-8 w-8 text-primary" />
                             <span className="font-headline text-2xl font-bold">
-                                {uiStrings.spiceverse[language]}
+                                {uiStrings.deviProducts[language]}
                             </span>
                         </div>
                         <p className="text-muted-foreground text-sm">

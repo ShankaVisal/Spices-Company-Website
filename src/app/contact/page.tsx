@@ -56,7 +56,7 @@ export default function ContactPage() {
                                 <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Email</h3>
-                                    <p className="text-muted-foreground">hello@spiceverse.com</p>
+                                    <p className="text-muted-foreground">hello@deviproducts.com</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
@@ -77,7 +77,7 @@ export default function ContactPage() {
                                 <Globe className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Website</h3>
-                                    <a href="https://www.spiceverse.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">www.spiceverse.com</a>
+                                    <a href="https://www.deviproducts.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">www.deviproducts.com</a>
                                 </div>
                             </div>
                         </div>

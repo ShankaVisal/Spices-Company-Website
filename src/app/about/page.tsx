@@ -12,7 +12,7 @@ export default function AboutPage() {
         <section className="relative w-full py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-white">
-              About Spiceverse
+              About Devi Products
             </h1>
             <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-white/90">
               Tracing the roots of flavor, from our home to yours.
@@ -43,7 +43,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">Our Story</h2>
                 <p className="text-muted-foreground mb-4">
-                  Spiceverse was born from a passion for authentic Sri Lankan flavors and a desire to share them with the world. Our journey began in the lush spice gardens of Sri Lanka, where generations have perfected the art of cultivating and curing spices.
+                  Devi Products was born from a passion for authentic Sri Lankan flavors and a desire to share them with the world. Our journey began in the lush spice gardens of Sri Lanka, where generations have perfected the art of cultivating and curing spices.
                 </p>
                 <p className="text-muted-foreground">
                   We believe in sustainable farming, ethical sourcing, and preserving the rich heritage of Sri Lankan spice traditions. Every product we offer is a testament to our commitment to quality and authenticity.

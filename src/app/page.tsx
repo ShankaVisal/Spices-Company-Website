@@ -34,7 +34,7 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-6 text-center">
             <div className="relative z-10">
               <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
-                Welcome to Spiceverse
+                Welcome to Devi Products
               </h1>
               <p className="mt-4 md:mt-6 max-w-2xl mx-auto text-lg md:text-xl text-white">
                 The authentic taste of Sri Lanka, delivered to your kitchen.

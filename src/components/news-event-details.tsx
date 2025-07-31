@@ -7,6 +7,7 @@ import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/componen
 import Autoplay from "embla-carousel-autoplay"
 import type { NewsEvent } from '@/lib/types';
 import { cn } from '@/lib/utils';
+import { useApp } from '@/hooks/use-app';
 
 interface NewsEventDetailsProps {
     event: NewsEvent;
@@ -15,6 +16,7 @@ interface NewsEventDetailsProps {
 export function NewsEventDetails({ event }: NewsEventDetailsProps) {
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
+  const { language } = useApp();
 
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false })
@@ -65,7 +67,7 @@ export function NewsEventDetails({ event }: NewsEventDetailsProps) {
                             <div className="relative aspect-video">
                             <Image
                                 src={image}
-                                alt={`${event.title} image ${index + 1}`}
+                                alt={`${event.title.en} image ${index + 1}`}
                                 data-ai-hint={event.aiHints[index]}
                                 fill
                                 className="object-cover rounded-lg"
@@ -90,12 +92,12 @@ export function NewsEventDetails({ event }: NewsEventDetailsProps) {
 
             <div className="text-center">
             <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-foreground">
-                {event.title}
+                {event.title[language]}
             </h1>
             <div className="flex items-center justify-center gap-2 mt-4 text-muted-foreground">
                 <Calendar className="h-5 w-5" />
                 <p className="text-lg md:text-xl">
-                    {event.date}
+                    {event.date[language]}
                 </p>
             </div>
             </div>
@@ -105,7 +107,7 @@ export function NewsEventDetails({ event }: NewsEventDetailsProps) {
         <section className="w-full pb-16 md:pb-24">
             <div className="container mx-auto px-4 md:px-6 max-w-3xl">
                 <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground">
-                <p>{event.content}</p>
+                <p>{event.content[language]}</p>
                 </div>
             </div>
         </section>

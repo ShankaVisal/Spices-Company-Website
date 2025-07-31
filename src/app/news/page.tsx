@@ -16,7 +16,7 @@ export default function NewsPage() {
               News & Events
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-white/90">
-              Stay up-to-date with the latest happenings at Spiceverse.
+              Stay up-to-date with the latest happenings at Devi Products.
             </p>
           </div>
            <Image

@@ -18,7 +18,7 @@ export function CartSheet({ children }: { children?: React.ReactNode }) {
   const totalPrice = cart.reduce((sum, item) => sum + item.quantity * item.selectedVariant.price, 0);
 
   const handleOrder = () => {
-    const header = `Hello ${uiStrings.spiceverse[language]}! I would like to order:\n\n`;
+    const header = `Hello ${uiStrings.deviProducts[language]}! I would like to order:\n\n`;
     const orderItems = cart.map(item => `- ${item.name[language]} (${item.selectedVariant.weight}) x ${item.quantity}`).join('\n');
     const footer = `\n\n${uiStrings.total[language]}: LKR ${totalPrice.toFixed(2)}`;
     const message = encodeURIComponent(header + orderItems + footer);

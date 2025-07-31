@@ -5,12 +5,14 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay"
 import type { Testimonial } from '@/lib/types';
 import { Quote } from 'lucide-react';
+import { useApp } from '@/hooks/use-app';
 
 interface TestimonialsProps {
   testimonials: Testimonial[];
 }
 
 export function Testimonials({ testimonials }: TestimonialsProps) {
+   const { language } = useApp();
    const plugin = React.useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   )
@@ -36,10 +38,10 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
                     <CardContent className="flex flex-col items-center justify-center p-6 text-center">
                       <Quote className="h-10 w-10 text-primary mb-4" />
                       <p className="text-lg md:text-xl text-muted-foreground mb-4 italic">
-                        &quot;{testimonial.quote}&quot;
+                        &quot;{testimonial.quote[language]}&quot;
                       </p>
-                      <p className="font-bold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                      <p className="font-bold text-foreground">{testimonial.name[language]}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.location[language]}</p>
                     </CardContent>
                   </Card>
                 </div>

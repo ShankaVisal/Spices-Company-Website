@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Spiceverse',
+  title: 'Devi Products',
   description: 'Authentic Sri Lankan spices for the modern kitchen.',
 };
 
