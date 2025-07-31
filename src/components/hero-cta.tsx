@@ -1,37 +1,42 @@
+
+'use client';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { CheckIcon } from './icons/check-icon';
+import { useApp } from '@/hooks/use-app';
+import { uiStrings } from '@/data/products';
 
 const benefits = [
-    { text: 'Rich in Antioxidants' },
-    { text: 'Boosts Metabolism' },
-    { text: 'Enhances Flavor' },
-    { text: 'Supports Digestion' }
+    { text: { en: 'Rich in Antioxidants', si: 'ප්‍රතිඔක්සිකාරක වලින් පොහොසත්' } },
+    { text: { en: 'Boosts Metabolism', si: 'පරිවෘත්තීය ක්‍රියාවලිය වැඩි දියුණු කරයි' } },
+    { text: { en: 'Enhances Flavor', si: 'රසය වැඩි දියුණු කරයි' } },
+    { text: { en: 'Supports Digestion', si: 'ජීර්ණයට සහය වේ' } }
 ];
 
 export function HeroCta() {
+    const { language } = useApp();
     return (
         <section className="w-full py-16 md:py-24 lg:py-32">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
                         <h2 className="text-4xl md:text-5xl font-headline font-bold">
-                            Providing premium spices for health and culinary excellence.
+                            {uiStrings.heroCtaTitle[language]}
                         </h2>
                         <p className="text-muted-foreground text-lg">
-                            We offer a range of spices that are packed with flavor and nutrients, supporting your wellness and elevating your cooking.
+                           {uiStrings.heroCtaDescription[language]}
                         </p>
                         <ul className="space-y-4">
                             {benefits.map((benefit, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <CheckIcon className="h-6 w-6 text-primary" />
-                                    <span className="font-semibold">{benefit.text}</span>
+                                    <span className="font-semibold">{benefit.text[language]}</span>
                                 </li>
                             ))}
                         </ul>
                         <Button size="lg" asChild className="bg-yellow-400 text-black hover:bg-yellow-500">
-                            <Link href="/about">Discover More &raquo;</Link>
+                            <Link href="/about">{uiStrings.discoverMore[language]}</Link>
                         </Button>
                     </div>
                     <div className="relative">
@@ -45,9 +50,9 @@ export function HeroCta() {
                             />
                         </div>
                         <div className="absolute -bottom-12 -left-12 bg-black text-white p-8 rounded-lg shadow-lg w-72">
-                            <h3 className="text-2xl font-bold mb-4">100% Natural, 100% Healthy Spices!</h3>
+                            <h3 className="text-2xl font-bold mb-4">{uiStrings.naturalHealthy[language]}</h3>
                              <Button asChild className="bg-yellow-400 text-black hover:bg-yellow-500">
-                                <Link href="/products">View Products</Link>
+                                <Link href="/products">{uiStrings.viewProducts[language]}</Link>
                             </Button>
                         </div>
                          <div className="absolute -bottom-12 -right-12 h-32 w-32 hidden md:block">

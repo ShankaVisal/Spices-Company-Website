@@ -1,8 +1,14 @@
+
+'use client';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import Link from 'next/link';
+import { useApp } from '@/hooks/use-app';
+import { uiStrings } from '@/data/products';
+
 
 export function GiftBanner() {
+    const { language } = useApp();
     return (
         <section className="relative w-full h-80 my-16">
             <Image
@@ -15,13 +21,13 @@ export function GiftBanner() {
             <div className="absolute inset-0 bg-black/50" />
             <div className="relative h-full flex flex-col items-center justify-center text-center text-white p-4">
                 <h2 className="text-4xl md:text-5xl font-headline font-bold mb-4">
-                    The Perfect Gift for Foodies
+                    {uiStrings.giftBannerTitle[language]}
                 </h2>
                 <p className="max-w-xl mb-6">
-                    Discover our beautifully curated gift boxes, filled with the finest Sri Lankan spices.
+                    {uiStrings.giftBannerDescription[language]}
                 </p>
                 <Button size="lg" asChild>
-                    <Link href="/products#gift-boxes">Shop Gifts</Link>
+                    <Link href="/products#gift-boxes">{uiStrings.shopGifts[language]}</Link>
                 </Button>
             </div>
         </section>

@@ -216,6 +216,7 @@ export const uiStrings = {
   happyCustomers: { en: 'Happy Customers', si: 'සතුටුදායක පාරිභෝගිකයින්' },
   outOfStock: { en: 'Out of Stock', si: 'තොග අවසන්' },
   whatOurCustomersSay: { en: 'What Our Customers Say', si: 'අපගේ පාරිභෝගිකයින් පවසන දේ' },
+  newsAndEvents: { en: 'News & Events', si: 'පුවත් සහ සිදුවීම්' },
   allNewsAndEvents: { en: 'View All News & Events', si: 'සියලුම පුවත් සහ සිදුවීම් බලන්න' },
   giftBannerTitle: { en: 'The Perfect Gift for Foodies', si: 'ආහාර ලෝලීන් සඳහා පරිපූර්ණ තෑග්ග' },
   giftBannerDescription: { en: 'Discover our beautifully curated gift boxes, filled with the finest Sri Lankan spices.', si: 'හොඳම ශ්‍රී ලාංකික කුළුබඩු වලින් පිරුණු, අලංකාර ලෙස සකස් කරන ලද අපගේ තෑගි පෙට්ටි සොයා ගන්න.' },
