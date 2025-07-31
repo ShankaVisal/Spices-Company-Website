@@ -6,7 +6,8 @@ import { notFound } from 'next/navigation';
 import { NewsEventDetails } from '@/components/news-event-details';
 
 export default function NewsEventPage({ params }: { params: { id: string } }) {
-  const event = newsAndEvents.find((e) => e.id.toString() === params.id);
+  const { id } = params;
+  const event = newsAndEvents.find((e) => e.id.toString() === id);
 
   if (!event) {
     notFound();
