@@ -7,8 +7,8 @@ import { Footer } from '@/components/footer';
 import { ProductList } from '@/components/product-list';
 import type { Product } from '@/lib/types';
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = (products as Product[]).find((p) => p.slug === params.slug);
+export default function ProductPage({ params: { slug } }: { params: { slug: string } }) {
+  const product = (products as Product[]).find((p) => p.slug === slug);
 
   if (!product) {
     notFound();
