@@ -25,7 +25,7 @@ export default function BlogPostPage({ params: { id } }: { params: { id: string 
           <header className="relative w-full h-96">
             <Image
               src={post.image}
-              alt={post.title[language]}
+              alt={post.title.en}
               data-ai-hint={post.aiHint}
               fill
               className="object-cover"

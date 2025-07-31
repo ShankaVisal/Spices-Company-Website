@@ -28,7 +28,7 @@ export function BlogSection({ posts }: BlogSectionProps) {
                     <div className="aspect-video relative">
                     <Image 
                         src={post.image} 
-                        alt={post.title[language]}
+                        alt={post.title.en}
                         data-ai-hint={post.aiHint} 
                         fill 
                         className="object-cover"
