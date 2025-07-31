@@ -3,7 +3,7 @@
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 
 const statsData = [
     { value: '30+', labelKey: 'spiceVarieties' },
@@ -17,7 +17,7 @@ export function WhyChooseUs() {
     
     const stats = statsData.map(stat => ({
         value: stat.value,
-        label: uiStrings[stat.labelKey][language]
+        label: (uiStrings as any)[stat.labelKey][language]
     }));
 
     return (

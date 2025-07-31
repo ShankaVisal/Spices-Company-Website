@@ -1,10 +1,9 @@
-
 'use client';
 
 import { ProductCard } from './product-card';
 import type { Product } from '@/lib/types';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 
 interface ProductListProps {
   products: Product[];
@@ -19,7 +18,7 @@ export function ProductList({ products, title }: ProductListProps) {
         return title;
     }
     if (typeof title === 'object' && title !== null) {
-        return title[language];
+        return title[language as keyof typeof title];
     }
     return uiStrings.ourProducts[language];
   }
