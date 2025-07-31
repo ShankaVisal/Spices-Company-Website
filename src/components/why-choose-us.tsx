@@ -1,14 +1,25 @@
+
+'use client';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
+import { useApp } from '@/hooks/use-app';
+import { uiStrings } from '@/data/products';
 
-const stats = [
-    { value: '30+', label: 'Spice Varieties' },
-    { value: '100%', label: 'Fresh Guaranteed' },
-    { value: '50+', label: 'Partner Farms' },
-    { value: '1000+', label: 'Happy Customers' }
+const statsData = [
+    { value: '30+', labelKey: 'spiceVarieties' },
+    { value: '100%', labelKey: 'freshGuaranteed' },
+    { value: '50+', labelKey: 'partnerFarms' },
+    { value: '1000+', labelKey: 'happyCustomers' }
 ];
 
 export function WhyChooseUs() {
+    const { language } = useApp();
+    
+    const stats = statsData.map(stat => ({
+        value: stat.value,
+        label: uiStrings[stat.labelKey][language]
+    }));
+
     return (
         <section className="relative w-full py-20 md:py-32 lg:py-40">
             <Image
@@ -21,12 +32,12 @@ export function WhyChooseUs() {
             <div className="absolute inset-0 bg-black/60" />
             <div className="relative container mx-auto px-4 md:px-6 text-white">
                 <div className="max-w-3xl">
-                    <Badge variant="secondary" className="mb-4 bg-primary/20 text-primary-foreground border-primary/40">WHY CHOOSE US</Badge>
+                    <Badge variant="secondary" className="mb-4 bg-primary/20 text-primary-foreground border-primary/40">{uiStrings.whyChooseUs[language]}</Badge>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold mb-6">
-                        Authentic Flavors, Ethically Sourced
+                        {uiStrings.whyChooseUsTitle[language]}
                     </h2>
                     <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-12">
-                        Offering the finest selection of authentic Sri Lankan spices to nourish your body and elevate your culinary creations.
+                        {uiStrings.whyChooseUsDescription[language]}
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 bg-primary/80 backdrop-blur-sm p-8 rounded-lg shadow-2xl">
                         {stats.map((stat, index) => (
