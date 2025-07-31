@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -7,7 +8,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { useApp } from '@/hooks/use-app';
 import type { Product, Recipe } from '@/lib/types';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 import { suggestRecipes } from '@/ai/flows/recipe-suggestion';
 import { Lightbulb, Loader2 } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from './ui/alert';

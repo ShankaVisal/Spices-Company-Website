@@ -1,0 +1,24 @@
+
+[
+  {
+    "id": 1,
+    "title": { "en": "The Heart of Flavor", "si": "රසයේ හදවත" },
+    "description": { "en": "Our spices are sourced from the lush, verdant gardens of Sri Lanka, where traditional farming methods yield the purest and most potent flavors.", "si": "අපගේ කුළුබඩු ශ්‍රී ලංකාවේ සශ්‍රීක, හරිත උද්‍යානවලින් ලබා ගන්නා අතර, එහිදී සම්ප්‍රදායික ගොවිතැන් ක්‍රම මගින් පිරිසිදුම සහ ප්‍රබලම රසයන් ලබා දේ." },
+    "image": "https://i.pinimg.com/736x/f7/bc/31/f7bc312795be16903ba822fd84314890.jpg",
+    "aiHint": "spice plantation"
+  },
+  {
+    "id": 2,
+    "title": { "en": "From Harvest to Home", "si": "අස්වැන්නේ සිට නිවසට" },
+    "description": { "en": "Each spice is carefully hand-picked, dried, and processed by local communities, preserving the authentic taste and aroma in every batch.", "si": "සෑම කුළුබඩුවක්ම ප්‍රදේශයේ ප්‍රජාවන් විසින් ප්‍රවේශමෙන් අතින් නෙළා, වියළා, සකස් කර, සෑම කාණ්ඩයකම සත්‍ය රසය සහ සුවඳ ආරක්ෂා කරයි." },
+    "image": "https://i.pinimg.com/736x/ff/80/dc/ff80dcd724eaae9fe3563d9740a45b58.jpg",
+    "aiHint": "spices drying"
+  },
+  {
+    "id": 3,
+    "title": { "en": "A Symphony of Spices", "si": "කුළුබඩු සංධ්වනියක්" },
+    "description": { "en": "Our curated collection includes everything from the fiery warmth of black pepper to the delicate sweetness of Ceylon cinnamon, ready to transform your cooking.", "si": "අපගේ සකසන ලද එකතුවට කළු ගම්මිරිස්වල ගිනිමය උණුසුමේ සිට ලංකා කුරුඳු වල සියුම් පැණිරස දක්වා සියල්ල ඇතුළත් වන අතර, ඔබේ ඉවුම් පිහුම් පරිවර්තනය කිරීමට සූදානම්." },
+    "image": "https://i.pinimg.com/736x/c9/4b/da/c94bda75cef60951ab6e6c14ae815cba.jpg",
+    "aiHint": "spices variety"
+  }
+]

@@ -1,9 +1,10 @@
+
 'use client';
 
 import Link from 'next/link';
 import { LanguageToggle } from '@/components/language-toggle';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 import { Leaf, Menu, ShoppingCart } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';

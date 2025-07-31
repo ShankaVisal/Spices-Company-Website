@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useApp } from '@/hooks/use-app';
 import type { Product, ProductVariant } from '@/lib/types';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 import { useToast } from "@/hooks/use-toast"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ShoppingCart, Star } from 'lucide-react';

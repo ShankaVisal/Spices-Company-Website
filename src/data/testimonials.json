@@ -1,0 +1,21 @@
+
+[
+  {
+    "id": 1,
+    "name": { "en": "Anusha Perera", "si": "අනුෂා පෙරේරා" },
+    "location": { "en": "Colombo, Sri Lanka", "si": "කොළඹ, ශ්‍රී ලංකාව" },
+    "quote": { "en": "The cinnamon sticks are incredibly fragrant and have elevated my baking. Truly authentic taste!", "si": "කුරුඳු පොතු ඇදහිය නොහැකි තරම් සුවඳයි. මගේ බේක් කිරීමේ කලාව ඉහළ නංවා ඇත. සැබවින්ම අව්‍යාජ රසයකි!" }
+  },
+  {
+    "id": 2,
+    "name": { "en": "James Smith", "si": "ජේම්ස් ස්මිත්" },
+    "location": { "en": "London, UK", "si": "ලන්ඩන්, එක්සත් රාජධානිය" },
+    "quote": { "en": "I ordered the spice collection and was blown away by the quality. The flavors are so vibrant and fresh. Highly recommend Devi Products!", "si": "මම කුළුබඩු එකතුව ඇණවුම් කළ අතර එහි ගුණාත්මකභාවය ගැන මවිතයට පත් වීමි. රසයන් ඉතා විචිත්‍රවත් හා නැවුම් ය. Devi Products බෙහෙවින් නිර්දේශ කරමි!" }
+  },
+  {
+    "id": 3,
+    "name": { "en": "Priya Sharma", "si": "ප්‍රියා ෂර්මා" },
+    "location": { "en": "Mumbai, India", "si": "මුම්බායි, ඉන්දියාව" },
+    "quote": { "en": "As a chef, I am very particular about my spices. Devi Products delivers top-notch quality every time. The turmeric powder is fantastic.", "si": "සූපවේදියෙකු ලෙස, මම මගේ කුළුබඩු ගැන ඉතා සැලකිලිමත් වෙමි. Devi Products සෑම විටම ඉහළම ගුණාත්මක භාවය ලබා දෙයි. කහ කුඩු විශිෂ්ටයි." }
+  }
+]

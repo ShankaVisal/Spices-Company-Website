@@ -8,7 +8,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useApp } from '@/hooks/use-app';
 import type { Product, ProductVariant } from '@/lib/types';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 import { useToast } from "@/hooks/use-toast"
 import { ShoppingCart, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -95,7 +95,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </>
         ) : (
              <Button disabled className="w-full">
-                Out of Stock
+                {uiStrings.outOfStock[language]}
             </Button>
         )}
       </CardFooter>

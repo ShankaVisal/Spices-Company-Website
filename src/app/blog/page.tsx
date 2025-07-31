@@ -1,7 +1,8 @@
+
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { BlogSection } from '@/components/blog-section';
-import { blogPosts } from '@/data/content';
+import blogPosts from '@/data/blog.json';
 import Image from 'next/image';
 
 export default function BlogPage() {

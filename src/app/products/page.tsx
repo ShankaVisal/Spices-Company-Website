@@ -1,13 +1,14 @@
+
 import { ProductList } from '@/components/product-list';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { products } from '@/data/products';
-import { uiStrings } from '@/data/products';
+import products from '@/data/products.json';
 import Image from 'next/image';
+import type { Product } from '@/lib/types';
 
 export default function ProductsPage() {
-  const spiceProducts = products.filter(p => p.category === 'Spice');
-  const giftBoxProducts = products.filter(p => p.category === 'Gift Box');
+  const spiceProducts = (products as Product[]).filter(p => p.category === 'Spice');
+  const giftBoxProducts = (products as Product[]).filter(p => p.category === 'Gift Box');
 
   return (
     <div className="flex min-h-screen flex-col">

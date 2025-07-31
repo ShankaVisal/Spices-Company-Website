@@ -4,7 +4,7 @@
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter } from '@/components/ui/sheet';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 import { WhatsAppIcon } from './icons/whatsapp-icon';
 import Image from 'next/image';
 import { Minus, Plus, ShoppingCart, Trash2 } from 'lucide-react';

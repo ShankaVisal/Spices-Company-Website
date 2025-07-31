@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 import Link from 'next/link';
 import { CheckIcon } from './icons/check-icon';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 
 const benefits = [
     { text: { en: 'Rich in Antioxidants', si: 'ප්‍රතිඔක්සිකාරක වලින් පොහොසත්' } },

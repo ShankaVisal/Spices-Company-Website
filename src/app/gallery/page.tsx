@@ -2,9 +2,10 @@
 'use client';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { galleryContent } from '@/data/content';
+import galleryContent from '@/data/gallery.json';
 import Image from 'next/image';
 import { useApp } from '@/hooks/use-app';
+import type { GalleryContent } from '@/lib/types';
 
 export default function GalleryPage() {
   const { language } = useApp();
@@ -34,7 +35,7 @@ export default function GalleryPage() {
         <section className="w-full py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col gap-12 md:gap-20">
-              {galleryContent.map((item, index) => (
+              {(galleryContent as GalleryContent[]).map((item, index) => (
                 <div
                   key={item.id}
                   className="grid md:grid-cols-2 gap-8 md:gap-12 items-center"

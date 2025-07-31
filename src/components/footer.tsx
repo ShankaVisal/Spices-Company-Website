@@ -1,8 +1,9 @@
+
 'use client';
 
 import Link from 'next/link';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 import { Leaf, Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { TiktokIcon } from './icons/tiktok-icon';
 

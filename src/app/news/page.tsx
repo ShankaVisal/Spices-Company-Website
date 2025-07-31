@@ -1,7 +1,8 @@
+
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { NewsEvents } from '@/components/news-events';
-import { newsAndEvents } from '@/data/content';
+import newsAndEvents from '@/data/news.json';
 import Image from 'next/image';
 
 

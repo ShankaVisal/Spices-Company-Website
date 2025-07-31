@@ -1,8 +1,9 @@
+
 import { ProductList } from '@/components/product-list';
 import { RecipeSuggester } from '@/components/recipe-suggester';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { products } from '@/data/products';
+import products from '@/data/products.json';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { FeaturedProduct } from '@/components/featured-product';
@@ -10,16 +11,20 @@ import { Testimonials } from '@/components/testimonials';
 import { PhotoGallery } from '@/components/photo-gallery';
 import { NewsEvents } from '@/components/news-events';
 import { BlogSection } from '@/components/blog-section';
-import { testimonials, galleryContent, newsAndEvents, blogPosts } from '@/data/content';
+import testimonials from '@/data/testimonials.json';
+import galleryContent from '@/data/gallery.json';
+import newsAndEvents from '@/data/news.json';
+import blogPosts from '@/data/blog.json';
 import Link from 'next/link';
 import { CartSheet } from '@/components/cart-sheet';
 import { WhyChooseUs } from '@/components/why-choose-us';
 import { HeroCta } from '@/components/hero-cta';
 import { GiftBanner } from '@/components/gift-banner';
+import type { Product } from '@/lib/types';
 
 
 export default function Home() {
-  const featuredProduct = products.find(p => p.category === 'Spice');
+  const featuredProduct = (products as Product[]).find(p => p.category === 'Spice');
 
   if (!featuredProduct) {
     // Fallback in case no spice product is found
@@ -55,7 +60,7 @@ export default function Home() {
           </div>
         </section>
         <HeroCta />
-        <ProductList products={products.filter(p => p.category === 'Spice').slice(0, 6)} title="Our Most Popular Spices" />
+        <ProductList products={(products as Product[]).filter(p => p.category === 'Spice').slice(0, 6)} title="Our Most Popular Spices" />
         <div className="text-center -mt-8 mb-16">
             <Button asChild variant="outline">
                 <Link href="/products">View All Products</Link>
@@ -78,7 +83,7 @@ export default function Home() {
                 <Link href="/blog">View All Posts</Link>
             </Button>
         </div>
-        <RecipeSuggester products={products.filter(p => p.category === 'Spice')} />
+        <RecipeSuggester products={(products as Product[]).filter(p => p.category === 'Spice')} />
       </main>
       <Footer />
       <CartSheet />

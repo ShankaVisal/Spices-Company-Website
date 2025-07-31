@@ -1,4 +1,3 @@
-
 'use client';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,7 +6,7 @@ import type { NewsEvent } from '@/lib/types';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 
 interface NewsEventsProps {
   events: NewsEvent[];

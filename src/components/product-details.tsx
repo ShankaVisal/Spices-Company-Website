@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 import { useToast } from "@/hooks/use-toast";
 import { ShoppingCart, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -65,7 +65,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                 <ImageCarousel images={product.images} aiHints={product.aiHints} alt={product.name.en} />
                  {!product.available && (
                     <div className="absolute inset-0 bg-black/60 flex items-center justify-center rounded-xl">
-                        <span className="text-white font-bold text-2xl bg-red-600 px-6 py-3 rounded-md">Out of Stock</span>
+                        <span className="text-white font-bold text-2xl bg-red-600 px-6 py-3 rounded-md">{uiStrings.outOfStock[language]}</span>
                     </div>
                 )}
             </div>
@@ -107,7 +107,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                 </>
               ) : (
                  <Button disabled size="lg" className="text-lg py-7 px-10 w-full sm:w-auto">
-                    Out of Stock
+                    {uiStrings.outOfStock[language]}
                 </Button>
               )}
 

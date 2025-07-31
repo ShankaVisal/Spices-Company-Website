@@ -2,15 +2,16 @@
 'use client';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { blogPosts } from '@/data/content';
+import blogPosts from '@/data/blog.json';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import React from 'react';
 import { useApp } from '@/hooks/use-app';
+import type { BlogPost } from '@/lib/types';
 
 export default function BlogPostPage({ params }: { params: { id: string } }) {
   const { id } = params;
-  const post = blogPosts.find((p) => p.id.toString() === id);
+  const post = (blogPosts as BlogPost[]).find((p) => p.id.toString() === id);
   const { language } = useApp();
 
   if (!post) {

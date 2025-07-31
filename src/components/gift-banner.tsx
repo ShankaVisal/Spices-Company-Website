@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { useApp } from '@/hooks/use-app';
-import { uiStrings } from '@/data/products';
+import uiStrings from '@/data/ui-strings.json';
 
 
 export function GiftBanner() {
