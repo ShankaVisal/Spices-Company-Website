@@ -1,3 +1,4 @@
+
 'use client';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -28,7 +29,7 @@ export function NewsEvents({ events }: NewsEventsProps) {
                   <div className="aspect-video relative">
                     <Image 
                       src={event.images[0]} 
-                      alt={event.title.en}
+                      alt={event.title}
                       data-ai-hint={event.aiHints[0]} 
                       fill 
                       className="object-cover"
@@ -37,9 +38,9 @@ export function NewsEvents({ events }: NewsEventsProps) {
                 </Link>
               </CardHeader>
               <CardContent className="p-6 flex-1 flex flex-col">
-                <p className="text-sm text-muted-foreground mb-2">{event.date[language]}</p>
-                <CardTitle className="font-headline text-xl mb-3 flex-1">{event.title[language]}</CardTitle>
-                <CardDescription className="line-clamp-2 mb-4">{event.description[language]}</CardDescription>
+                <p className="text-sm text-muted-foreground mb-2">{event.date}</p>
+                <CardTitle className="font-headline text-xl mb-3 flex-1">{event.title}</CardTitle>
+                <CardDescription className="line-clamp-2 mb-4">{event.description}</CardDescription>
                 <Button variant="secondary" className="mt-auto self-start" asChild>
                   <Link href={`/news/${event.id}`}>
                     Read More <ArrowRight className="ml-2 h-4 w-4" />

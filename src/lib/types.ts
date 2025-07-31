@@ -64,21 +64,21 @@ export interface Testimonial {
 
 export interface NewsEvent {
     id: number;
-    title: { en: string; si: string; };
-    date: { en: string; si: string; };
-    description: { en: string; si: string; };
-    content: { en: string; si: string; };
+    title: string;
+    date: string;
+    description: string;
+    content: string;
     images: string[];
     aiHints: string[];
 }
 
 export interface BlogPost {
     id: number;
-    title: { en: string; si: string; };
-    category: { en: string; si: string; };
+    title: string;
+    category: string;
     image: string;
     aiHint: string;
-    content: { en: string; si: string; };
+    content: string;
 }
 
 export interface GalleryContent {

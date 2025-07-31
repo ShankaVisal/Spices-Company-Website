@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -5,15 +6,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { BlogPost } from '@/lib/types';
 import Link from 'next/link';
-import { useApp } from '@/hooks/use-app';
 
 interface BlogSectionProps {
   posts: BlogPost[];
 }
 
 export function BlogSection({ posts }: BlogSectionProps) {
-  const { language } = useApp();
-
   return (
     <section className="w-full py-12 md:py-20 lg:py-24 bg-card">
       <div className="container mx-auto px-4 md:px-6">
@@ -28,7 +26,7 @@ export function BlogSection({ posts }: BlogSectionProps) {
                     <div className="aspect-video relative">
                     <Image 
                         src={post.image} 
-                        alt={post.title.en}
+                        alt={post.title}
                         data-ai-hint={post.aiHint} 
                         fill 
                         className="object-cover"
@@ -38,12 +36,12 @@ export function BlogSection({ posts }: BlogSectionProps) {
                 </Link>
               </CardHeader>
               <CardContent className="p-6 flex-1 flex flex-col">
-                <p className="text-sm text-primary font-semibold uppercase tracking-wider mb-2">{post.category[language]}</p>
+                <p className="text-sm text-primary font-semibold uppercase tracking-wider mb-2">{post.category}</p>
                 <h3 className="font-headline text-xl font-bold mb-3 flex-1">
-                    <Link href={`/blog/${post.id}`} className="hover:text-primary transition-colors">{post.title[language]}</Link>
+                    <Link href={`/blog/${post.id}`} className="hover:text-primary transition-colors">{post.title}</Link>
                 </h3>
                 <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
-                  {post.content[language]}
+                  {post.content}
                 </p>
                 <Button variant="secondary" className="mt-auto self-start" asChild>
                   <Link href={`/blog/${post.id}`}>

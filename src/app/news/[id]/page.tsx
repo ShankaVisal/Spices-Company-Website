@@ -6,6 +6,7 @@ import newsAndEvents from '@/data/news.json';
 import { notFound } from 'next/navigation';
 import { NewsEventDetails } from '@/components/news-event-details';
 import type { NewsEvent } from '@/lib/types';
+import { use } from 'react';
 
 export default function NewsEventPage({ params }: { params: { id: string } }) {
   const event = (newsAndEvents as NewsEvent[]).find((e) => e.id.toString() === params.id);
