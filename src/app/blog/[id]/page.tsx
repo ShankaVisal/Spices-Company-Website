@@ -9,8 +9,8 @@ import React from 'react';
 import { useApp } from '@/hooks/use-app';
 import type { BlogPost } from '@/lib/types';
 
-export default function BlogPostPage({ params: { id } }: { params: { id: string } }) {
-  const post = (blogPosts as BlogPost[]).find((p) => p.id.toString() === id);
+export default function BlogPostPage({ params }: { params: { id: string } }) {
+  const post = (blogPosts as BlogPost[]).find((p) => p.id.toString() === params.id);
   const { language } = useApp();
 
   if (!post) {
