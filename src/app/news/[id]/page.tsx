@@ -7,8 +7,8 @@ import { notFound } from 'next/navigation';
 import { NewsEventDetails } from '@/components/news-event-details';
 import type { NewsEvent } from '@/lib/types';
 
-export default function NewsEventPage({ params: { id } }: { params: { id: string } }) {
-  const event = (newsAndEvents as NewsEvent[]).find((e) => e.id.toString() === id);
+export default function NewsEventPage({ params }: { params: { id: string } }) {
+  const event = (newsAndEvents as NewsEvent[]).find((e) => e.id.toString() === params.id);
 
   if (!event) {
     notFound();
