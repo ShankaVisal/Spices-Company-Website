@@ -1,9 +1,13 @@
+
+'use client';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { galleryContent } from '@/data/content';
 import Image from 'next/image';
+import { useApp } from '@/hooks/use-app';
 
 export default function GalleryPage() {
+  const { language } = useApp();
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -50,10 +54,10 @@ export default function GalleryPage() {
                   </div>
                   <div className="text-center md:text-left">
                     <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
-                      {item.title.en}
+                      {item.title[language]}
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                      {item.description.en}
+                      {item.description[language]}
                     </p>
                   </div>
                 </div>
