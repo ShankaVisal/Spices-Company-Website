@@ -10,7 +10,7 @@ import Image from 'next/image';
 import { Minus, Plus, ShoppingCart, Trash2 } from 'lucide-react';
 import { Separator } from './ui/separator';
 
-const WHATSAPP_NUMBER = '+94741156797';
+const WHATSAPP_NUMBER = '+94753177570';
 
 export function CartSheet({ children }: { children?: React.ReactNode }) {
   const { language, cart, updateQuantity, clearCart } = useApp();
