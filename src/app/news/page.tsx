@@ -4,6 +4,16 @@ import { Footer } from '@/components/footer';
 import { NewsEvents } from '@/components/news-events';
 import newsAndEvents from '@/data/news.json';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'News & Events',
+  description: 'Stay up-to-date with the latest news, events, and announcements from Devi Products, your source for authentic Sri Lankan spices.',
+  openGraph: {
+    title: 'News & Events | Devi Products',
+    description: 'Stay up-to-date with the latest happenings at Devi Products.',
+  }
+};
 
 
 export default function NewsPage() {

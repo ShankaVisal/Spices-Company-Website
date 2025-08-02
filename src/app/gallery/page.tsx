@@ -6,10 +6,21 @@ import galleryContent from '@/data/gallery.json';
 import Image from 'next/image';
 import { useApp } from '@/hooks/use-app';
 import type { GalleryContent } from '@/lib/types';
+import Head from 'next/head';
 
 export default function GalleryPage() {
   const { language } = useApp();
+  const title = 'Our Spice Stories Gallery';
+  const description = 'A visual journey into the heart of Devi Products. Explore our gallery of authentic Sri Lankan spices, from harvest to your home.';
+
   return (
+    <>
+    <Head>
+        <title>{`${title} | Devi Products`}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={`${title} | Devi Products`} />
+        <meta property="og:description" content={description} />
+    </Head>
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
@@ -69,5 +80,6 @@ export default function GalleryPage() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }

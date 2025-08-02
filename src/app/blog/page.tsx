@@ -4,6 +4,16 @@ import { Footer } from '@/components/footer';
 import { BlogSection } from '@/components/blog-section';
 import blogPosts from '@/data/blog.json';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Spice & Flavor Blog',
+  description: 'The official blog of Devi Products. Discover recipes, stories, and inspiration from the world of authentic Sri Lankan spices.',
+  openGraph: {
+    title: 'Spice & Flavor Blog | Devi Products',
+    description: 'Discover recipes, stories, and inspiration from the world of authentic Sri Lankan spices.',
+  }
+};
 
 export default function BlogPage() {
   return (

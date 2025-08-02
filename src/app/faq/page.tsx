@@ -1,3 +1,4 @@
+
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import {
@@ -7,6 +8,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import Image from 'next/image';
+import type { Metadata } from 'next';
+import { JsonLd } from '@/components/json-ld';
+
+export const metadata: Metadata = {
+  title: 'Frequently Asked Questions (FAQ)',
+  description: 'Find answers to common questions about Devi Products, our Sri Lankan spices, shipping, and storage. Learn about Ceylon cinnamon, organic options, and more.',
+  openGraph: {
+    title: 'Frequently Asked Questions (FAQ) | Devi Products',
+    description: 'Find answers to common questions about our Sri Lankan spices, shipping, and more.',
+  }
+};
 
 const faqs = [
     {
@@ -29,11 +41,25 @@ const faqs = [
         question: "Do you ship internationally?",
         answer: "Yes, we ship our spices worldwide! Shipping costs and times vary depending on the destination. You can find more details on our shipping policy page."
     }
-]
+];
 
 export default function FAQPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
+      <JsonLd data={faqSchema} />
       <Header />
       <main className="flex-1">
         <section className="relative w-full py-20 md:py-32">

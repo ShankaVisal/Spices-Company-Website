@@ -7,6 +7,14 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import React, { use } from 'react';
 import type { BlogPost } from '@/lib/types';
+import { JsonLd } from '@/components/json-ld';
+
+// Although this is a client component, we can't use generateMetadata.
+// We'll have to manage the title and meta tags manually.
+// This is a limitation of using client components for dynamic pages.
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deviproducts.com';
+
 
 export default function BlogPostPage({ params }: { params: { id: string } }) {
   const post = (blogPosts as BlogPost[]).find((p) => p.id.toString() === params.id);
@@ -14,9 +22,56 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
   if (!post) {
     notFound();
   }
+  
+  const blogPostSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "image": post.image,
+    "author": {
+      "@type": "Organization",
+      "name": "Devi Products"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Devi Products",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/logo.png`
+      }
+    },
+    "description": post.content.substring(0, 160) + '...',
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/blog/${post.id}`
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": `${siteUrl}`
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": `${siteUrl}/blog`
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": post.title
+    }]
+  };
+
 
   return (
     <div className="flex min-h-screen flex-col">
+      <JsonLd data={blogPostSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <Header />
       <main className="flex-1">
         <article>

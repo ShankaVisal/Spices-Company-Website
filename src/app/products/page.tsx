@@ -5,6 +5,17 @@ import { Footer } from '@/components/footer';
 import products from '@/data/products.json';
 import Image from 'next/image';
 import type { Product } from '@/lib/types';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Spice Collection & Gift Boxes',
+  description: 'Explore our curated selection of premium, authentic Sri Lankan spices like Ceylon cinnamon, black pepper, and goraka. Find the perfect spice or gift box from Devi Products.',
+  openGraph: {
+    title: 'Our Spice Collection & Gift Boxes | Devi Products',
+    description: 'Explore our curated selection of premium, authentic Sri Lankan spices.',
+  }
+};
+
 
 export default function ProductsPage() {
   const spiceProducts = (products as Product[]).filter(p => p.category === 'Spice');

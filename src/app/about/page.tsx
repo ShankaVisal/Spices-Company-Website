@@ -1,8 +1,19 @@
+
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import Image from 'next/image';
 import { Leaf, Users, Target, Eye, Goal } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Devi Products',
+  description: 'Learn about the story, mission, and values of Devi Products. Discover our passion for authentic, ethically sourced Sri Lankan spices and our commitment to quality.',
+  openGraph: {
+    title: 'About Devi Products',
+    description: 'Learn about the story, mission, and values of Devi Products.',
+  }
+};
 
 export default function AboutPage() {
   return (
