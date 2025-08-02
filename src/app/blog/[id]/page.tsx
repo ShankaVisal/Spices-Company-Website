@@ -17,7 +17,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deviproducts.co
 
 
 export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = (blogPosts as BlogPost[]).find((p) => p.id.toString() === params.id);
+  const { id } = use(params);
+  const post = (blogPosts as BlogPost[]).find((p) => p.id.toString() === id);
 
   if (!post) {
     notFound();

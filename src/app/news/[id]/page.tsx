@@ -12,7 +12,8 @@ import { JsonLd } from '@/components/json-ld';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deviproducts.com';
 
 export default function NewsEventPage({ params }: { params: { id: string } }) {
-  const event = (newsAndEvents as NewsEvent[]).find((e) => e.id.toString() === params.id);
+  const { id } = use(params);
+  const event = (newsAndEvents as NewsEvent[]).find((e) => e.id.toString() === id);
 
   if (!event) {
     notFound();
