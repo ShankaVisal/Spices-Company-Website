@@ -65,6 +65,9 @@ export function Footer() {
                 </div>
                 <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
                     <p>{uiStrings.footerText[language]}</p>
+                    <p className="mt-2">
+                        Developed by <a href="https://www.taproit.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">Tapro IT</a>
+                    </p>
                 </div>
             </div>
         </footer>
