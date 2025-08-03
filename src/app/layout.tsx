@@ -61,7 +61,7 @@ export default function RootLayout({
     "logo": `${siteUrl}/logo.png`,
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+94-11-234-5678",
+      "telephone": "+94-75-317-7570",
       "contactType": "customer service"
     },
     "sameAs": [

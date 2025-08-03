@@ -16,7 +16,7 @@ export function Footer() {
                 <div className="grid gap-8 md:grid-cols-4">
                     <div className="flex flex-col gap-4 md:col-span-1">
                          <div className="flex items-center gap-2">
-                            <Image src="https://placehold.co/40x40.png" alt="Devi Products Logo" width={40} height={40} data-ai-hint="logo" />
+                            <Image src="https://placehold.co/40x40.png" alt="Devi Products Logo" width={40} height={40} data-ai-hint="company logo" />
                             <span className="font-headline text-2xl font-bold">
                                 {uiStrings.deviProducts[language]}
                             </span>
