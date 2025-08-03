@@ -9,13 +9,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deviproducts.co
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Devi Products - Authentic Sri Lankan Spices',
+    default: 'Devi Products - The pure taste of the Down South...',
     template: '%s | Devi Products',
   },
-  description: 'Discover the authentic taste of Sri Lanka with Devi Products. We offer premium, ethically sourced spices like Ceylon cinnamon, black pepper, and goraka.',
-  keywords: ['Sri Lankan spices', 'Ceylon cinnamon', 'black pepper', 'goraka', 'authentic spices', 'Devi Products'],
+  description: 'Discover the authentic taste of Sri Lanka with Devi Products. We offer premium, ethically sourced spices like Ceylon cinnamon, Black pepper, and Garcinia.',
+  keywords: ['Sri Lankan spices', 'Ceylon cinnamon', 'black pepper', 'goraka', 'Garcinia', 'authentic spices', 'Devi Products', 'Devi', 'kulubadu', 'Gampaha', 'Sri Lanka', ],
   openGraph: {
-    title: 'Devi Products - Authentic Sri Lankan Spices',
+    title: 'Devi Products - The pure taste of the Down South.',
     description: 'Premium, ethically sourced spices from Sri Lanka. Explore our collection of Ceylon cinnamon, black pepper, and more.',
     url: siteUrl,
     siteName: 'Devi Products',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Devi Products - Authentic Sri Lankan Spices',
+    title: 'Devi Products - The pure taste of the Down South.',
     description: 'Discover the authentic taste of Sri Lanka with Devi Products. Premium spices like Ceylon cinnamon and black pepper.',
     images: [`${siteUrl}/og-image.jpg`],
   },
