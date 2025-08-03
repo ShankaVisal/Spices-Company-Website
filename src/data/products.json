@@ -140,7 +140,7 @@
     "category": "Gift Box",
     "description": { "en": "The perfect set for anyone beginning their Sri Lankan culinary journey.", "si": "ශ්‍රී ලාංකේය සූපශාස්ත්‍ර ගමන ආරම්භ කරන ඕනෑම කෙනෙකුට පරිපූර්ණ කට්ටලය." },
     "variants": [{ "weight": "Set", "price": 3500 }],
-    "images": ["https://i.pinimg.com/736x/b2/24/8c/b2248c8946a4855a8052565b9a81878d.jpg"],
+    "images": ["https://i.pinimg.com/736x/3c/d5/2d/3cd52d0a94c385bce0ae5ec63ef4fb7b.jpg"],
     "aiHints": ["spice gift set"],
     "available": true
   },
@@ -151,7 +151,7 @@
     "category": "Gift Box",
     "description": { "en": "A collection of our finest curry powders and essential spices for the perfect curry.", "si": "පරිපූර්ණ කරියක් සඳහා අපගේ හොඳම කරි කුඩු සහ අත්‍යවශ්‍ය කුළුබඩු එකතුවකි." },
     "variants": [{ "weight": "Set", "price": 4500 }],
-    "images": ["https://i.pinimg.com/736x/5f/79/d3/5f79d345f69c4d874533a3c98fe712e0.jpg"],
+    "images": ["https://i.pinimg.com/1200x/dc/48/ee/dc48ee1d9e639a4d3d521c3ceae1d692.jpg"],
     "aiHints": ["curry spice set"],
     "available": true
   },
@@ -162,7 +162,7 @@
     "category": "Gift Box",
     "description": { "en": "A delightful selection of our sweet spices, perfect for baking and desserts.", "si": "බේක් කිරීම සහ අතුරුපස සඳහා පරිපූර්ණ අපගේ මිහිරි කුළුබඩු වල ප්‍රියජනක තේරීමක්." },
     "variants": [{ "weight": "Set", "price": 4000 }],
-    "images": ["https://i.pinimg.com/736x/11/4a/4a/114a4ab0357e60e5881a53e4142f9b8c.jpg"],
+    "images": ["https://i.pinimg.com/1200x/12/bf/a6/12bfa675a61e9fef25cc48e14387d55c.jpg"],
     "aiHints": ["sweet spice set"],
     "available": true
   }

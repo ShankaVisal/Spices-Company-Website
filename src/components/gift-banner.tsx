@@ -12,7 +12,7 @@ export function GiftBanner() {
     return (
         <section className="relative w-full h-80 my-16">
             <Image
-                src="https://i.pinimg.com/originals/2b/c7/2a/2bc72a5a56c7030c88b63443b71b80c2.jpg"
+                src="https://i.pinimg.com/1200x/9c/e5/05/9ce505d6c42c36c0eb9a871c68c91217.jpg"
                 alt="Gift boxes with spices"
                 data-ai-hint="spice gift boxes"
                 fill
