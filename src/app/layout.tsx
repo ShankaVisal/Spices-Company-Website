@@ -4,6 +4,7 @@ import { AppProvider } from '@/context/app-provider';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deviproducts.com';
 
@@ -95,6 +96,7 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body className="font-body antialiased">
+      <Analytics/>
         <AppProvider>
           {children}
           <Toaster />
