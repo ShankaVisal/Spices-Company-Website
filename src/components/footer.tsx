@@ -2,9 +2,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useApp } from '@/hooks/use-app';
 import uiStrings from '@/data/ui-strings.json';
-import { Leaf, Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { TiktokIcon } from './icons/tiktok-icon';
 
 export function Footer() {
@@ -15,7 +16,7 @@ export function Footer() {
                 <div className="grid gap-8 md:grid-cols-4">
                     <div className="flex flex-col gap-4 md:col-span-1">
                          <div className="flex items-center gap-2">
-                            <Leaf className="h-8 w-8 text-primary" />
+                            <Image src="https://placehold.co/40x40.png" alt="Devi Products Logo" width={40} height={40} data-ai-hint="logo" />
                             <span className="font-headline text-2xl font-bold">
                                 {uiStrings.deviProducts[language]}
                             </span>
