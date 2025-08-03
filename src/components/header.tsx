@@ -10,6 +10,7 @@ import { Menu, ShoppingCart } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { CartSheet } from '@/components/cart-sheet';
+import logo from '../logo.png';
 
 const navLinks = [
   { href: '/about', label: { en: 'About Us', si: 'අප ගැන' } },
@@ -29,7 +30,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-auto flex items-center gap-2">
-          <Image src="/logo.png" alt="Devi Products Logo" width={40} height={40} data-ai-hint="company logo" />
+          <Image src={logo} alt="Devi Products Logo" width={80} height={80} data-ai-hint="company logo" />
           <span className="font-headline text-2xl font-bold">
             {uiStrings.deviProducts[language]}
           </span>

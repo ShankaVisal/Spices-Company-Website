@@ -7,6 +7,7 @@ import { useApp } from '@/hooks/use-app';
 import uiStrings from '@/data/ui-strings.json';
 import { Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { TiktokIcon } from './icons/tiktok-icon';
+import logo1 from '../logo.png';
 
 export function Footer() {
     const { language } = useApp();
@@ -16,7 +17,7 @@ export function Footer() {
                 <div className="grid gap-8 md:grid-cols-4">
                     <div className="flex flex-col gap-4 md:col-span-1">
                          <div className="flex items-center gap-2">
-                            <Image src="/logo.png" alt="Devi Products Logo" width={40} height={40} data-ai-hint="company logo" />
+                            <Image src={logo1} alt="Devi Products Logo" width={80} height={80} data-ai-hint="company logo" />
                             <span className="font-headline text-2xl font-bold">
                                 {uiStrings.deviProducts[language]}
                             </span>
