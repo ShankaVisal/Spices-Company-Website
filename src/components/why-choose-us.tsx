@@ -6,9 +6,9 @@ import { useApp } from '@/hooks/use-app';
 import uiStrings from '@/data/ui-strings.json';
 
 const statsData = [
-    { value: '30+', labelKey: 'spiceVarieties' },
+    { value: '5+', labelKey: 'spiceVarieties' },
     { value: '100%', labelKey: 'freshGuaranteed' },
-    { value: '50+', labelKey: 'partnerFarms' },
+    { value: '10+', labelKey: 'partnerFarms' },
     { value: '1000+', labelKey: 'happyCustomers' }
 ];
 
