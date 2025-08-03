@@ -56,28 +56,28 @@ export default function ContactPage() {
                                 <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Email</h3>
-                                    <p className="text-muted-foreground">hello@deviproducts.com</p>
+                                    <p className="text-muted-foreground">contact@deviproducts.lk</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
                                 <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Phone</h3>
-                                    <p className="text-muted-foreground">+94 11 234 5678</p>
+                                    <p className="text-muted-foreground">+94 75 317 7570</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
                                 <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Address</h3>
-                                    <p className="text-muted-foreground">123 Spice Grove, Colombo, Sri Lanka</p>
+                                    <p className="text-muted-foreground">171/6, 1st lane, Farmgrove watta, Veyangoda, Sri Lanka</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
                                 <Globe className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Website</h3>
-                                    <a href="https://www.deviproducts.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">www.deviproducts.com</a>
+                                    <a href="https://www.deviproducts.lk" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">www.deviproducts.com</a>
                                 </div>
                             </div>
                         </div>
