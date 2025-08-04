@@ -30,7 +30,7 @@ export function CartSheet({ children }: { children?: React.ReactNode }) {
   ) : (
     <SheetTrigger asChild>
       <Button
-        className="fixed bottom-4 right-4 h-14 w-14 md:bottom-6 md:right-6 md:h-16 md:w-16 rounded-full shadow-lg z-50 flex items-center justify-center bg-accent hover:bg-accent/90"
+        className="fixed bottom-4 left-4 h-14 w-14 md:bottom-6 md:left-6 md:h-16 md:w-16 rounded-full shadow-lg z-50 flex items-center justify-center bg-accent hover:bg-accent/90"
         size="icon"
         aria-label={`View cart with ${itemCount} items`}
       >
