@@ -85,6 +85,7 @@ export default function Home() {
         </div>
         <RecipeSuggester products={(products as Product[]).filter(p => p.category === 'Spice')} />
       </main>
+      <iframe style={{ width: 400, height: 600 }} src="https://app.fastbots.ai/embed/cmdxejuay02r9pb1mpsitjw0a"></iframe>
       <Footer />
       <CartSheet />
     </div>
