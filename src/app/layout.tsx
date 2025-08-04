@@ -92,13 +92,13 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-        <script src="https://cdn.pulse.is/livechat/loader.js" data-live-chat-id="6890f6548f9f365978081c61" async></script>
       </head>
       <body className="font-body antialiased">
         <AppProvider>
           {children}
           <Toaster />
         </AppProvider>
+        <script src="https://cdn.pulse.is/livechat/loader.js" data-live-chat-id="6890f6548f9f365978081c61" async></script>
       </body>
     </html>
   );
