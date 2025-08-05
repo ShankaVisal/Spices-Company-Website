@@ -4,7 +4,7 @@ import blogPosts from '@/data/blog.json';
 import newsAndEvents from '@/data/news.json';
 import type { Product, BlogPost, NewsEvent } from '@/lib/types';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deviproducts.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.deviproducts.lk';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
