@@ -98,7 +98,6 @@ export default function RootLayout({
           {children}
           <Toaster />
         </AppProvider>
-        <script src="https://cdn.pulse.is/livechat/loader.js" data-live-chat-id="6890f6548f9f365978081c61" async></script>
       </body>
     </html>
   );
