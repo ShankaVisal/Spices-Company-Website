@@ -105,8 +105,8 @@ export function NewsEventDetails({ event }: NewsEventDetailsProps) {
         </header>
 
         <section className="w-full pb-16 md:pb-24">
-            <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground text-justify">
+            <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+                <div className="prose prose-xl dark:prose-invert max-w-none text-muted-foreground text-justify">
                     {event.content.split('\n').map((paragraph, index) => (
                       <p key={index} className="mb-6">{paragraph}</p>
                     ))}
