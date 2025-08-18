@@ -10,7 +10,7 @@
     "author": {
       "name": "Jane Doe",
       "title": "Head of Culinary",
-      "image": "https://placehold.co/100x100.png",
+      "image": "/authors/jane-doe.png",
       "aiHint": "woman portrait"
     }
   },
@@ -24,7 +24,7 @@
     "author": {
       "name": "Jane Doe",
       "title": "Head of Culinary",
-      "image": "https://placehold.co/100x100.png",
+      "image": "/authors/jane-doe.png",
       "aiHint": "woman portrait"
     }
   },
@@ -38,7 +38,7 @@
     "author": {
       "name": "Jane Doe",
       "title": "Head of Culinary",
-      "image": "https://placehold.co/100x100.png",
+      "image": "/authors/jane-doe.png",
       "aiHint": "woman portrait"
     }
   }
