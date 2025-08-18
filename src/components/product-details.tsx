@@ -14,6 +14,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Separator } from '@/components/ui/separator';
 import type { Product } from '@/lib/types';
 import { ImageCarousel } from './image-carousel';
+import { ShareButtons } from './share-buttons';
 
 interface ProductDetailsProps {
     product: Product;
@@ -82,7 +83,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               <p className="text-muted-foreground text-lg">{product.longDescription ? product.longDescription[language] : product.description[language]}</p>
               
               {product.available ? (
-                <>
+                <div className="space-y-6">
                     <div className="flex items-center gap-4">
                         <p className="text-4xl font-bold text-foreground">
                         LKR {selectedVariant.price.toFixed(2)}
@@ -104,13 +105,13 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                         <ShoppingCart className="mr-2 h-6 w-6"/>
                         {uiStrings.addToCart[language]}
                     </Button>
-                </>
+                </div>
               ) : (
                  <Button disabled size="lg" className="text-lg py-7 px-10 w-full sm:w-auto">
                     {uiStrings.outOfStock[language]}
                 </Button>
               )}
-
+               <ShareButtons title={`${product.name.en} | Devi Products`} />
             </div>
           </div>
         </div>
