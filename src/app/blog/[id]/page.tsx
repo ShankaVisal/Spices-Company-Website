@@ -99,8 +99,10 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
 
           <div className="w-full py-16 md:py-24">
             <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground">
-                <p>{post.content}</p>
+              <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground text-justify">
+                {post.content.split('\n').map((paragraph, index) => (
+                  <p key={index} className="mb-6">{paragraph}</p>
+                ))}
               </div>
               <Separator className="my-12" />
               <Card className="bg-secondary/50">
