@@ -9,6 +9,8 @@ import React, { use } from 'react';
 import type { BlogPost } from '@/lib/types';
 import { JsonLd } from '@/components/json-ld';
 import { ShareButtons } from '@/components/share-buttons';
+import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 
 // Although this is a client component, we can't use generateMetadata.
 // We'll have to manage the title and meta tags manually.
@@ -31,8 +33,8 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
     "headline": post.title,
     "image": post.image,
     "author": {
-      "@type": "Organization",
-      "name": "Devi Products"
+      "@type": "Person",
+      "name": post.author.name
     },
     "publisher": {
       "@type": "Organization",
@@ -100,6 +102,25 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground">
                 <p>{post.content}</p>
               </div>
+              <Separator className="my-12" />
+              <Card className="bg-secondary/50">
+                <CardContent className="p-6 flex items-center gap-6">
+                    <div className="relative h-24 w-24 rounded-full overflow-hidden flex-shrink-0">
+                        <Image 
+                            src={post.author.image} 
+                            alt={post.author.name}
+                            data-ai-hint={post.author.aiHint}
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <div>
+                        <p className="font-semibold text-lg">Written by</p>
+                        <h4 className="font-headline text-2xl font-bold">{post.author.name}</h4>
+                        <p className="text-muted-foreground">{post.author.title}</p>
+                    </div>
+                </CardContent>
+              </Card>
               <ShareButtons title={post.title} />
             </div>
           </div>

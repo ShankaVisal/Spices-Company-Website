@@ -72,6 +72,13 @@ export interface NewsEvent {
     aiHints: string[];
 }
 
+interface Author {
+    name: string;
+    title: string;
+    image: string;
+    aiHint: string;
+}
+
 export interface BlogPost {
     id: number;
     title: string;
@@ -79,6 +86,7 @@ export interface BlogPost {
     image: string;
     aiHint: string;
     content: string;
+    author: Author;
 }
 
 export interface GalleryContent {
