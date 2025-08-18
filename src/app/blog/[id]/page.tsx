@@ -8,6 +8,7 @@ import Image from 'next/image';
 import React, { use } from 'react';
 import type { BlogPost } from '@/lib/types';
 import { JsonLd } from '@/components/json-ld';
+import { ShareButtons } from '@/components/share-buttons';
 
 // Although this is a client component, we can't use generateMetadata.
 // We'll have to manage the title and meta tags manually.
@@ -99,6 +100,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
               <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground">
                 <p>{post.content}</p>
               </div>
+              <ShareButtons title={post.title} />
             </div>
           </div>
         </article>

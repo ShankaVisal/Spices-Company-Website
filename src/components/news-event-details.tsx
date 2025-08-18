@@ -8,6 +8,7 @@ import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/componen
 import Autoplay from "embla-carousel-autoplay"
 import type { NewsEvent } from '@/lib/types';
 import { cn } from '@/lib/utils';
+import { ShareButtons } from './share-buttons';
 
 interface NewsEventDetailsProps {
     event: NewsEvent;
@@ -108,6 +109,7 @@ export function NewsEventDetails({ event }: NewsEventDetailsProps) {
                 <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground">
                 <p>{event.content}</p>
                 </div>
+                <ShareButtons title={event.title} />
             </div>
         </section>
     </article>
