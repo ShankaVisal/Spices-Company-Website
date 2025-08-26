@@ -33,9 +33,7 @@
     "description": "Join our masterclass on creating the perfect Sri Lankan curry. Limited spots available, book now!",
     "content": "Join our masterclass on creating the perfect Sri Lankan curry. This hands-on workshop will guide you through the essential techniques and spice blends to create an authentic and delicious curry. Limited spots are available, so book now to avoid disappointment!",
     "images": [
-      "https://i.pinimg.com/736x/a5/12/d3/a512d3af7dd550668c051456951f02f1.jpg",
-      "https://placehold.co/600x400.png",
-      "https://placehold.co/600x400.png"
+      "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/people/stall1.JPG"
     ],
     "aiHints": ["cooking workshop", "sri lankan curry", "people cooking"]
   }
