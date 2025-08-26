@@ -56,7 +56,7 @@ export function NewsEventDetails({ event }: NewsEventDetailsProps) {
                 align: "start",
                 loop: true,
             }}
-            className="w-full mb-8 relative"
+            className="w-full max-w-4xl mx-auto mb-8 relative"
             >
             <CarouselContent>
                 {event.images.map((image, index) => (
