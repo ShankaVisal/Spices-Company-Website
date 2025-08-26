@@ -2,14 +2,13 @@
 [
   {
     "id": 1,
-    "title": "New Organic Spice Line Launched",
-    "date": "August 15, 2024",
-    "description": "We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms.",
-    "content": "We are thrilled to announce our new line of certified organic spices, sourced directly from sustainable farms. This collection features our most popular spices, now available with organic certification, ensuring the purest quality and taste. We believe in supporting farming practices that are good for you and for the planet.",
+    "title": "My First Sale – A Dream Start for Devi Products",
+    "date": "August 04, 2025",
+    "description": "Devi Products is proud to announce a special milestone in our journey – the very first sale of our authentic Sri Lankan spices.",
+    "content": "We are delighted to announce a significant milestone in our journey – the very first sale of Devi Products.\nOur founder officially launched the brand with a mission to deliver premium, authentic Sri Lankan spices to the world. The honor of being our very first customer goes to none other than Mr. Ranjith Premathilake, Chairman of Sanjeewaka Ayurvedic Products (Pvt.) Ltd, the visionary entrepreneur behind the globally renowned Chandanalepa Ayurveda Cosmetics.\nThe personal handover of our first product was more than just a sale – it was a moment of inspiration and validation. Beginning our journey with the trust of such a respected business leader strengthens our commitment to uphold the values of authenticity, quality, and trust in every product we deliver.\nThis is only the beginning. Devi Products looks forward to sharing the rich heritage of Sri Lankan spices with the world.",
     "images": [
-      "https://i.pinimg.com/736x/9f/75/2b/9f752bc07d30674cb2d1195cce374a86.jpg",
-      "https://placehold.co/600x400.png",
-      "https://placehold.co/600x400.png"
+      "https://i.pinimg.com/736x/d3/4b/ba/d34bba5073b789d8732e376fa975ab5e.jpg",
+      "https://i.pinimg.com/736x/db/62/46/db6246fa03a7eb843fbbd5fb2dfe2278.jpg"
     ],
     "aiHints": ["organic spices", "sustainable farm", "spice packaging"]
   },
