@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+            {
+        protocol: 'https',
+        hostname: 'wtxtchqioofzyrzulhoz.supabase.co',
+        port: '',
+        pathname: '/**', // Allow all image paths
+      },
       {
         protocol: 'https',
         hostname: 'i.pinimg.com',
