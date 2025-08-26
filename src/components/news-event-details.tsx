@@ -47,7 +47,7 @@ export function NewsEventDetails({ event }: NewsEventDetailsProps) {
 
   return (
     <article>
-        <header className="w-full py-16 md:py-24 bg-card">
+        <header className="w-full pt-8 md:pt-12 pb-8 md:pb-12 bg-card">
         <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-8">
                 <h1 className="font-headline text-3xl md:text-4xl font-bold tracking-tight text-foreground">
