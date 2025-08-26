@@ -5,6 +5,7 @@ import { BlogSection } from '@/components/blog-section';
 import blogPosts from '@/data/blog.json';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import type { BlogPost } from '@/lib/types';
 
 export const metadata: Metadata = {
   title: 'Spice & Flavor Blog',
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const sortedPosts = [...(blogPosts as BlogPost[])].sort((a, b) => b.id - a.id);
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -38,7 +40,7 @@ export default function BlogPage() {
             />
             <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>
-        <BlogSection posts={blogPosts} />
+        <BlogSection posts={sortedPosts} />
       </main>
       <Footer />
     </div>

@@ -5,6 +5,7 @@ import { NewsEvents } from '@/components/news-events';
 import newsAndEvents from '@/data/news.json';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import type { NewsEvent } from '@/lib/types';
 
 export const metadata: Metadata = {
   title: 'News & Events',
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 
 
 export default function NewsPage() {
+  const sortedEvents = [...(newsAndEvents as NewsEvent[])].sort((a, b) => b.id - a.id);
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -39,7 +41,7 @@ export default function NewsPage() {
             />
              <div className="absolute inset-0 bg-black/50 z-0"></div>
         </section>
-        <NewsEvents events={newsAndEvents} />
+        <NewsEvents events={sortedEvents} />
       </main>
       <Footer />
     </div>

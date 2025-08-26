@@ -20,11 +20,13 @@ import { CartSheet } from '@/components/cart-sheet';
 import { WhyChooseUs } from '@/components/why-choose-us';
 import { HeroCta } from '@/components/hero-cta';
 import { GiftBanner } from '@/components/gift-banner';
-import type { Product } from '@/lib/types';
+import type { Product, BlogPost, NewsEvent } from '@/lib/types';
 
 
 export default function Home() {
   const featuredProduct = (products as Product[]).find(p => p.category === 'Spice');
+  const sortedNews = [...(newsAndEvents as NewsEvent[])].sort((a, b) => b.id - a.id);
+  const sortedBlogs = [...(blogPosts as BlogPost[])].sort((a, b) => b.id - a.id);
 
   if (!featuredProduct) {
     // Fallback in case no spice product is found
@@ -70,14 +72,14 @@ export default function Home() {
         <FeaturedProduct product={featuredProduct} />
         <Testimonials testimonials={testimonials} />
         <PhotoGallery items={galleryContent} />
-        <NewsEvents events={newsAndEvents.slice(0, 3)} />
+        <NewsEvents events={sortedNews.slice(0, 3)} />
          <div className="text-center -mt-16 mb-16">
             <Button asChild variant="outline">
                 <Link href="/news">View All News & Events</Link>
             </Button>
         </div>
         <GiftBanner />
-        <BlogSection posts={blogPosts.slice(0, 3)} />
+        <BlogSection posts={sortedBlogs.slice(0, 3)} />
          <div className="text-center -mt-16 mb-24">
             <Button asChild variant="outline">
                 <Link href="/blog">View All Posts</Link>
