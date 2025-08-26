@@ -7,19 +7,19 @@
     "description": "Devi Products is proud to announce a special milestone in our journey – the very first sale of our authentic Sri Lankan spices.",
     "content": "We are delighted to announce a significant milestone in our journey – the very first sale of Devi Products.\nOur founder officially launched the brand with a mission to deliver premium, authentic Sri Lankan spices to the world. The honor of being our very first customer goes to none other than Mr. Ranjith Premathilake, Chairman of Sanjeewaka Ayurvedic Products (Pvt.) Ltd, the visionary entrepreneur behind the globally renowned Chandanalepa Ayurveda Cosmetics.\nThe personal handover of our first product was more than just a sale – it was a moment of inspiration and validation. Beginning our journey with the trust of such a respected business leader strengthens our commitment to uphold the values of authenticity, quality, and trust in every product we deliver.\nThis is only the beginning. Devi Products looks forward to sharing the rich heritage of Sri Lankan spices with the world.",
     "images": [
-      "https://i.pinimg.com/736x/d3/4b/ba/d34bba5073b789d8732e376fa975ab5e.jpg",
-      "https://i.pinimg.com/736x/db/62/46/db6246fa03a7eb843fbbd5fb2dfe2278.jpg"
+      "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/people/chandanalepa.jpg",
+      "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/spices/devi_products.png"
     ],
     "aiHints": ["organic spices", "sustainable farm", "spice packaging"]
   },
   {
     "id": 2,
-    "title": "Devi Products at the Good Food Show",
-    "date": "July 28, 2024",
+    "title": "Devi Products at the Trace City Expert in Colombo",
+    "date": "August 23, 2025",
     "description": "Come visit our booth at the International Good Food Show in London. We will be offering samples and special discounts.",
     "content": "Come visit our booth at the International Good Food Show in London. We will be offering samples of our latest products, special event-only discounts, and live cooking demonstrations. Meet the team and experience the world of Devi Products firsthand!",
     "images": [
-      "https://i.pinimg.com/736x/3d/6d/5c/3d6d5ccb052a9c8d0e24b06cb78c3657.jpg",
+      "https://i.pinimg.com/736x/05/13/85/0513853af07823d447d77f58dc4a7b10.jpg",
       "https://placehold.co/600x400.png",
       "https://placehold.co/600x400.png"
     ],
