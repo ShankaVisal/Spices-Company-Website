@@ -19,18 +19,18 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
    const { language } = useApp();
 
   return (
-    <section className="w-full py-12 md:py-20 lg:py-24 bg-secondary/50">
+    <section className="w-full py-12 md:py-16 lg:py-20 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
             What Our Customers Say
             </h2>
-            <p className="text-muted-foreground mb-8 md:mb-12">
+            <p className="text-muted-foreground mb-8">
                 Real feedback from our valued customers who love our authentic spices.
             </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="flex flex-col">
                 <CardContent className="p-6 flex-1 flex flex-col items-start text-left">
@@ -52,7 +52,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
             ))}
         </div>
 
-        <div className="max-w-2xl mx-auto mt-16">
+        <div className="max-w-2xl mx-auto mt-12">
           <Card>
             <CardHeader className="items-center text-center">
               <CardTitle className="font-headline text-2xl">Share Your Experience</CardTitle>
