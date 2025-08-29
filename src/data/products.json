@@ -18,16 +18,7 @@
         "https://i.pinimg.com/736x/e3/b1/4a/e3b14aa20a1a67cb94a71d6f93ef2717.jpg"
     ],
     "aiHints": ["black peppercorns", "peppercorns background", "peppercorns bowl", "peppercorns grinder", "peppercorns plant"],
-    "available": true,
-    "featured": {
-      "image": "https://i.pinimg.com/736x/87/4c/67/874c6749c2a3838a35649b56365a6f2b.jpg",
-      "aiHint": "peppercorns harvesting",
-      "title": { "en": "Try Our New Product", "si": "අපගේ නව නිෂ්පාදනය උත්සාහ කරන්න" },
-      "description": {
-        "en": "Discover the unmatched quality of our freshly harvested Black Peppercorns. Sourced directly from the lush spice gardens of Sri Lanka, each peppercorn is hand-picked to ensure a bold, pungent flavor that will elevate your culinary creations. Perfect for grinding fresh over any dish.",
-        "si": "අපගේ නැවුම්ව නෙළාගත් කළු ගම්මිරිස් ඇටවල අසමසම ගුණාත්මකභාවය සොයා ගන්න. ශ්‍රී ලංකාවේ සශ්‍රීක කුළුබඩු උද්‍යානවලින් සෘජුවම ලබාගත් සෑම ගම්මිරිස් ඇටයක්ම ඔබේ සූපශාස්ත්‍ර නිර්මාණ ඉහළ නංවන තද, තියුණු රසයක් සහතික කිරීම සඳහා අතින් තෝරා ගනු ලැබේ. ඕනෑම කෑමක් මත නැවුම්ව ඇඹරීම සඳහා පරිපූර්ණයි."
-      }
-    }
+    "available": true
   },
   {
     "id": 2,
@@ -71,7 +62,16 @@
       { "id": 1, "author": "Anusha P.", "rating": 5, "comment": "The best cinnamon I have ever used. The aroma is amazing!" },
       { "id": 2, "author": "John Doe", "rating": 4, "comment": "Good quality, but a bit pricey." }
     ],
-    "available": true
+    "available": true,
+    "featured": {
+      "image": "https://i.pinimg.com/736x/72/27/4b/72274b514bf5cd7b7b7ce6504f4b42da.jpg",
+      "aiHint": "cinnamon sticks",
+      "title": { "en": "Discover True Cinnamon", "si": "සැබෑ කුරුඳු සොයා ගන්න" },
+      "description": {
+        "en": "Experience the delicate, sweet flavor of authentic Ceylon Cinnamon. Unlike any other, our cinnamon is sourced from the Cinnamomum verum tree, offering a superior aroma and numerous health benefits. It's the perfect addition to your favorite desserts, warm beverages, and savory dishes. Elevate your cooking with the world's finest cinnamon.",
+        "si": "සැබෑ ලංකා කුරුඳු වල සියුම්, මිහිරි රසය අත්විඳින්න. වෙනත් කිසිම දෙයකට දෙවැනි නැති අපගේ කුරුඳු, Cinnamomum verum ගසෙන් ලබා ගන්නා අතර, උසස් සුවඳක් සහ බොහෝ සෞඛ්‍ය ප්‍රතිලාභ ලබා දෙයි. එය ඔබගේ ප්‍රියතම අතුරුපස, උණුසුම් බීම සහ රසවත් කෑම සඳහා පරිපූර්ණ එකතු කිරීමකි. ලෝකයේ හොඳම කුරුඳු සමඟ ඔබේ ඉවුම් පිහුම් ඉහළ නංවන්න."
+      }
+    }
   },
   {
     "id": 4,
