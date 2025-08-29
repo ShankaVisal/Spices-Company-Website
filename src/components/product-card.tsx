@@ -57,44 +57,44 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
         </Link>
       </CardHeader>
-      <CardContent className="flex-1 p-6">
+      <CardContent className="flex-1 p-4">
         <Link href={`/products/${product.slug}`}>
-            <CardTitle className="font-headline text-2xl mb-2 hover:text-primary transition-colors">{product.name[language]}</CardTitle>
+            <CardTitle className="font-headline text-xl mb-1 hover:text-primary transition-colors">{product.name[language]}</CardTitle>
         </Link>
-        <CardDescription className="line-clamp-2">{product.description[language]}</CardDescription>
-         <Button variant="link" asChild className="p-0 h-auto mt-2">
+        <CardDescription className="text-sm line-clamp-2">{product.description[language]}</CardDescription>
+         <Button variant="link" asChild className="p-0 h-auto mt-1 text-sm">
             <Link href={`/products/${product.slug}`}>
-                See More <ArrowRight className="ml-1 h-4 w-4" />
+                See More <ArrowRight className="ml-1 h-3 w-3" />
             </Link>
         </Button>
       </CardContent>
-      <CardFooter className="p-6 pt-0 flex flex-col items-start gap-4">
+      <CardFooter className="p-4 pt-0 flex flex-col items-start gap-3">
         {product.available ? (
             <>
                 <div className="flex justify-between items-center w-full">
-                    <p className="text-xl font-bold text-foreground">
+                    <p className="text-lg font-bold text-foreground">
                     LKR {selectedVariant.price.toFixed(2)}
                     </p>
                     <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
-                        <SelectTrigger className="w-[120px]">
+                        <SelectTrigger className="w-[100px] h-9 text-xs">
                             <SelectValue placeholder="Select weight" />
                         </SelectTrigger>
                         <SelectContent>
                             {product.variants.map(variant => (
-                            <SelectItem key={variant.weight} value={variant.weight}>
+                            <SelectItem key={variant.weight} value={variant.weight} className="text-xs">
                                 {variant.weight}
                             </SelectItem>
                             ))}
                         </SelectContent>
                     </Select>
                 </div>
-                <Button onClick={handleAddToCart} className="w-full">
+                <Button onClick={handleAddToCart} className="w-full h-9">
                 <ShoppingCart className="mr-2 h-4 w-4"/>
                 {uiStrings.addToCart[language]}
                 </Button>
             </>
         ) : (
-             <Button disabled className="w-full">
+             <Button disabled className="w-full h-9">
                 {uiStrings.outOfStock[language]}
             </Button>
         )}

@@ -62,7 +62,7 @@ export default function Home() {
           </div>
         </section>
         <HeroCta />
-        <ProductList products={(products as Product[]).filter(p => p.category === 'Spice').slice(0, 6)} title="Our Most Popular Spices" />
+        <ProductList products={(products as Product[]).filter(p => p.category === 'Spice').slice(0, 8)} title="Our Most Popular Spices" />
         <div className="text-center -mt-8 mb-16">
             <Button asChild variant="outline">
                 <Link href="/products">View All Products</Link>
