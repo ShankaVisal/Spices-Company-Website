@@ -19,7 +19,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
    const { language } = useApp();
 
   return (
-    <section className="w-full py-12 md:py-16 lg:py-20 bg-secondary/50">
+    <section className="w-full py-12 md:py-16 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
@@ -52,7 +52,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
             ))}
         </div>
 
-        <div className="max-w-2xl mx-auto mt-12">
+        <div className="max-w-lg mx-auto mt-8">
           <Card>
             <CardHeader className="items-center text-center">
               <CardTitle className="font-headline text-2xl">Share Your Experience</CardTitle>
