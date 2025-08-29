@@ -37,7 +37,7 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32 bg-secondary/50">
+    <section className="w-full py-12 md:py-20 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         <Card className="overflow-hidden shadow-xl border-2 border-primary/20">
           <CardContent className="p-0">
@@ -58,11 +58,11 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                     </div>
                 )}
               </div>
-              <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="p-6 md:p-10 flex flex-col justify-center">
                 <Link href={`/products/${product.slug}`}>
-                    <h3 className="font-headline text-3xl md:text-4xl font-bold mb-4 hover:text-primary transition-colors">{product.name[language]}</h3>
+                    <h3 className="font-headline text-3xl md:text-3xl font-bold mb-3 hover:text-primary transition-colors">{product.name[language]}</h3>
                 </Link>
-                <div className="flex items-center gap-1 text-yellow-500 mb-4">
+                <div className="flex items-center gap-1 text-yellow-500 mb-3">
                   <Star className="fill-current" />
                   <Star className="fill-current" />
                   <Star className="fill-current" />
@@ -70,16 +70,16 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                   <Star className="fill-current" />
                   <span className="text-muted-foreground ml-2 text-sm">(5.0)</span>
                 </div>
-                <p className="text-muted-foreground text-base mb-6">{product.description[language]}</p>
+                <p className="text-muted-foreground text-sm mb-4">{product.description[language]}</p>
                 
                 {product.available ? (
                     <>
-                        <div className="flex items-center gap-4 mb-6">
-                            <p className="text-3xl font-bold text-foreground">
+                        <div className="flex items-center gap-4 mb-4">
+                            <p className="text-2xl font-bold text-foreground">
                                 LKR {selectedVariant.price.toFixed(2)}
                             </p>
                             <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
-                                <SelectTrigger className="w-[150px]">
+                                <SelectTrigger className="w-[120px] h-9 text-xs">
                                     <SelectValue placeholder="Select weight" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -91,13 +91,13 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                                 </SelectContent>
                             </Select>
                         </div>
-                        <Button onClick={handleAddToCart} size="lg">
-                        <ShoppingCart className="mr-2 h-5 w-5"/>
+                        <Button onClick={handleAddToCart}>
+                        <ShoppingCart className="mr-2 h-4 w-4"/>
                         {uiStrings.addToCart[language]}
                         </Button>
                     </>
                 ) : (
-                    <Button disabled size="lg">
+                    <Button disabled>
                         Out of Stock
                     </Button>
                 )}
