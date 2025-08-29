@@ -58,24 +58,24 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                     </div>
                 )}
               </div>
-              <div className="p-6 md:p-10 flex flex-col justify-center">
+              <div className="p-6 md:p-8 flex flex-col justify-center">
                 <Link href={`/products/${product.slug}`}>
-                    <h3 className="font-headline text-3xl md:text-3xl font-bold mb-3 hover:text-primary transition-colors">{product.name[language]}</h3>
+                    <h3 className="font-headline text-2xl md:text-3xl font-bold mb-2 hover:text-primary transition-colors">{product.name[language]}</h3>
                 </Link>
                 <div className="flex items-center gap-1 text-yellow-500 mb-3">
-                  <Star className="fill-current" />
-                  <Star className="fill-current" />
-                  <Star className="fill-current" />
-                  <Star className="fill-current" />
-                  <Star className="fill-current" />
+                  <Star className="fill-current h-4 w-4" />
+                  <Star className="fill-current h-4 w-4" />
+                  <Star className="fill-current h-4 w-4" />
+                  <Star className="fill-current h-4 w-4" />
+                  <Star className="fill-current h-4 w-4" />
                   <span className="text-muted-foreground ml-2 text-sm">(5.0)</span>
                 </div>
-                <p className="text-muted-foreground text-sm mb-4">{product.description[language]}</p>
+                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{product.description[language]}</p>
                 
                 {product.available ? (
                     <>
                         <div className="flex items-center gap-4 mb-4">
-                            <p className="text-2xl font-bold text-foreground">
+                            <p className="text-xl font-bold text-foreground">
                                 LKR {selectedVariant.price.toFixed(2)}
                             </p>
                             <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
@@ -84,20 +84,20 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                                 </SelectTrigger>
                                 <SelectContent>
                                     {product.variants.map(variant => (
-                                    <SelectItem key={variant.weight} value={variant.weight}>
+                                    <SelectItem key={variant.weight} value={variant.weight} className="text-xs">
                                         {variant.weight}
                                     </SelectItem>
                                     ))}
                                 </SelectContent>
                             </Select>
                         </div>
-                        <Button onClick={handleAddToCart}>
+                        <Button onClick={handleAddToCart} size="sm">
                         <ShoppingCart className="mr-2 h-4 w-4"/>
                         {uiStrings.addToCart[language]}
                         </Button>
                     </>
                 ) : (
-                    <Button disabled>
+                    <Button disabled size="sm">
                         Out of Stock
                     </Button>
                 )}
