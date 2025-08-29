@@ -41,8 +41,8 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
       <div className="container mx-auto px-4 md:px-6">
             <Card className="overflow-hidden shadow-xl border-2 border-primary/20 max-w-5xl mx-auto">
             <CardContent className="p-0">
-                <div className="grid md:grid-cols-5">
-                <div className="relative aspect-square md:col-span-3">
+                <div className="grid md:grid-cols-2">
+                <div className="relative aspect-square md:col-span-1">
                     <Link href={`/products/${product.slug}`}>
                         <Image 
                             src={product.images[0]} 
@@ -58,10 +58,10 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                         </div>
                     )}
                 </div>
-                <div className="p-8 md:py-12 md:px-10 flex flex-col justify-center md:col-span-2">
-                    <p className="text-sm font-medium text-primary uppercase tracking-wider mb-2">Try our new Product</p>
+                <div className="p-8 md:py-12 md:px-10 flex flex-col justify-center md:col-span-1">
+                    <h3 className="font-headline text-3xl md:text-4xl font-bold mb-2">Try our new Product</h3>
                     <Link href={`/products/${product.slug}`}>
-                        <h3 className="font-headline text-2xl md:text-3xl font-bold mb-2 hover:text-primary transition-colors">{product.name[language]}</h3>
+                        <p className="text-lg font-medium text-primary uppercase tracking-wider mb-2 hover:underline">{product.name[language]}</p>
                     </Link>
                     <div className="flex items-center gap-1 text-yellow-500 mb-3">
                     <Star className="fill-current h-4 w-4" />
