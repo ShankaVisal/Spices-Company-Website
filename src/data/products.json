@@ -18,7 +18,16 @@
         "https://i.pinimg.com/736x/e3/b1/4a/e3b14aa20a1a67cb94a71d6f93ef2717.jpg"
     ],
     "aiHints": ["black peppercorns", "peppercorns background", "peppercorns bowl", "peppercorns grinder", "peppercorns plant"],
-    "available": true
+    "available": true,
+    "featured": {
+      "image": "https://i.pinimg.com/736x/87/4c/67/874c6749c2a3838a35649b56365a6f2b.jpg",
+      "aiHint": "peppercorns harvesting",
+      "title": { "en": "Try Our New Product", "si": "අපගේ නව නිෂ්පාදනය උත්සාහ කරන්න" },
+      "description": {
+        "en": "Discover the unmatched quality of our freshly harvested Black Peppercorns. Sourced directly from the lush spice gardens of Sri Lanka, each peppercorn is hand-picked to ensure a bold, pungent flavor that will elevate your culinary creations. Perfect for grinding fresh over any dish.",
+        "si": "අපගේ නැවුම්ව නෙළාගත් කළු ගම්මිරිස් ඇටවල අසමසම ගුණාත්මකභාවය සොයා ගන්න. ශ්‍රී ලංකාවේ සශ්‍රීක කුළුබඩු උද්‍යානවලින් සෘජුවම ලබාගත් සෑම ගම්මිරිස් ඇටයක්ම ඔබේ සූපශාස්ත්‍ර නිර්මාණ ඉහළ නංවන තද, තියුණු රසයක් සහතික කිරීම සඳහා අතින් තෝරා ගනු ලැබේ. ඕනෑම කෑමක් මත නැවුම්ව ඇඹරීම සඳහා පරිපූර්ණයි."
+      }
+    }
   },
   {
     "id": 2,

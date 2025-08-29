@@ -36,6 +36,12 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
     }
   };
 
+  const featuredDetails = product.featured;
+  const displayImage = featuredDetails?.image || product.images[0];
+  const displayAiHint = featuredDetails?.aiHint || product.aiHints[0];
+  const displayDescription = featuredDetails?.description[language] || product.description[language];
+  const displayTitle = featuredDetails?.title[language] || "Try our new Product";
+
   return (
     <section className="w-full py-12 md:py-20 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
@@ -45,9 +51,9 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                 <div className="relative aspect-square md:col-span-1">
                     <Link href={`/products/${product.slug}`}>
                         <Image 
-                            src={product.images[0]} 
+                            src={displayImage} 
                             alt={product.name.en}
-                            data-ai-hint={product.aiHints[0]}
+                            data-ai-hint={displayAiHint}
                             fill 
                             className="object-cover"
                         />
@@ -59,7 +65,7 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                     )}
                 </div>
                 <div className="p-8 md:py-12 md:px-10 flex flex-col justify-center md:col-span-1">
-                    <h3 className="font-headline text-3xl md:text-4xl font-bold mb-4">Try our new Product</h3>
+                    <h3 className="font-headline text-3xl md:text-4xl font-bold mb-4">{displayTitle}</h3>
                     <Link href={`/products/${product.slug}`}>
                         <p className="text-lg font-medium text-primary uppercase tracking-wider hover:underline">{product.name[language]}</p>
                     </Link>
@@ -71,7 +77,7 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                     <Star className="fill-current h-4 w-4" />
                     <span className="text-muted-foreground ml-2 text-sm">(5.0)</span>
                     </div>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{product.description[language]}</p>
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{displayDescription}</p>
                     
                     {product.available ? (
                         <>

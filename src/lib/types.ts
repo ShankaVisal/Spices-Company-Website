@@ -11,6 +11,19 @@ export interface Review {
   comment: string;
 }
 
+export interface FeaturedDetails {
+  image: string;
+  aiHint: string;
+  title: {
+    en: string;
+    si: string;
+  };
+  description: {
+    en: string;
+    si: string;
+  };
+}
+
 export interface Product {
   id: number;
   slug: string;
@@ -32,6 +45,7 @@ export interface Product {
   aiHints: string[];
   reviews?: Review[];
   available: boolean;
+  featured?: FeaturedDetails;
 }
 
 export interface CartItem extends Product {

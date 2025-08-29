@@ -24,13 +24,13 @@ import type { Product, BlogPost, NewsEvent } from '@/lib/types';
 
 
 export default function Home() {
-  const featuredProduct = (products as Product[]).find(p => p.category === 'Spice');
+  const featuredProduct = (products as Product[]).find(p => p.featured);
   const sortedNews = [...(newsAndEvents as NewsEvent[])].sort((a, b) => b.id - a.id);
   const sortedBlogs = [...(blogPosts as BlogPost[])].sort((a, b) => b.id - a.id);
 
   if (!featuredProduct) {
     // Fallback in case no spice product is found
-    return <div>Error: No spice products available.</div>;
+    return <div>Error: No featured product available.</div>;
   }
 
   return (
