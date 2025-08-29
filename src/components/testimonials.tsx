@@ -9,6 +9,9 @@ import Link from 'next/link';
 import { GoogleIcon } from './icons/google-icon';
 import { useApp } from '@/hooks/use-app';
 import uiStrings from '@/data/ui-strings.json';
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+import { cn } from '@/lib/utils';
 
 interface TestimonialsProps {
   testimonials: Testimonial[];
@@ -18,6 +21,31 @@ const reviewUrl = "https://g.page/r/Ced3xuK6pa4IEAI/review";
 
 export function Testimonials({ testimonials }: TestimonialsProps) {
   const { language } = useApp();
+  const [api, setApi] = React.useState<CarouselApi>()
+  const [current, setCurrent] = React.useState(0)
+
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true })
+  )
+
+  React.useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrent(api.selectedScrollSnap())
+
+    const onSelect = (api: CarouselApi) => {
+        setCurrent(api.selectedScrollSnap())
+    }
+
+    api.on("select", onSelect)
+
+    return () => {
+      api.off("select", onSelect)
+    }
+  }, [api])
+
 
   return (
     <section className="w-full py-8 md:py-12 bg-secondary/50">
@@ -30,30 +58,54 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
                 Real feedback from our valued customers who love our authentic spices.
             </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="flex flex-col">
-                <CardContent className="p-6 flex-1 flex flex-col items-start text-left">
-                    <Quote className="h-10 w-10 text-primary mb-4" />
-                    <p className="text-muted-foreground mb-6 flex-1">
-                    &quot;{testimonial.quote}&quot;
-                    </p>
-                    <div className="flex items-center gap-3">
-                         <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center font-bold text-lg">
-                            {testimonial.name.charAt(0)}
-                        </div>
-                        <div>
-                            <p className="font-bold text-foreground">{testimonial.name}</p>
-                            <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                        </div>
+        
+        <Carousel
+            setApi={setApi}
+            plugins={[plugin.current]}
+            opts={{
+                align: "start",
+                loop: true,
+            }}
+            className="w-full max-w-4xl mx-auto relative"
+            >
+            <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1 h-full">
+                        <Card className="flex flex-col h-full">
+                            <CardContent className="p-6 flex-1 flex flex-col items-start text-left">
+                                <Quote className="h-10 w-10 text-primary mb-4" />
+                                <p className="text-muted-foreground mb-6 flex-1">
+                                &quot;{testimonial.quote}&quot;
+                                </p>
+                                <div className="flex items-center gap-3">
+                                    <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center font-bold text-lg">
+                                        {testimonial.name.charAt(0)}
+                                    </div>
+                                    <div>
+                                        <p className="font-bold text-foreground">{testimonial.name}</p>
+                                        <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
                     </div>
-                </CardContent>
-              </Card>
-            ))}
-        </div>
+                </CarouselItem>
+                ))}
+            </CarouselContent>
+            <div className="embla__dots">
+                {testimonials.map((_, index) => (
+                    <button
+                    key={index}
+                    onClick={() => api?.scrollTo(index)}
+                    className={cn("embla__dot !bg-primary/50", { "!bg-primary": index === current })}
+                    />
+                ))}
+            </div>
+        </Carousel>
 
-        <div className="max-w-lg mx-auto mt-8">
+
+        <div className="max-w-lg mx-auto mt-16">
           <Card>
             <CardHeader className="items-center text-center">
               <CardTitle className="font-headline text-2xl">Share Your Experience</CardTitle>
@@ -80,3 +132,4 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
     </section>
   );
 }
+
