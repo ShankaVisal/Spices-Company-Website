@@ -2,8 +2,6 @@
 'use client';
 import * as React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import Autoplay from "embla-carousel-autoplay"
 import type { Testimonial } from '@/lib/types';
 import { Quote, Star } from 'lucide-react';
 import { useApp } from '@/hooks/use-app';
@@ -19,46 +17,42 @@ const reviewUrl = "https://g.page/r/Ced3xuK6pa4IEAI/review";
 
 export function Testimonials({ testimonials }: TestimonialsProps) {
    const { language } = useApp();
-   const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  )
 
   return (
-    <section className="w-full py-12 md:py-20 lg:py-24">
+    <section className="w-full py-12 md:py-20 lg:py-24 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-8 md:mb-12">
-          What Our Customers Say
-        </h2>
-        <Carousel 
-          plugins={[plugin.current]}
-          opts={{ loop: true }} 
-          className="w-full max-w-4xl mx-auto"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
-        >
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index}>
-                <div className="p-2">
-                  <Card className="border-none shadow-none">
-                    <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-                      <Quote className="h-10 w-10 text-primary mb-4" />
-                      <p className="text-lg md:text-xl text-muted-foreground mb-4 italic">
-                        &quot;{testimonial.quote[language]}&quot;
-                      </p>
-                      <p className="font-bold text-foreground">{testimonial.name[language]}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.location[language]}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
+            What Our Customers Say
+            </h2>
+            <p className="text-muted-foreground mb-8 md:mb-12">
+                Real feedback from our valued customers who love our authentic spices.
+            </p>
+        </div>
 
-        <div className="max-w-2xl mx-auto mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="flex flex-col">
+                <CardContent className="p-6 flex-1 flex flex-col items-start text-left">
+                    <Quote className="h-10 w-10 text-primary mb-4" />
+                    <p className="text-muted-foreground mb-6 flex-1">
+                    &quot;{testimonial.quote[language]}&quot;
+                    </p>
+                    <div className="flex items-center gap-3">
+                         <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center font-bold text-lg">
+                            {testimonial.name[language].charAt(0)}
+                        </div>
+                        <div>
+                            <p className="font-bold text-foreground">{testimonial.name[language]}</p>
+                            <p className="text-sm text-muted-foreground">{testimonial.location[language]}</p>
+                        </div>
+                    </div>
+                </CardContent>
+              </Card>
+            ))}
+        </div>
+
+        <div className="max-w-2xl mx-auto mt-16">
           <Card>
             <CardHeader className="items-center text-center">
               <CardTitle className="font-headline text-2xl">Share Your Experience</CardTitle>
