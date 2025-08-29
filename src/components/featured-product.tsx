@@ -51,7 +51,8 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                 <div className="relative aspect-square md:col-span-1">
                     <Link href={`/products/${product.slug}`}>
                         <Image 
-                            src={displayImage} 
+                            //src={displayImage} 
+                            src= "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/spices/devi-cinnamon-01.webp"
                             alt={product.name.en}
                             data-ai-hint={displayAiHint}
                             fill 

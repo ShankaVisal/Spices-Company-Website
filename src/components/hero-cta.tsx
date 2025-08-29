@@ -40,26 +40,26 @@ export function HeroCta() {
                         </Button>
                     </div>
                     <div className="relative">
-                        <div className="aspect-square rounded-lg overflow-hidden">
+                        <div className="aspect-square rounded-lg overflow-hidden ">
                              <Image 
-                                src="https://i.pinimg.com/736x/c9/4b/da/c94bda75cef60951ab6e6c14ae815cba.jpg"
+                                src="https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/spices/devi-products-04.png"
                                 alt="Assortment of healthy spices"
                                 data-ai-hint="spices assortment"
                                 fill
                                 className="object-cover"
                             />
                         </div>
-                        <div className="absolute -bottom-12 -left-12 bg-black text-white p-8 rounded-lg shadow-lg w-72">
+                        <div className="absolute -bottom-16 -left-12 bg-lime-950 text-white p-8 rounded-lg shadow-lg w-72">
                             <h3 className="text-2xl font-bold mb-4">{uiStrings.naturalHealthy[language]}</h3>
                              <Button asChild className="bg-yellow-400 text-black hover:bg-yellow-500">
                                 <Link href="/products">{uiStrings.viewProducts[language]}</Link>
                             </Button>
                         </div>
-                         <div className="absolute -bottom-12 -right-12 h-32 w-32 hidden md:block">
+                         <div className="absolute -bottom-12 -right-12 h-48 w-48 hidden md:block">
                              <Image 
-                                src="https://i.pinimg.com/736x/72/27/4b/72274b514bf5cd7b7b7ce6504f4b42da.jpg"
-                                alt="Cinnamon sticks"
-                                data-ai-hint="cinnamon sticks"
+                                src="https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/symbols/100-natural.png"
+                                alt="100% natural"
+                                data-ai-hint="100 percent natural symbol"
                                 fill
                                 className="object-contain"
                             />
