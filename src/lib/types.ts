@@ -57,9 +57,9 @@ export interface Recipe {
 
 export interface Testimonial {
   id: number;
-  name: { en: string; si: string; };
-  location: { en: string; si: string; };
-  quote: { en: string; si: string; };
+  name: string;
+  location: string;
+  quote: string;
 }
 
 export interface NewsEvent {

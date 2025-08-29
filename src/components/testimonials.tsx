@@ -4,7 +4,6 @@ import * as React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Testimonial } from '@/lib/types';
 import { Quote, Star } from 'lucide-react';
-import { useApp } from '@/hooks/use-app';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { GoogleIcon } from './icons/google-icon';
@@ -16,16 +15,15 @@ interface TestimonialsProps {
 const reviewUrl = "https://g.page/r/Ced3xuK6pa4IEAI/review";
 
 export function Testimonials({ testimonials }: TestimonialsProps) {
-   const { language } = useApp();
 
   return (
     <section className="w-full py-12 md:py-16 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
             What Our Customers Say
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground">
                 Real feedback from our valued customers who love our authentic spices.
             </p>
         </div>
@@ -36,15 +34,15 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
                 <CardContent className="p-6 flex-1 flex flex-col items-start text-left">
                     <Quote className="h-10 w-10 text-primary mb-4" />
                     <p className="text-muted-foreground mb-6 flex-1">
-                    &quot;{testimonial.quote[language]}&quot;
+                    &quot;{testimonial.quote}&quot;
                     </p>
                     <div className="flex items-center gap-3">
                          <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center font-bold text-lg">
-                            {testimonial.name[language].charAt(0)}
+                            {testimonial.name.charAt(0)}
                         </div>
                         <div>
-                            <p className="font-bold text-foreground">{testimonial.name[language]}</p>
-                            <p className="text-sm text-muted-foreground">{testimonial.location[language]}</p>
+                            <p className="font-bold text-foreground">{testimonial.name}</p>
+                            <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                         </div>
                     </div>
                 </CardContent>
