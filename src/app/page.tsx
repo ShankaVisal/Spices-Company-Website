@@ -21,7 +21,7 @@ import { WhyChooseUs } from '@/components/why-choose-us';
 import { HeroCta } from '@/components/hero-cta';
 import { GiftBanner } from '@/components/gift-banner';
 import type { Product, BlogPost, NewsEvent } from '@/lib/types';
-import { GoogleReviewCollector } from '@/components/google-review-collector';
+
 
 
 export default function Home() {
@@ -72,7 +72,7 @@ export default function Home() {
         <WhyChooseUs />
         <FeaturedProduct product={featuredProduct} />
         <Testimonials testimonials={testimonials} />
-        <GoogleReviewCollector />
+
         <PhotoGallery items={galleryContent} />
         <NewsEvents events={sortedNews.slice(0, 3)} />
          <div className="text-center -mt-16 mb-16">

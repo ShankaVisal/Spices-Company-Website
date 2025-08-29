@@ -42,9 +42,6 @@
   "shopGifts": { "en": "Shop Gifts", "si": "තෑගි මිලදී ගන්න" },
   "fromOurBlog": { "en": "From Our Blog", "si": "අපේ බ්ලොග් එකෙන්" },
   "viewAllPosts": { "en": "View All Posts", "si": "සියලුම ලිපි බලන්න" },
-  "reviewCollectorTitle": { "en": "Share Your Experience", "si": "ඔබේ අත්දැකීම බෙදාගන්න" },
-  "reviewCollectorDescription": { "en": "Your feedback helps us grow and serve you better. We'd love to hear what you think!", "si": "ඔබගේ ප්‍රතිපෝෂණය අපට වර්ධනය වීමට සහ ඔබට වඩා හොඳින් සේවය කිරීමට උපකාරී වේ. ඔබ සිතන්නේ කුමක්දැයි ඇසීමට අපි කැමතියි!" },
-  "reviewCollectorButton": { "en": "Leave a Review on Google", "si": "Google හි සමාලෝචනයක් තබන්න" },
   "basedOnReviews": { "en": "Based on", "si": "සමාලෝචන මත පදනම්ව" },
   "reviews": { "en": "reviews", "si": "ක්" }
 }
