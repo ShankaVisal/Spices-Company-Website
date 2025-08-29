@@ -58,7 +58,7 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                         </div>
                     )}
                 </div>
-                <div className="p-6 md:p-8 flex flex-col justify-center md:col-span-2">
+                <div className="p-8 md:p-12 flex flex-col justify-center md:col-span-2">
                     <Link href={`/products/${product.slug}`}>
                         <h3 className="font-headline text-2xl md:text-3xl font-bold mb-2 hover:text-primary transition-colors">{product.name[language]}</h3>
                     </Link>
