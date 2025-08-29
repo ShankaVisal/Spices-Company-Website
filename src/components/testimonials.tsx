@@ -66,7 +66,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
                 align: "start",
                 loop: true,
             }}
-            className="w-full max-w-4xl mx-auto relative"
+            className="w-full max-w-6xl mx-auto relative"
             >
             <CarouselContent>
                 {testimonials.map((testimonial, index) => (
@@ -132,4 +132,3 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
     </section>
   );
 }
-
