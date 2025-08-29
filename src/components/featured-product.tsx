@@ -42,7 +42,7 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
         <Card className="overflow-hidden shadow-xl border-2 border-primary/20">
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2">
-              <div className="relative aspect-square md:min-h-[500px]">
+              <div className="relative aspect-square">
                 <Link href={`/products/${product.slug}`}>
                     <Image 
                         src={product.images[0]} 
@@ -58,11 +58,11 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                     </div>
                 )}
               </div>
-              <div className="p-10 md:p-16 flex flex-col justify-center">
+              <div className="p-8 md:p-12 flex flex-col justify-center">
                 <Link href={`/products/${product.slug}`}>
-                    <h3 className="font-headline text-4xl md:text-5xl font-bold mb-6 hover:text-primary transition-colors">{product.name[language]}</h3>
+                    <h3 className="font-headline text-3xl md:text-4xl font-bold mb-4 hover:text-primary transition-colors">{product.name[language]}</h3>
                 </Link>
-                <div className="flex items-center gap-1 text-yellow-500 mb-6">
+                <div className="flex items-center gap-1 text-yellow-500 mb-4">
                   <Star className="fill-current" />
                   <Star className="fill-current" />
                   <Star className="fill-current" />
@@ -70,16 +70,16 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                   <Star className="fill-current" />
                   <span className="text-muted-foreground ml-2 text-sm">(5.0)</span>
                 </div>
-                <p className="text-muted-foreground text-lg mb-8">{product.description[language]}</p>
+                <p className="text-muted-foreground text-base mb-6">{product.description[language]}</p>
                 
                 {product.available ? (
                     <>
-                        <div className="flex items-center gap-4 mb-8">
-                            <p className="text-4xl font-bold text-foreground">
+                        <div className="flex items-center gap-4 mb-6">
+                            <p className="text-3xl font-bold text-foreground">
                                 LKR {selectedVariant.price.toFixed(2)}
                             </p>
                             <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
-                                <SelectTrigger className="w-[150px] text-lg py-7 px-4">
+                                <SelectTrigger className="w-[150px]">
                                     <SelectValue placeholder="Select weight" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -91,13 +91,13 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                                 </SelectContent>
                             </Select>
                         </div>
-                        <Button onClick={handleAddToCart} size="lg" className="text-lg py-7 px-10">
-                        <ShoppingCart className="mr-2 h-6 w-6"/>
+                        <Button onClick={handleAddToCart} size="lg">
+                        <ShoppingCart className="mr-2 h-5 w-5"/>
                         {uiStrings.addToCart[language]}
                         </Button>
                     </>
                 ) : (
-                    <Button disabled size="lg" className="text-lg py-7 px-10">
+                    <Button disabled size="lg">
                         Out of Stock
                     </Button>
                 )}
