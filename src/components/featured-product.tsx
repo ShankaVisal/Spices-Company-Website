@@ -59,9 +59,9 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                     )}
                 </div>
                 <div className="p-8 md:py-12 md:px-10 flex flex-col justify-center md:col-span-1">
-                    <h3 className="font-headline text-3xl md:text-4xl font-bold mb-2">Try our new Product</h3>
+                    <h3 className="font-headline text-3xl md:text-4xl font-bold mb-4">Try our new Product</h3>
                     <Link href={`/products/${product.slug}`}>
-                        <p className="text-lg font-medium text-primary uppercase tracking-wider mb-2 hover:underline">{product.name[language]}</p>
+                        <p className="text-lg font-medium text-primary uppercase tracking-wider hover:underline">{product.name[language]}</p>
                     </Link>
                     <div className="flex items-center gap-1 text-yellow-500 mb-3">
                     <Star className="fill-current h-4 w-4" />
