@@ -7,6 +7,8 @@ import { Quote, Star } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { GoogleIcon } from './icons/google-icon';
+import { useApp } from '@/hooks/use-app';
+import uiStrings from '@/data/ui-strings.json';
 
 interface TestimonialsProps {
   testimonials: Testimonial[];
@@ -15,13 +17,14 @@ interface TestimonialsProps {
 const reviewUrl = "https://g.page/r/Ced3xuK6pa4IEAI/review";
 
 export function Testimonials({ testimonials }: TestimonialsProps) {
+  const { language } = useApp();
 
   return (
-    <section className="w-full py-12 md:py-16 bg-secondary/50">
+    <section className="w-full py-8 md:py-12 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">
-            What Our Customers Say
+            {uiStrings.whatOurCustomersSay[language]}
             </h2>
             <p className="text-muted-foreground">
                 Real feedback from our valued customers who love our authentic spices.
