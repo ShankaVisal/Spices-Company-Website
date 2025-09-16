@@ -20,6 +20,7 @@ import { CartSheet } from '@/components/cart-sheet';
 import { WhyChooseUs } from '@/components/why-choose-us';
 import { HeroCta } from '@/components/hero-cta';
 import { GiftBanner } from '@/components/gift-banner';
+import { SpinWheelGame } from '@/components/spin-wheel-game';
 import type { Product, BlogPost, NewsEvent } from '@/lib/types';
 
 
@@ -71,8 +72,8 @@ export default function Home() {
         </div>
         <WhyChooseUs />
         <FeaturedProduct product={featuredProduct} />
+        <SpinWheelGame />
         <Testimonials testimonials={testimonials} />
-
         <PhotoGallery items={galleryContent} />
         <NewsEvents events={sortedNews.slice(0, 3)} />
          <div className="text-center -mt-16 mb-16">
