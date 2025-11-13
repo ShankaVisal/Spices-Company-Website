@@ -1,10 +1,10 @@
+
 import { ProductList } from '@/components/product-list';
 import { RecipeSuggester } from '@/components/recipe-suggester';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import products from '@/data/products.json';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
 import { FeaturedProduct } from '@/components/featured-product';
 import { Testimonials } from '@/components/testimonials';
 import { PhotoGallery } from '@/components/photo-gallery';
@@ -20,6 +20,13 @@ import { WhyChooseUs } from '@/components/why-choose-us';
 import { HeroCta } from '@/components/hero-cta';
 import { GiftBanner } from '@/components/gift-banner';
 import type { Product, BlogPost, NewsEvent } from '@/lib/types';
+import { HeroSlider } from '@/components/hero-slider';
+
+const heroImages = [
+    { src: "https://i.pinimg.com/736x/57/b1/69/57b169156c38776167938afd08259b1a.jpg", aiHint: "spices Sri Lanka" },
+    { src: "https://i.pinimg.com/736x/6f/30/a4/6f30a41a4a408b53578799863ea8441c.jpg", aiHint: "spices composition" },
+    { src: "https://i.pinimg.com/736x/01/b9/36/01b93699b8b0e895861198f738c23743.jpg", aiHint: "spices market" }
+];
 
 export default function Home() {
   const featuredProduct = (products as Product[]).find(p => p.featured);
@@ -49,13 +56,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <Image
-              src="https://i.pinimg.com/736x/57/b1/69/57b169156c38776167938afd08259b1a.jpg"
-              alt="Spices background"
-              data-ai-hint="spices Sri Lanka"
-              fill
-              className="object-cover opacity-3 dark:opacity-1"
-            />
+            <HeroSlider images={heroImages} />
           </div>
         </section>
         <HeroCta />
