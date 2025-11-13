@@ -24,7 +24,9 @@ import { HeroSlider } from '@/components/hero-slider';
 
 const heroImages = [
     { src: "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/hero/angelo-pantazis-wXrrmCgqnaI-unsplash.jpg", aiHint: "spices Sri Lanka" },
-    { src: "https://i.pinimg.com/736x/9d/60/fb/9d60fbced3582280ebbfebf1e544a30b.jpg", aiHint: "spices composition" },
+    { src: "https://i.pinimg.com/736x/57/b1/69/57b169156c38776167938afd08259b1a.jpg", aiHint: "spices composition" },
+    { src: "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/hero/vincent-belanger-3gmr5ez2otU-unsplash.jpg", aiHint: "spices Sri Lanka" },
+    { src: "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/hero/zahrin-lukman-FYc-qfATAk4-unsplash.jpg", aiHint: "spices composition" },
     { src: "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/hero/tina-dawson-5bpuJ2XDQWg-unsplash.jpg", aiHint: "spices market" }
 ];
 
