@@ -28,7 +28,7 @@
     "description": { "en": "Sun-dried goraka, essential for authentic Sri Lankan fish curries and other sour dishes.", "si": "හිරු එළියෙන් වියලන ලද ගොරකා, ශ්‍රී ලාංකේය මාළු කරි සහ අනෙකුත් ඇඹුල් රසැති කෑම සඳහා අත්‍යවශ්‍ය වේ." },
     "longDescription": { "en": "Also known as Garcinia Cambogia, black garcinia (goraka) is a souring agent used in Sri Lankan cuisine, particularly in fish curries. It imparts a unique sour and slightly smoky flavor. Our goraka is naturally sun-dried to preserve its authentic taste.", "si": "Garcinia Cambogia ලෙසද හැඳින්වෙන, කළු ගොරකා යනු ශ්‍රී ලාංකේය ආහාර පිසීමේදී, විශේෂයෙන් මාළු කරි වල භාවිතා වන ඇඹුල් කාරකයකි. එය අද්විතීය ඇඹුල් සහ තරමක් දුම් රසයක් ලබා දෙයි. අපගේ ගොරකා එහි සැබෑ රසය ආරක්ෂා කර ගැනීම සඳහා ස්වභාවිකව හිරු එළියෙන් වියළනු ලැබේ." },
     "variants": [
-        { "weight": "100g", "price": 180 }
+        { "weight": "100g", "price": 100, "originalPrice": 180 }
     ],
     "images": [
         "https://i.pinimg.com/736x/de/37/50/de3750ca74382746bcf873d47181a3f8.jpg",

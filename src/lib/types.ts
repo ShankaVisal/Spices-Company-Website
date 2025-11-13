@@ -2,6 +2,7 @@
 export interface ProductVariant {
   weight: string;
   price: number;
+  originalPrice?: number;
 }
 
 export interface Review {
