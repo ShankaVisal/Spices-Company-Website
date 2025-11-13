@@ -57,7 +57,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
         </Link>
       </CardHeader>
-      <CardContent className="flex-1 p-4">
+      <CardContent className="flex-1 p-4 pb-2">
         <Link href={`/products/${product.slug}`}>
             <CardTitle className="font-headline text-xl mb-1 hover:text-primary transition-colors">{product.name[language]}</CardTitle>
         </Link>
@@ -67,6 +67,11 @@ export function ProductCard({ product }: ProductCardProps) {
                 See More <ArrowRight className="ml-1 h-3 w-3" />
             </Link>
         </Button>
+        {selectedVariant.originalPrice && (
+            <p className="text-sm text-muted-foreground line-through mt-2">
+                LKR {selectedVariant.originalPrice.toFixed(2)}
+            </p>
+        )}
       </CardContent>
       <CardFooter className="p-4 pt-0 flex flex-col items-start gap-3">
         {product.available ? (
@@ -76,11 +81,6 @@ export function ProductCard({ product }: ProductCardProps) {
                         <p className="text-lg font-bold text-foreground">
                         LKR {selectedVariant.price.toFixed(2)}
                         </p>
-                        {selectedVariant.originalPrice && (
-                            <p className="text-sm text-muted-foreground line-through">
-                                LKR {selectedVariant.originalPrice.toFixed(2)}
-                            </p>
-                        )}
                     </div>
                     <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
                         <SelectTrigger className="w-[100px] h-9 text-xs">
