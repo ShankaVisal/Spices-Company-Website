@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useApp } from '@/hooks/use-app';
 import uiStrings from '@/data/ui-strings.json';
-import { Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Twitter, Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { TiktokIcon } from './icons/tiktok-icon';
 import logo1 from '../logo.png';
 
@@ -14,7 +14,7 @@ export function Footer() {
     return (
         <footer className="border-t bg-card">
             <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
-                <div className="grid gap-8 md:grid-cols-4">
+                <div className="grid gap-8 md:grid-cols-5">
                     <div className="flex flex-col gap-4 md:col-span-1">
                          <div className="flex items-center gap-2">
                             <Image src={logo1} alt="Devi Products Logo" width={80} height={80} data-ai-hint="company logo" />
@@ -26,13 +26,12 @@ export function Footer() {
                             {uiStrings.heroSlogan[language]}
                         </p>
                     </div>
-                    <div className="md:col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-8">
+                    <div className="md:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-8">
                         <div>
                             <h3 className="font-semibold mb-4">Products</h3>
                             <ul className="space-y-2">
                                 <li><Link href="/products" className="text-sm text-muted-foreground hover:text-primary">Spices</Link></li>
-                                <li><Link href="/products" className="text-sm text-muted-foreground hover:text-primary">Blends</Link></li>
-                                <li><Link href="/products" className="text-sm text-muted-foreground hover:text-primary">Gift Boxes</Link></li>
+                                <li><Link href="/products#gift-boxes" className="text-sm text-muted-foreground hover:text-primary">Gift Boxes</Link></li>
                             </ul>
                         </div>
                          <div>
@@ -42,14 +41,24 @@ export function Footer() {
                                 <li><Link href="/gallery" className="text-sm text-muted-foreground hover:text-primary">Gallery</Link></li>
                                 <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">Blog</Link></li>
                                 <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
+                                <li><Link href="/faq" className="text-sm text-muted-foreground hover:text-primary">FAQs</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="font-semibold mb-4">Resources</h3>
-                            <ul className="space-y-2">
-                                <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">Recipes</Link></li>
-                                <li><Link href="/faq" className="text-sm text-muted-foreground hover:text-primary">FAQs</Link></li>
-                                <li><a href="#" className="text-sm text-muted-foreground hover:text-primary">Shipping</a></li>
+                            <h3 className="font-semibold mb-4">Contact Us</h3>
+                            <ul className="space-y-3">
+                                <li className="flex items-start gap-2">
+                                    <Mail className="h-4 w-4 mt-0.5 text-muted-foreground flex-shrink-0" />
+                                    <a href="mailto:contact@deviproducts.lk" className="text-sm text-muted-foreground hover:text-primary">contact@deviproducts.lk</a>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <Phone className="h-4 w-4 mt-0.5 text-muted-foreground flex-shrink-0" />
+                                    <a href="tel:+94753177570" className="text-sm text-muted-foreground hover:text-primary">+94 75 317 7570</a>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <MapPin className="h-4 w-4 mt-0.5 text-muted-foreground flex-shrink-0" />
+                                    <p className="text-sm text-muted-foreground">171/6, 1st lane, Farmgrove watta, Veyangoda, Sri Lanka</p>
+                                </li>
                             </ul>
                         </div>
                         <div>
