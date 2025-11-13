@@ -57,7 +57,7 @@ export function Footer() {
                             <div className="flex space-x-4">
                                 <a href="#" className="text-muted-foreground hover:text-primary"><Twitter /></a>
                                 <a href="https://www.facebook.com/profile.php?id=61578727486308" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Facebook /></a>
-                                <a href="#" className="text-muted-foreground hover:text-primary"><Instagram /></a>
+                                <a href="https://www.instagram.com/devi_products/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Instagram /></a>
                                 <a href="https://www.linkedin.com/company/devi-products/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
                                 <a href="https://www.tiktok.com/@devi_products" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><TiktokIcon className="h-6 w-6" /></a>
                             </div>
