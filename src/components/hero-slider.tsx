@@ -44,9 +44,10 @@ export function HeroSlider({ images }: PropType) {
               alt={images[selectedIndex].aiHint}
               data-ai-hint={images[selectedIndex].aiHint}
               fill
-              className="object-cover opacity-30 dark:opacity-10"
+              className="object-cover"
               priority
             />
+             <div className="absolute inset-0 bg-black/50" />
           </motion.div>
         </AnimatePresence>
       </div>
