@@ -68,7 +68,7 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                 <div className="p-8 md:py-12 md:px-10 flex flex-col justify-center md:col-span-1">
                     <h3 className="font-headline text-3xl md:text-4xl font-bold mb-4">{displayTitle}</h3>
                     <Link href={`/products/${product.slug}`}>
-                        <p className="text-lg font-medium text-primary uppercase tracking-wider hover:underline">{product.name[language]}</p>
+                        <p className="text-lg font-medium text-primary uppercase tracking-wider hover:underline mb-2">{product.name[language]}</p>
                     </Link>
                     <div className="flex items-center gap-1 text-yellow-500 mb-3">
                     <Star className="fill-current h-4 w-4" />
@@ -83,9 +83,16 @@ export function FeaturedProduct({ product }: FeaturedProductProps) {
                     {product.available ? (
                         <>
                             <div className="flex items-center gap-4 mb-4">
-                                <p className="text-xl font-bold text-foreground">
-                                    LKR {selectedVariant.price.toFixed(2)}
-                                </p>
+                                <div className="flex items-baseline gap-2">
+                                    <p className="text-xl font-bold text-foreground">
+                                        LKR {selectedVariant.price.toFixed(2)}
+                                    </p>
+                                    {selectedVariant.originalPrice && (
+                                        <p className="text-sm text-muted-foreground line-through">
+                                            LKR {selectedVariant.originalPrice.toFixed(2)}
+                                        </p>
+                                    )}
+                                </div>
                                 <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
                                     <SelectTrigger className="w-[120px] h-9 text-xs">
                                         <SelectValue placeholder="Select weight" />

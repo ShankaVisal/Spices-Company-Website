@@ -85,9 +85,16 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               {product.available ? (
                 <div className="space-y-6">
                     <div className="flex items-center gap-4">
-                        <p className="text-4xl font-bold text-foreground">
-                        LKR {selectedVariant.price.toFixed(2)}
-                        </p>
+                        <div className="flex items-baseline gap-2">
+                            <p className="text-4xl font-bold text-foreground">
+                            LKR {selectedVariant.price.toFixed(2)}
+                            </p>
+                             {selectedVariant.originalPrice && (
+                                <p className="text-xl text-muted-foreground line-through">
+                                    LKR {selectedVariant.originalPrice.toFixed(2)}
+                                </p>
+                            )}
+                        </div>
                         <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
                         <SelectTrigger className="w-[150px] text-base py-6 px-4">
                             <SelectValue placeholder="Select weight" />

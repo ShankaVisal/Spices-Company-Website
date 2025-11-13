@@ -72,9 +72,16 @@ export function ProductCard({ product }: ProductCardProps) {
         {product.available ? (
             <>
                 <div className="flex justify-between items-center w-full">
-                    <p className="text-lg font-bold text-foreground">
-                    LKR {selectedVariant.price.toFixed(2)}
-                    </p>
+                    <div className="flex items-baseline gap-2">
+                        <p className="text-lg font-bold text-foreground">
+                        LKR {selectedVariant.price.toFixed(2)}
+                        </p>
+                        {selectedVariant.originalPrice && (
+                            <p className="text-sm text-muted-foreground line-through">
+                                LKR {selectedVariant.originalPrice.toFixed(2)}
+                            </p>
+                        )}
+                    </div>
                     <Select onValueChange={handleVariantChange} defaultValue={selectedVariant.weight}>
                         <SelectTrigger className="w-[100px] h-9 text-xs">
                             <SelectValue placeholder="Select weight" />
