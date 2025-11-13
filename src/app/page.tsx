@@ -20,7 +20,6 @@ import { WhyChooseUs } from '@/components/why-choose-us';
 import { HeroCta } from '@/components/hero-cta';
 import { GiftBanner } from '@/components/gift-banner';
 import type { Product, BlogPost, NewsEvent } from '@/lib/types';
-import Script from 'next/script'; // Import the Next.js Script component
 
 export default function Home() {
   const featuredProduct = (products as Product[]).find(p => p.featured);
@@ -28,28 +27,13 @@ export default function Home() {
   const sortedBlogs = [...(blogPosts as BlogPost[])].sort((a, b) => b.id - a.id);
 
   if (!featuredProduct) {
-    // Fallback in case no spice product is found
     return <div>Error: No featured product available.</div>;
   }
 
   return (
     <div className="flex min-h-screen flex-col">
-      {/* This is the recommended way to add the Elfsight script in Next.js.
-        It loads the script asynchronously and ensures it is ready before the page becomes interactive.
-      */}
-      <Script
-        src="https://elfsightcdn.com/platform.js"
-        strategy="beforeInteractive" 
-      />
-
       <Header />
       <main className="flex-1">
-        {/* This is the container div where the Elfsight widget will be rendered.
-          Place it anywhere in your JSX where you want the widget to appear.
-          For a pop-up, its position in the code doesn't matter as much, but putting it near the top of the content is a good practice.
-        */}
-        <div className="elfsight-app-066431c5-6193-48ec-8fc6-ec9a7676fe93" data-elfsight-app-lazy></div>
-        
         <section className="relative w-full min-h-screen flex items-center justify-center bg-card overflow-hidden">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <div className="relative z-10">
@@ -75,28 +59,31 @@ export default function Home() {
           </div>
         </section>
         <HeroCta />
-        <ProductList products={(products as Product[]).filter(p => p.category === 'Spice').slice(0, 8)} title="Our Most Popular Spices" />
+        <ProductList
+          products={(products as Product[]).filter(p => p.category === 'Spice').slice(0, 8)}
+          title="Our Most Popular Spices"
+        />
         <div className="text-center -mt-8 mb-16">
-            <Button asChild variant="outline">
-                <Link href="/products">View All Products</Link>
-            </Button>
+          <Button asChild variant="outline">
+            <Link href="/products">View All Products</Link>
+          </Button>
         </div>
         <WhyChooseUs />
         <FeaturedProduct product={featuredProduct} />
         <Testimonials testimonials={testimonials} />
         <PhotoGallery items={galleryContent} />
         <NewsEvents events={sortedNews.slice(0, 3)} />
-         <div className="text-center -mt-16 mb-16">
-            <Button asChild variant="outline">
-                <Link href="/news">View All News & Events</Link>
-            </Button>
+        <div className="text-center -mt-16 mb-16">
+          <Button asChild variant="outline">
+            <Link href="/news">View All News & Events</Link>
+          </Button>
         </div>
         <GiftBanner />
         <BlogSection posts={sortedBlogs.slice(0, 3)} />
-         <div className="text-center -mt-16 mb-24">
-            <Button asChild variant="outline">
-                <Link href="/blog">View All Posts</Link>
-            </Button>
+        <div className="text-center -mt-16 mb-24">
+          <Button asChild variant="outline">
+            <Link href="/blog">View All Posts</Link>
+          </Button>
         </div>
         <RecipeSuggester products={(products as Product[]).filter(p => p.category === 'Spice')} />
       </main>
