@@ -2,37 +2,34 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
-import useEmblaCarousel, { type EmblaOptionsType, type EmblaCarouselType } from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 
 type PropType = {
   images: { src: string; aiHint: string }[];
-  options?: EmblaOptionsType;
 };
 
-export function HeroSlider({ images, options }: PropType) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ ...options, loop: true }, [Autoplay({ delay: 5000 })]);
+export function HeroSlider({ images }: PropType) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, []);
-
-  const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
+  const scrollTo = (index: number) => {
+    setSelectedIndex(index);
+  };
+  
+  const nextSlide = useCallback(() => {
+    setSelectedIndex((prev) => (prev + 1) % images.length);
+  }, [images.length]);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    onSelect(emblaApi);
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
-  }, [emblaApi, onSelect]);
+    const timer = setTimeout(nextSlide, 5000);
+    return () => clearTimeout(timer);
+  }, [selectedIndex, nextSlide]);
+
 
   return (
     <>
-      <div className="absolute inset-0 overflow-hidden" ref={emblaRef}>
+      <div className="absolute inset-0 overflow-hidden">
         <AnimatePresence initial={false}>
           <motion.div
             key={selectedIndex}

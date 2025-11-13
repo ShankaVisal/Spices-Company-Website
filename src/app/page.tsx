@@ -23,9 +23,9 @@ import type { Product, BlogPost, NewsEvent } from '@/lib/types';
 import { HeroSlider } from '@/components/hero-slider';
 
 const heroImages = [
-    { src: "https://i.pinimg.com/736x/57/b1/69/57b169156c38776167938afd08259b1a.jpg", aiHint: "spices Sri Lanka" },
-    { src: "https://i.pinimg.com/736x/6f/30/a4/6f30a41a4a408b53578799863ea8441c.jpg", aiHint: "spices composition" },
-    { src: "https://i.pinimg.com/736x/01/b9/36/01b93699b8b0e895861198f738c23743.jpg", aiHint: "spices market" }
+    { src: "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/hero/angelo-pantazis-wXrrmCgqnaI-unsplash.jpg", aiHint: "spices Sri Lanka" },
+    { src: "https://i.pinimg.com/736x/9d/60/fb/9d60fbced3582280ebbfebf1e544a30b.jpg", aiHint: "spices composition" },
+    { src: "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/hero/tina-dawson-5bpuJ2XDQWg-unsplash.jpg", aiHint: "spices market" }
 ];
 
 export default function Home() {
