@@ -56,7 +56,7 @@ export function Footer() {
                             <h3 className="font-semibold mb-4">Follow Us</h3>
                             <div className="flex space-x-4">
                                 <a href="#" className="text-muted-foreground hover:text-primary"><Twitter /></a>
-                                <a href="#" className="text-muted-foreground hover:text-primary"><Facebook /></a>
+                                <a href="https://www.facebook.com/profile.php?id=61578727486308" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Facebook /></a>
                                 <a href="#" className="text-muted-foreground hover:text-primary"><Instagram /></a>
                                 <a href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></a>
                                 <a href="#" className="text-muted-foreground hover:text-primary"><TiktokIcon className="h-6 w-6" /></a>

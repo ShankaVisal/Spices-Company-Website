@@ -65,7 +65,7 @@ export default function RootLayout({
       "contactType": "customer service"
     },
     "sameAs": [
-      "https://www.facebook.com/deviproducts",
+      "https://www.facebook.com/profile.php?id=61578727486308",
       "https://www.twitter.com/deviproducts",
       "https://www.instagram.com/deviproducts"
     ]
