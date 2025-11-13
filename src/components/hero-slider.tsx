@@ -21,7 +21,7 @@ export function HeroSlider({ images }: PropType) {
   }, [images.length]);
 
   useEffect(() => {
-    const timer = setTimeout(nextSlide, 5000);
+    const timer = setTimeout(nextSlide, 10000);
     return () => clearTimeout(timer);
   }, [selectedIndex, nextSlide]);
 
