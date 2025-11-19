@@ -43,8 +43,8 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative w-full h-screen flex items-center justify-center -mt-20">
-          <div className="container mx-auto px-4 md:px-6 text-center">
+        <section className="relative w-full h-screen">
+          <div className="container mx-auto px-4 md:px-6 h-full flex items-center justify-center text-center">
             <div className="relative z-10">
               <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
                 Welcome to Devi Products
