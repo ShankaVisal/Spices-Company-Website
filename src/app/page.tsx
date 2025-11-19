@@ -21,6 +21,7 @@ import { HeroCta } from '@/components/hero-cta';
 import { GiftBanner } from '@/components/gift-banner';
 import type { Product, BlogPost, NewsEvent } from '@/lib/types';
 import { HeroSlider } from '@/components/hero-slider';
+import Image from 'next/image';
 
 const heroImages = [
     { src: "https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/hero/angelo-pantazis-wXrrmCgqnaI-unsplash.jpg", aiHint: "spices Sri Lanka" },
@@ -89,6 +90,17 @@ export default function Home() {
           </Button>
         </div>
         <RecipeSuggester products={(products as Product[]).filter(p => p.category === 'Spice')} />
+        <section className="w-full">
+            <div className="relative aspect-[2400/840] w-full">
+                <Image 
+                    src="https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/illustrations/sri-lankan-spice-harvest.png" 
+                    alt="An illustration of a Sri Lankan spice harvest scene"
+                    data-ai-hint="spice harvest illustration"
+                    fill
+                    className="object-cover"
+                />
+            </div>
+        </section>
       </main>
       <Footer />
       <CartSheet />
