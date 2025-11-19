@@ -24,7 +24,7 @@ export default function GalleryPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative w-full h-[60vh] md:h-auto -mt-20 flex items-center md:items-start md:pt-[24rem] md:pb-32">
+        <section className="relative w-full h-[50vh] flex items-center justify-center">
           <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-white">
               Our Spice Stories
