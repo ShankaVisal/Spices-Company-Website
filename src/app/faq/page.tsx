@@ -62,7 +62,7 @@ export default function FAQPage() {
       <JsonLd data={faqSchema} />
       <Header />
       <main className="flex-1">
-        <section className="relative w-full py-24 md:py-40 -mt-20 pt-64">
+        <section className="relative w-full py-24 md:py-40 -mt-20 pt-80">
           <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-white">
               Frequently Asked Questions
