@@ -22,7 +22,7 @@ export default function BlogPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative w-full py-24 md:py-40 -mt-20 pt-96">
+        <section className="relative w-full py-24 md:py-40 -mt-20 pt-[32rem]">
           <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-white">
               From Our Blog
