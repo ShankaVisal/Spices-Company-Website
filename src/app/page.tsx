@@ -93,7 +93,7 @@ export default function Home() {
         <section className="w-full">
             <div className="relative aspect-[2400/840] w-full">
                 <Image 
-                    src="https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/illustrations/sri-lankan-spice-harvest.png" 
+                    src="https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/images/homepageBottomImage.png" 
                     alt="An illustration of a Sri Lankan spice harvest scene"
                     data-ai-hint="spice harvest illustration"
                     fill
