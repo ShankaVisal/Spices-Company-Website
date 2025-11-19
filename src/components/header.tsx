@@ -11,6 +11,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { CartSheet } from '@/components/cart-sheet';
 import logo from '../logo.png';
+import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/about', label: { en: 'About Us', si: 'අප ගැන' } },
@@ -25,25 +27,44 @@ const navLinks = [
 export function Header() {
   const { language, cart } = useApp();
   const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
+    <header className={cn(
+      "fixed top-0 z-50 w-full transition-all duration-300",
+      isScrolled ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md" : "bg-transparent border-b-transparent"
+    )}>
+      <div className="container flex h-20 items-center">
         <Link href="/" className="mr-auto flex items-center gap-2">
           <Image src={logo} alt="Devi Products Logo" width={40} height={40} data-ai-hint="company logo" />
-          <span className="font-headline text-2xl font-bold">
+          <span className={cn(
+            "font-headline text-2xl font-bold transition-colors",
+            isScrolled ? "text-foreground" : "text-white"
+          )}>
             {uiStrings.deviProducts[language]}
           </span>
         </Link>
         <nav className="hidden md:flex gap-6 items-center">
           {navLinks.map(link => (
-            <Link key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+            <Link key={link.href} href={link.href} className={cn(
+              "text-sm font-medium transition-colors hover:text-primary",
+              isScrolled ? "text-muted-foreground hover:text-foreground" : "text-white/80 hover:text-white"
+            )}>
               {link.label[language]}
             </Link>
           ))}
           <CartSheet>
             <SheetTrigger asChild>
-                <Button variant="ghost" className="relative">
+                <Button variant="ghost" className={cn("relative", isScrolled ? "text-foreground" : "text-white hover:text-white hover:bg-white/10")}>
                     <ShoppingCart className="h-5 w-5" />
                     <span className="sr-only">View Cart</span>
                     {itemCount > 0 && (
@@ -59,7 +80,7 @@ export function Header() {
           <LanguageToggle />
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className={cn("md:hidden", isScrolled ? "text-foreground" : "text-white hover:text-white hover:bg-white/10")}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
