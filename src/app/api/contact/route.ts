@@ -45,19 +45,22 @@
 
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import { MongoClient } from "mongodb";
+import { MongoClient, ServerApiVersion } from "mongodb";
 
-// Get environment variables
 const MONGODB_URI = process.env.MONGO_URI;
 const EMAIL_USER = process.env.EMAIL_USER;
 const EMAIL_PASS = process.env.EMAIL_PASS;
 
-// Safety check
-if (!MONGODB_URI) throw new Error("MONGODB_URI is not defined in .env.local");
+// Safety checks
+if (!MONGODB_URI) throw new Error("MONGO_URI is not defined in .env.local");
 if (!EMAIL_USER || !EMAIL_PASS) throw new Error("EMAIL_USER or EMAIL_PASS is not defined in .env.local");
 
-// Create MongoDB client
-const client = new MongoClient(MONGODB_URI);
+// MongoDB client
+const client = new MongoClient(MONGODB_URI, {
+  serverApi: ServerApiVersion.v1,
+  tls: true,                  // ensures TLS connection
+  tlsAllowInvalidCertificates: false, // keep false for production
+});
 
 export async function POST(request: Request) {
   try {
@@ -83,7 +86,7 @@ export async function POST(request: Request) {
       createdAt: new Date(),
     });
 
-    // 2️⃣ Send email using Nodemailer
+    // 2️⃣ Send email via Gmail
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: { user: EMAIL_USER, pass: EMAIL_PASS },
@@ -113,3 +116,4 @@ export async function POST(request: Request) {
     await client.close();
   }
 }
+
