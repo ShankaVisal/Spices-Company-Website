@@ -49,7 +49,7 @@ export function Footer() {
                             <ul className="space-y-3">
                                 <li className="flex items-start gap-2">
                                     <Mail className="h-4 w-4 mt-0.5 text-muted-foreground flex-shrink-0" />
-                                    <a href="mailto:contact@deviproducts.lk" className="text-sm text-muted-foreground hover:text-primary">contact@deviproducts.lk</a>
+                                    <a href="mailto:contact@deviproducts.lk" className="text-sm text-muted-foreground hover:text-primary">deviproducts2025@gmail.com</a>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <Phone className="h-4 w-4 mt-0.5 text-muted-foreground flex-shrink-0" />

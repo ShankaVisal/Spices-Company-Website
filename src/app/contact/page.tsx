@@ -80,7 +80,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                                 <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0"/>
                                 <div>
                                     <h3 className="font-semibold text-lg">Email</h3>
-                                    <p className="text-muted-foreground">contact@deviproducts.lk</p>
+                                    <p className="text-muted-foreground">deviproducts2025@gmail.com</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
