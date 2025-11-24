@@ -14,14 +14,38 @@ import Image from 'next/image';
 export default function ContactPage() {
     const { toast } = useToast();
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        toast({
-            title: "Message Sent!",
-            description: "Thank you for contacting us. We'll get back to you shortly.",
-        });
-        (e.target as HTMLFormElement).reset();
-    }
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const form = e.target as HTMLFormElement;
+  const data = {
+    firstName: (form.firstName as HTMLInputElement).value,
+    lastName: (form.lastName as HTMLInputElement).value,
+    email: (form.email as HTMLInputElement).value,
+    message: (form.message as HTMLTextAreaElement).value,
+  };
+
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  if (res.ok) {
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for contacting us. We'll get back to you shortly.",
+    });
+    form.reset();
+  } else {
+    toast({
+      title: "Error",
+      description: "Failed to send message. Please try again later.",
+      variant: "destructive",
+    });
+  }
+};
+
 
   return (
     <div className="flex min-h-screen flex-col">
