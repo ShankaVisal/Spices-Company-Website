@@ -5,13 +5,14 @@ import Image from 'next/image';
 import { Leaf, Users, Target, Eye, Goal } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'About Devi Products',
-  description: 'Learn about the story, mission, and values of Devi Products. Discover our passion for authentic, ethically sourced Sri Lankan spices and our commitment to quality.',
+  description: 'Learn about the story, mission, and values of Devi Products, and meet our founder, Shanka Visal. Discover our passion for authentic, ethically sourced Sri Lankan spices and our commitment to quality.',
   openGraph: {
     title: 'About Devi Products',
-    description: 'Learn about the story, mission, and values of Devi Products.',
+    description: 'Learn about the story, mission, values, and founder of Devi Products.',
   }
 };
 
@@ -20,7 +21,7 @@ export default function AboutPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="relative w-full h-[50vh] flex items-center justify-center">
+        <section className="relative w-full py-20 pt-32 md:py-32 md:pt-48 flex items-center justify-center">
           <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-white">
               About Devi Products
@@ -65,6 +66,38 @@ export default function AboutPage() {
         </section>
 
         <section className="w-full py-16 md:py-24 bg-secondary/50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="md:order-last">
+                 <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src="https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/people/shanka-visal-founder.jpg"
+                      alt="Shanka Visal, Founder of Devi Products"
+                      data-ai-hint="founder portrait"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">Meet Our Founder</h2>
+                 <p className="text-muted-foreground mb-4">
+                  Shanka Visal, the visionary founder behind Devi Products, is on a mission to share the rich culinary traditions of Sri Lanka. An entrepreneur with a passion for quality and authenticity, Shanka is bridging the gap between local spice farmers and the global market. He believes in combining modern innovation with timeless tradition to bring the purest flavors from his homeland to your kitchen.
+                </p>
+                <p className="text-muted-foreground">
+                  Learn more about his journey and other projects on his personal portfolio.
+                </p>
+                <Button asChild className="mt-4">
+                    <a href="https://www.shankavisal.com" target="_blank" rel="noopener noreferrer">
+                        Visit shankavisal.com
+                    </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">Our Vision & Mission</h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
