@@ -71,7 +71,7 @@ export default function AboutPage() {
               <div className="md:order-last">
                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
                     <Image
-                      src="https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/people/shanka-visal-founder.jpg"
+                      src="https://wtxtchqioofzyrzulhoz.supabase.co/storage/v1/object/public/people/shanka.png"
                       alt="Shanka Visal, Founder of Devi Products"
                       data-ai-hint="founder portrait"
                       fill
