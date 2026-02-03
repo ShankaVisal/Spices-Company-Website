@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   :root {
-    --background: 84 9% 95%;
+    --background: 0 0% 100%;
     --foreground: 24 6% 20%;
     --card: 84 9% 98%;
     --card-foreground: 24 6% 20%;
