@@ -1,6 +1,5 @@
 
 import { ProductList } from '@/components/product-list';
-import { RecipeSuggester } from '@/components/recipe-suggester';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import products from '@/data/products.json';
@@ -89,7 +88,6 @@ export default function Home() {
             <Link href="/blog">View All Posts</Link>
           </Button>
         </div>
-        <RecipeSuggester products={(products as Product[]).filter(p => p.category === 'Spice')} />
         <section className="w-full">
             <div className="relative aspect-[2400/840] w-full">
                 <Image 
